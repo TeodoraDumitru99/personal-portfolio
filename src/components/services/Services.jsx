@@ -1,40 +1,67 @@
 import "./services.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Card1Img from "../assets/card1.png";
 import Card2Img from "../assets/card2.png";
 import Card3Img from "../assets/card3.png";
 import Card4Img from "../assets/card4.png";
 const Services = () => {
-  const [expanded, setExpanded] = useState({});
-  // Just temporary usage for now
+  const [expanded, setExpanded] = useState(null);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 1000);
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth <= 1000);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  useEffect(() => {
+    const section = document.querySelector(".services");
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (!entry.isIntersecting) {
+          setExpanded(null);
+        }
+      },
+      { threshold: 0.1 }
+    );
+    if (section) observer.observe(section);
+    return () => observer.disconnect();
+  }, []);
+
+  const handleMouseLeave = () => {
+    if (!isMobile) {
+      setExpanded(null);
+    }
+  };
+
+  const handleInteraction = (id) => {
+    setExpanded((prevId) => (prevId === id ? null : id));
+  };
 
   const accordionContent = [
     {
       id: 0,
       title: "WEBSITE DEVELOPMENT",
-      text: "Crafting responsive and visually stunning websites that elevate your brand's online presence, ensuring high performance and seamless user experiences across all devices.",
-      shorttext: "Crafting responsive and visually stunning websites...",
+      text: "Crafting responsive, visually stunning websites to elevate your brand, ensuring high performance and seamless user experiences.",
+      shorttext: "Crafting responsive, visually stunning websites to",
       imgsrc: Card2Img,
     },
     {
       id: 1,
       title: "UI/UX DESIGN",
-      text: "Designing intuitive interfaces that prioritize the User Experience, blending creativity with functionality to deliver user-friendly designs that captivate and engage audiences.",
-      shorttext:
-        "Designing intuitive interfaces that prioritize the User Experience...",
+      text: "Designing intuitive interfaces that prioritize the user, blending creativity and functionality for captivating, user-friendly designs.",
+      shorttext: "Designing intuitive interfaces that prioritize the user",
       imgsrc: Card3Img,
     },
     {
       id: 2,
       title: "SEAMLESS EXPERIENCES",
-      shorttext: "Building fluid and engaging products across all devices...",
-      text: "Building fluid and engaging products across all devices, focusing on consistency, interactivity, and adaptability to ensure flawless experiences everywhere your users go.",
+      text: "Building fluid, engaging products across all devices with consistency, interactivity, and adaptability for flawless user experiences.",
+      shorttext: "Building fluid, engaging products across all devices with",
       imgsrc: Card4Img,
     },
   ];
-  const handleToggle = (id) => {
-    setExpanded((prev) => ({ ...prev, [id]: !prev[id] }));
-  };
+
   return (
     <section className="services">
       <div className="wrapper">
@@ -49,39 +76,47 @@ const Services = () => {
               <div
                 key={id}
                 className={`secondary_card ${
-                  id === 1 ? "secondary_card--reverse" : ""
+                  expanded === id ? "expanded" : ""
                 }`}
+                onMouseEnter={() => !isMobile && handleInteraction(id)}
+                onMouseLeave={handleMouseLeave}
+                onClick={() => isMobile && handleInteraction(id)}
               >
-                {/* <p className="arrow" onClick={handleToggle}>
-                  {expanded[id] === expanded[id] ? "AAA" : "BBB"}
-                </p> */}
-                <div
-                  className={`secondary_column ${
-                    id === 1 ? "secondary_column--reverse" : ""
-                  } `}
-                >
+                <div className="secondary_column">
                   <h3 className="secondary_title">{title}</h3>
-                  <p className="secondary_full_text">
-                    <span
-                      className={`secondary_text ${
-                        expanded[id] ? "expanded" : ""
-                      }`}
-                    >
-                      {text}
-                    </span>
-                    <span
-                      className="secondary_short_text"
-                      onClick={() => handleToggle(id)}
-                    >
-                      {shorttext}
-                    </span>
-                  </p>
+                  <div className="secondary_full_text">
+                    {expanded === id ? (
+                      <span
+                        key={`expanded-${id}`}
+                        className={`secondary_text ${
+                          expanded === id ? "fade-in" : "fade-out"
+                        }`}
+                      >
+                        {text}
+                      </span>
+                    ) : (
+                      <p
+                        key={`short-${id}`}
+                        className={`secondary_short_text ${
+                          expanded === id ? "fade-out" : "fade-in"
+                        }`}
+                        // onClick={() => handleToggle(id)}
+                      >
+                        {shorttext}
+                        <span className="secondary_read_more">
+                          ... Read More
+                        </span>
+                      </p>
+                    )}
+                  </div>
                 </div>
                 <img
                   loading="lazy"
                   src={imgsrc}
                   alt="Star"
-                  className="services__secondary_img"
+                  className={`services_secondary_img ${
+                    expanded === id ? "fade-in" : "fade-out"
+                  }`}
                 />
               </div>
             ))}
