@@ -2,13 +2,13 @@
   background-color: #0f0f1c;
   color: white;
   padding-top:100px;
-  padding-bottom:50px;
+  padding-bottom:100px;
 }
 
 .approach_title{
   text-align: center;
   font-size: 50px;
-  padding-bottom: 100px;
+  padding-bottom: 60px;
 }
 
 .approach_content{
@@ -47,7 +47,7 @@ transform 0.8s cubic-bezier(0.25, 1, 0.5, 1) /* Smooth movement */
   /* transform:translateY(0); */
 }
 .approach_text{
-  font-size:18px;
+  font-size:20px;
   line-height:45px;
   top:100px;
   text-align:justify;
@@ -120,7 +120,7 @@ padding:0 70px;
 @media(max-width:750px){
   .approach_text{
     line-height: 1.2;
-    font-size:16px;
+    font-size:18px;
   }
 
   .approach_title{
@@ -144,6 +144,10 @@ padding:0 70px;
 
   .approach_header{
     font-size:25px;
+  }
+
+  .approach_text{
+    font-size:16px;
   }
 }
 
