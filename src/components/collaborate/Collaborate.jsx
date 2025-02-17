@@ -9,10 +9,12 @@ const Collaborate = () => {
           <div className="collaborate_text">
             Have a project in mind? I'm always excited to work on new challenges
             and ideas. Whether it's a web page, an illustration, or a creative
-            discussion, send me a message! If you're ready to build something
-            impactful together, let's connect!
+            discussion, feel free to send me a message. If you are ready to
+            build something impactful together, let's collaborate!
           </div>
-          <button className="collaborate_button">Contact</button>
+          <a className="collaborate_button" href="/contact">
+            Contact
+          </a>
         </div>
       </div>
     </section>
