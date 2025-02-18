@@ -8,14 +8,47 @@ const Contact = () => {
     user_email: "",
     message: "",
   });
+
+  const [errors, setErrors] = useState({});
+
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const apiKey = process.env.REACT_APP_API_KEY;
 
+  const validateForm = () => {
+    let newErrors = {};
+
+    //Name Validation: Only letters, min 2 characters, max 150//
+
+    if (!/^[A-Za-z\s]{2,150}$/.test(formData.user_name)) {
+      newErrors.user_name =
+        "Name should be between 2-150 characters and contain only letters.";
+    }
+
+    // Email Validation: Must contain @ and domain
+
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.user_email)) {
+      newErrors.user_email = "Please enter a valid email address.";
+    }
+
+    // Message Validation: Minimum 10 characters, max 500
+
+    if (formData.message.length < 10 || formData.message.length > 500) {
+      newErrors.message = "Message should be between 10 and 500 characters.";
+    }
+
+    setErrors(newErrors); //update with validation error
+    return Object.keys(newErrors).length === 0; //return true if no errors
+  };
+
   const handleSubmit = (e) => {
-    e.preventDefault(); //prevent page realod on submit
+    e.preventDefault(); //prevent page relaod on submit
+
+    if (!validateForm()) {
+      return; //stop submission if validation fails
+    }
 
     emailjs.send("service_bober", "template_vntxzsc", formData, apiKey).then(
       (result) => {
@@ -46,7 +79,7 @@ const Contact = () => {
               recommendation, feel free to reach out. I am sure we can achieve
               wonderful things together!
             </p>
-            <form className="contact_form" onSubmit={handleSubmit}>
+            <form className="contact_form" onSubmit={handleSubmit} noValidate>
               <div className="contact_form_inputs">
                 <input
                   className="contact_form_input"
@@ -58,6 +91,9 @@ const Contact = () => {
                   aria-label="Your Name"
                   required
                 />
+                {errors.user_name && (
+                  <p className="contact_error_text">{errors.user_name}</p>
+                )}
 
                 <input
                   className="contact_form_input"
@@ -66,10 +102,12 @@ const Contact = () => {
                   placeholder="Your Email"
                   value={formData.user_email}
                   onChange={handleChange}
-                  aria-lavel="Your Email"
+                  aria-label="Your Email"
                   required
                 />
-
+                {errors.user_email && (
+                  <p className="contact_error_text">{errors.user_email}</p>
+                )}
                 <textarea
                   className="contact_form_input contact_form_input--text"
                   name="message"
@@ -80,6 +118,9 @@ const Contact = () => {
                   rows={7}
                   required
                 ></textarea>
+                {errors.message && (
+                  <p className="contact_error_text">{errors.message}</p>
+                )}
               </div>
 
               <button className="form_button" type="submit">
