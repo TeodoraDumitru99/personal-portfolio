@@ -4,6 +4,7 @@ import Services from "./components/services/Services";
 import Technologies from "./components/technologies/Technologies";
 import Approach from "./components/approach/Approach";
 import Collaborate from "./components/collaborate/Collaborate";
+import Footer from "./components/footer/Footer";
 import {
   BrowserRouter as Router,
   Routes,
@@ -39,9 +40,8 @@ function App() {
             <Route path="*" element={<Navigate to="/" />} />
           </Routes>
         </main>
+        <Footer />
       </Router>
-
-      <footer>footer</footer>
     </>
   );
 }
