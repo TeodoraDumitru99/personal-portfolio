@@ -88,19 +88,21 @@
 }
 
 .hero_button {
-  width: 50px;
+  font-family: "Outfit", sans-serif;
   height: 50px;
   border-radius: 5px;
-  background: #f2eef9;
+  background: #954edd;
   transition: all 1s ease-in-out;
-  font-size: 30px;
+  font-size: 20px;
   font-weight: 600;
   box-shadow: 5px 5px 15px #0f0f1c;
-  color: #1e1a31;
+  color: #f2eef9;
+  width: fit-content;
+  padding: 10px 50px;
 }
 
 .hero_button:hover {
-  background: #954edd;
+  background: #372c53;
   cursor: pointer;
 }
 
@@ -187,7 +189,7 @@
 
   .hero_personal {
     width: 100%;
-    padding:20px;
+    padding: 20px;
   }
 
   .hero_tagg {

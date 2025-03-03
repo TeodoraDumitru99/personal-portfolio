@@ -247,9 +247,23 @@ const Hero = () => {
             <h1 className="hero_text_headline">From Pixels to Perfection</h1>
             <span className="hero_name">Teodora Dumitru</span>
             <div className="hero_contact">
-              <button onClick={handleDownload} className="hero_button">
-                cv
-              </button>
+              <a
+                href="mailto:teodoradumitru1999@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hero_social hero_email"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 43 43"
+                  width="50"
+                  height="50"
+                  fill="#F2EEF9"
+                >
+                  <path d="M3.99789 0.0528564C2.76519 0.0528564 1.68846 0.814763 1.06528 1.96418L20.2606 24.9986C20.9675 25.8469 22.0282 25.8469 22.7352 24.9986C23.4421 24.1502 41.9305 1.96418 41.9305 1.96418C41.3073 0.814763 40.2306 0.0528564 38.9979 0.0528564H3.99789ZM0.497894 7.85882V37.8529C0.497894 40.1797 2.05889 42.0529 3.99789 42.0529H38.9979C40.9369 42.0529 42.4979 40.1797 42.4979 37.8529V7.85882L25.2098 28.6045C23.1746 31.0468 19.8212 31.0468 17.786 28.6045L9.14194 18.2317L0.497894 7.85882Z" />
+                </svg>
+              </a>
+
               <a
                 href="https://www.linkedin.com/in/teodora-dumitru/"
                 target="_blank"
@@ -284,6 +298,9 @@ const Hero = () => {
                 </svg>
               </a>
             </div>
+            <button onClick={handleDownload} className="hero_button">
+              Resume
+            </button>
           </div>
           <div className="hero_personal">
             <span className="hero_tagg">Frontend Developer</span>
