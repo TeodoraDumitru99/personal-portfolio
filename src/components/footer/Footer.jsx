@@ -14,16 +14,7 @@ const Footer = () => {
   ];
 
   useEffect(() => {
-    const handleScrollFooter = () => {};
-
-    window.addEventListener("scroll", handleScrollFooter);
-    return () => {
-      window.removeEventListener("scroll", handleScrollFooter);
-    };
-  }, []);
-
-  useEffect(() => {
-    window.scrollTo({ top: 0, behaviour: "smooth" });
+    window.scrollTo(0, 0);
   }, [location.pathname]);
   // Goes top after scrolling and changing route
 
