@@ -1,10 +1,9 @@
 import "./footer.css";
 import LogoImg from "../assets/logo.png";
 import { Link, useLocation } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 
 const Footer = () => {
-  const [isScrolledFooter, setIsScrolledFooter] = useState(false);
   const location = useLocation();
 
   const navLinks = [
@@ -15,13 +14,7 @@ const Footer = () => {
   ];
 
   useEffect(() => {
-    const handleScrollFooter = () => {
-      if (window.scrollY > 50) {
-        setIsScrolledFooter(true);
-      } else {
-        setIsScrolledFooter(false);
-      }
-    };
+    const handleScrollFooter = () => {};
 
     window.addEventListener("scroll", handleScrollFooter);
     return () => {
@@ -75,7 +68,7 @@ const Footer = () => {
               href="mailto:teodoradumitru1999@gmail.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="footer_social footer_email"
+              className="footer_social footer_linkedin"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
