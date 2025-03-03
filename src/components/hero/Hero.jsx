@@ -9,9 +9,10 @@ const Hero = () => {
 
   useEffect(() => {
     const scene = new THREE.Scene();
+    const container = containerRef.current;
     // scene.background = new THREE.Color("#101012");
     scene.background = new THREE.Color("#0f0f1c");
-    if (!containerRef.current) {
+    if (!container) {
       console.error("containerRef.current is null. Skipping initialization");
       return;
     }
