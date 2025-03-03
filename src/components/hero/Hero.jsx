@@ -8,14 +8,16 @@ const Hero = () => {
   const containerRef = useRef(null);
 
   useEffect(() => {
-    const scene = new THREE.Scene();
     const container = containerRef.current;
     // scene.background = new THREE.Color("#101012");
-    scene.background = new THREE.Color("#0f0f1c");
     if (!container) {
       console.error("containerRef.current is null. Skipping initialization");
       return;
     }
+
+    const scene = new THREE.Scene();
+    scene.background = new THREE.Color("#0f0f1c");
+
     const camera = new THREE.PerspectiveCamera(
       90,
       containerRef.current.clientWidth / containerRef.current.clientHeight,
@@ -24,14 +26,10 @@ const Hero = () => {
     );
 
     const renderer = new THREE.WebGLRenderer({ antialias: true });
-    renderer.setSize(
-      containerRef.current.clientWidth,
-      containerRef.current.clientHeight
-    );
+    renderer.setSize(container.clientWidth, container.clientHeight);
     renderer.shadowMap.enabled = true;
     renderer.outputEncoding = THREE.SRGBColorSpace;
-    containerRef.current.appendChild(renderer.domElement);
-
+    container.appendChild(renderer.domElement);
     // // Debug: Log container dimensions
     // console.log(
     //   "Container dimensions:",
@@ -41,14 +39,9 @@ const Hero = () => {
 
     //Resize Handling
     const onWindowResize = () => {
-      camera.aspect =
-        containerRef.current.clientWidth / containerRef.current.clientHeight;
+      camera.aspect = container.clientWidth / container.clientHeight;
       camera.updateProjectionMatrix();
-      renderer.setSize(
-        containerRef.current.clientWidth,
-        containerRef.current.clientHeight
-      );
-      // updatePlanetPosition();
+      renderer.setSize(container.clientWidth, container.clientHeight);
     };
 
     window.addEventListener("resize", onWindowResize);
@@ -222,11 +215,9 @@ const Hero = () => {
       if (renderer) {
         renderer.dispose();
       }
-      if (
-        containerRef.current &&
-        containerRef.current.contains(renderer.domElement)
-      ) {
-        containerRef.current.removeChild(renderer.domElement);
+
+      if (container && container.contains(renderer.domElement)) {
+        container.removeChild(renderer.domElement);
       }
     };
   }, []);
