@@ -12,7 +12,7 @@
 }
 
 .footer_logo_link {
-  min-width: 120px;
+  min-width: 165px;
   justify-content: flex-end;
 }
 
@@ -57,7 +57,7 @@
 .footer_contact {
   display: flex;
   gap: 20px;
-  min-width: 120px;
+  min-width: 165px;
   justify-content: flex-end;
 }
 
