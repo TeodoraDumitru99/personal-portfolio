@@ -8,11 +8,24 @@
   padding:0;
 }
 
-body{
+html, body{
   font-family:sans-serif;
   font-family:'Outfit',sans-serif;
   font-style:normal;
   overflow-y:auto;
+  display:flex;
+  flex-direction:column;
+  height:100%;
+}
+
+.app_container{
+  display:flex;
+  flex-direction:column;
+  min-height:100dvh;
+}
+
+.container{
+  min-height:100dvh;
 }
 
 .wrapper{

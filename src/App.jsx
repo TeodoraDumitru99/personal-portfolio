@@ -17,10 +17,10 @@ import Contact from "./components/contact/Contact";
 
 function App() {
   return (
-    <>
+    <div className="app_container">
       <Router>
         <Navbar />
-        <main>
+        <main className="content">
           <Routes>
             <Route
               path="/"
@@ -42,7 +42,7 @@ function App() {
         </main>
         <Footer />
       </Router>
-    </>
+    </div>
   );
 }
 
