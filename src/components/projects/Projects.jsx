@@ -5,6 +5,7 @@ import BiasZeroImg from "../assets/Bias_Zero.png";
 import SmartLampImg from "../assets/Smart_Control_Lamp.png";
 import MultifunctionalImg from "../assets/Multifunctional_Storage.png";
 import ModularImg from "../assets/Modular_Bean_Bag.png";
+import { Link } from "react-router-dom";
 
 const Projects = () => {
   const cardsContent = [
@@ -46,7 +47,7 @@ const Projects = () => {
           desc: "Design and Prototype for a smart lamp with remote control, operable via a mobile app or automatically through integrated sensors.",
           alt: "Smart Control Lamp Image",
           imgsrc: SmartLampImg,
-          ahref: "/",
+          ahref: "/projects/smart-lamp",
         },
         {
           id: 1,
@@ -85,9 +86,9 @@ const Projects = () => {
                     />
                     <h3 className="project_title">{title}</h3>
                     <p className="project_desc">{desc}</p>
-                    <a href={ahref} className="project_button">
+                    <Link to={ahref} className="project_button">
                       View More
-                    </a>
+                    </Link>
                   </div>
                 ))}
               </div>

@@ -1,0 +1,67 @@
+.projects_lamp {
+  background-color: #0f0f1c;
+  color: white;
+  padding-top: 100px;
+  padding-bottom: 50px;
+  min-height: 100dvh;
+}
+
+.projects_lamp_title {
+  text-align: center;
+  font-size: 50px;
+  padding-bottom: 50px;
+}
+
+.projects_lamp_content{
+    display:flex;
+    flex-direction: column;
+    gap:50px;
+}
+
+.projects_lamp_hero {
+  display: flex;
+  justify-content: space-between;
+}
+
+.lamp_img_div {
+  display: flex;
+  gap: 20px;
+  min-height:500px;
+}
+
+.lamp_img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  object-fit: contain;
+  align-self:flex-start;
+}
+
+.lamp_axo_img {
+  width:100%;
+  max-width:250px;
+  object-fit: contain;
+  align-self:flex-end;
+}
+
+.lamp_main_text{
+    max-width:650px;
+    text-align: justify;
+    display:flex;
+    flex-direction: column;
+    gap:10px;
+    font-size:20px;
+}
+
+.lamp_slider{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    gap:20px;
+}
+
+.lamp_slider_image{
+    width:auto;
+    height:100%;
+    max-height:400px;
+}
