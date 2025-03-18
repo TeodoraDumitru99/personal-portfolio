@@ -52,13 +52,14 @@ const Navbar = () => {
     >
       <div className="wrapper">
         <div className="navbar_content">
-          <img
-            loading="lazy"
-            src={LogoImg}
-            alt="logo"
-            className="navbar_logo"
-          />
-
+          <a href="\" className="navbar_logo_link">
+            <img
+              loading="lazy"
+              src={LogoImg}
+              alt="logo"
+              className="navbar_logo"
+            />
+          </a>
           {/* Hamburger Menu */}
           <div
             className={`navbar_hamburger ${isMenuOpen ? "active" : ""}`}
