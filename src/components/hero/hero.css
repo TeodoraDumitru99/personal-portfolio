@@ -4,6 +4,7 @@
   color: #f2eef9;
   overflow: hidden;
   position: relative;
+  z-index: 1;
 }
 
 .hero_content {

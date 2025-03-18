@@ -18,34 +18,35 @@ import Lamp from "./components/lamp/Lamp";
 
 function App() {
   return (
-    <div className="app_container">
-      <Router>
-        <Navbar />
-        <main className="content">
-          <Routes>
-            <Route
-              path="/"
-              element={
-                <>
-                  <Hero />
-                  <Services />
-                  <Technologies />
-                  <Approach />
-                  <Collaborate />
-                </>
-              }
-            />
-            <Route path="/about" element={<About />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/projects/smart-lamp" element={<Lamp />} />
-
-            <Route path="*" element={<Navigate to="/" />} />
-          </Routes>
-        </main>
-        <Footer />
-      </Router>
-    </div>
+    <>
+      <div className="app_container">
+        <Router>
+          <Navbar />
+          <main className="content">
+            <Routes>
+              <Route
+                path="/"
+                element={
+                  <>
+                    <Hero />
+                    <Services />
+                    <Technologies />
+                    <Approach />
+                    <Collaborate />
+                  </>
+                }
+              />
+              <Route path="/about" element={<About />} />
+              <Route path="/projects" element={<Projects />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/projects/smart-lamp" element={<Lamp />} />
+              <Route path="*" element={<Navigate to="/" />} />
+            </Routes>
+          </main>
+          <Footer />
+        </Router>
+      </div>
+    </>
   );
 }
 
