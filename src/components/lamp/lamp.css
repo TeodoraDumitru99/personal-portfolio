@@ -1,32 +1,28 @@
 .projects_lamp {
   background-color: #0f0f1c;
-  color: white;
+  color:#f2eef9;;
   padding-top: 100px;
   padding-bottom: 50px;
   min-height: 100dvh;
 }
 
-.projects_lamp_title {
-  text-align: center;
-  font-size: 50px;
-  padding-bottom: 50px;
-}
-
-.projects_lamp_content{
-    display:flex;
-    flex-direction: column;
-    gap:50px;
+.projects_lamp_content {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  align-items: center;
 }
 
 .projects_lamp_hero {
   display: flex;
   justify-content: space-between;
+  gap: 30px;
 }
 
 .lamp_img_div {
   display: flex;
   gap: 20px;
-  min-height:500px;
+  min-height: 500px;
 }
 
 .lamp_img {
@@ -34,34 +30,78 @@
   max-width: 500px;
   height: auto;
   object-fit: contain;
-  align-self:flex-start;
+  align-self: flex-start;
 }
 
 .lamp_axo_img {
-  width:100%;
-  max-width:250px;
+  width: 100%;
+  max-width: 250px;
   object-fit: contain;
-  align-self:flex-end;
+  align-self: flex-end;
+  height: auto;
 }
 
-.lamp_main_text{
-    max-width:650px;
-    text-align: justify;
-    display:flex;
+.lamp_main_text {
+  max-width: 650px;
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.lamp_slider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: fit-content;
+  max-width: 1200px;
+}
+
+.lamp_slider_item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.lamp_slider_image {
+  height: 100%;
+  width: auto;
+  max-height: 600px;
+}
+
+@media (max-width: 1300px) {
+  .projects_lamp_hero {
     flex-direction: column;
-    gap:10px;
-    font-size:20px;
-}
-
-.lamp_slider{
-    display:flex;
-    flex-direction:column;
     align-items: center;
-    gap:20px;
+  }
+
+  .lamp_main_text {
+    max-width: 1200px;
+  }
+
+  .lamp_img {
+    object-fit: contain;
+  }
 }
 
-.lamp_slider_image{
-    width:auto;
-    height:100%;
-    max-height:400px;
+@media (max-width: 750px) {
+  .lamp_img_div {
+    flex-direction: column;
+    max-width: 500px;
+  }
+
+  .lamp_axo_img,
+  .lamp_img {
+    max-width: fit-content;
+  }
+}
+
+@media (max-width: 450px) {
+  .lamp_slider {
+    height: auto;
+    width: 100%;
+  }
 }

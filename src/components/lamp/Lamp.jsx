@@ -6,21 +6,22 @@ import LampRender from "../assets/lampImages/lamp_render.png";
 import LampDesign from "../assets/lampImages/lamp_design.png";
 import LampProt1 from "../assets/lampImages/lamp_prototype_1.png";
 import LampProt2 from "../assets/lampImages/lamp_prototype_2.png";
+import Slider from "../slider/Slider";
 
 const Lamp = () => {
   const lampSliderContent = [
     { id: 0, alt: "Lamp Poster", imgsrc: LampPoster },
     { id: 1, alt: "Lamp Render", imgsrc: LampRender },
-    { id: 2, alt: "Lamp Design", imgsrc: LampDesign },
-    { id: 3, alt: "Lamp Prototype 1", imgsrc: LampProt1 },
-    { id: 4, alt: "Lamp Poster", imgsrc: LampProt2 },
+    { id: 2, alt: "Lamp 3D Model", imgsrc: LampDesign },
+    { id: 3, alt: "Lamp Prototype - Idle Mode", imgsrc: LampProt1 },
+    { id: 4, alt: "Lamp Prototype - Active Mode", imgsrc: LampProt2 },
   ];
 
   return (
     <section className="projects_lamp">
       <div className="wrapper">
-        <h2 className="projects_lamp_title">Smart Control Lamp</h2>
-        <div className="projects_lamp_content">
+        <h2 className="projects_lamp_title title">Smart Control Lamp</h2>
+        <div className="projects_lamp_content body_text">
           <div className="projects_lamp_hero">
             <div className="lamp_img_div">
               <img
@@ -58,16 +59,19 @@ const Lamp = () => {
             </div>
           </div>
           <div className="lamp_slider">
-            {lampSliderContent.map(({ id, alt, imgsrc }) => (
-              <div key={id}>
-                <img
-                  loading="lazy"
-                  src={imgsrc}
-                  alt={alt}
-                  className="lamp_slider_image"
-                />
-              </div>
-            ))}
+            <Slider>
+              {lampSliderContent.map(({ id, alt, imgsrc }) => (
+                <div key={id} className="lamp_slider_item">
+                  <img
+                    src={imgsrc}
+                    alt={alt}
+                    loading="lazy"
+                    className="lamp_slider_image"
+                  />
+                  <span className="lamp_slider_desc">{alt}</span>
+                </div>
+              ))}
+            </Slider>
           </div>
         </div>
       </div>
