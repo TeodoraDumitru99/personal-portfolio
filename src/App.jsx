@@ -15,6 +15,7 @@ import About from "./components/about/About";
 import Projects from "./components/projects/Projects";
 import Contact from "./components/contact/Contact";
 import Lamp from "./components/lamp/Lamp";
+import Multifunctional from "./components/multifunctional/Multifunctional";
 
 function App() {
   return (
@@ -40,6 +41,10 @@ function App() {
               <Route path="/projects" element={<Projects />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/projects/smart-lamp" element={<Lamp />} />
+              <Route
+                path="/projects/multifunctional-storage"
+                element={<Multifunctional />}
+              />
               <Route path="*" element={<Navigate to="/" />} />
             </Routes>
           </main>

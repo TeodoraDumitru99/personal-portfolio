@@ -12,17 +12,18 @@ const Lamp = () => {
   const lampSliderContent = [
     { id: 0, alt: "Lamp Poster", imgsrc: LampPoster },
     { id: 1, alt: "Lamp Render", imgsrc: LampRender },
-    { id: 2, alt: "Lamp 3D Model", imgsrc: LampDesign },
-    { id: 3, alt: "Lamp Prototype - Idle Mode", imgsrc: LampProt1 },
-    { id: 4, alt: "Lamp Prototype - Active Mode", imgsrc: LampProt2 },
+    { id: 2, alt: "Lamp Axonometry", imgsrc: LampAxoImg },
+    { id: 3, alt: "Lamp 3D Model", imgsrc: LampDesign },
+    { id: 4, alt: "Lamp Prototype - Idle Mode", imgsrc: LampProt1 },
+    { id: 5, alt: "Lamp Prototype - Active Mode", imgsrc: LampProt2 },
   ];
 
   return (
-    <section className="projects_lamp">
+    <section className="project">
       <div className="wrapper">
-        <h2 className="projects_lamp_title title">Smart Control Lamp</h2>
-        <div className="projects_lamp_content body_text">
-          <div className="projects_lamp_hero">
+        <h2 className="title">Smart Control Lamp</h2>
+        <div className="project_content body_text">
+          <div className="project_hero">
             <div className="lamp_img_div">
               <img
                 className="lamp_img"
@@ -30,14 +31,8 @@ const Lamp = () => {
                 alt="Smart Lamp Img"
                 src={SmartLampSImg}
               />
-              <img
-                className="lamp_axo_img"
-                loading="lazy"
-                alt="Smart Lamp Axonometry Img"
-                src={LampAxoImg}
-              />
             </div>
-            <div className="lamp_main_text">
+            <div className="project_text lamp_text">
               <p>
                 BloomLight is a lighting fixture with a dedicated smart control
                 system designed for individuals with locomotor disabilities. The
@@ -58,17 +53,17 @@ const Lamp = () => {
               </p>
             </div>
           </div>
-          <div className="lamp_slider">
+          <div className="slider">
             <Slider>
               {lampSliderContent.map(({ id, alt, imgsrc }) => (
-                <div key={id} className="lamp_slider_item">
+                <div key={id} className="slider_item">
                   <img
                     src={imgsrc}
                     alt={alt}
                     loading="lazy"
-                    className="lamp_slider_image"
+                    className="slider_image"
                   />
-                  <span className="lamp_slider_desc">{alt}</span>
+                  <span className="slider_desc">{alt}</span>
                 </div>
               ))}
             </Slider>

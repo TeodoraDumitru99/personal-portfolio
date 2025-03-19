@@ -55,7 +55,7 @@ const Projects = () => {
           desc: "Design and Prototype for a multi-functional drinking water and storage container, suitable for hiking enthusiasts.",
           alt: "Multifunctional Storage Image",
           imgsrc: MultifunctionalImg,
-          ahref: "/",
+          ahref: "/projects/multifunctional-storage",
         },
         {
           id: 2,
@@ -82,11 +82,11 @@ const Projects = () => {
                       loading="lazy"
                       src={imgsrc}
                       alt={alt}
-                      className="project_image"
+                      className="projects_element_image"
                     />
-                    <h3 className="project_title">{title}</h3>
-                    <p className="project_desc">{desc}</p>
-                    <Link to={ahref} className="project_button">
+                    <h3 className="projects_element_title">{title}</h3>
+                    <p className="projects_element_desc">{desc}</p>
+                    <Link to={ahref} className="projects_element_button">
                       View More
                     </Link>
                   </div>
