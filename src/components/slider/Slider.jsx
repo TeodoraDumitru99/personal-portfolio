@@ -1,10 +1,14 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import "./slider.css";
 
 const Slider = ({ children }) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [timeID, setTimeID] = useState(null);
   const [slideFinished, setSlideFinished] = useState(true);
+
+  const slideNext = useCallback(() => {
+    setActiveIndex((val) => (val >= children.length - 1 ? 0 : val + 1));
+  }, [children.length]);
 
   useEffect(() => {
     if (slideFinished) {
@@ -16,17 +20,7 @@ const Slider = ({ children }) => {
         }, 7000)
       );
     }
-  }, [slideFinished]);
-
-  const slideNext = () => {
-    setActiveIndex((val) => {
-      if (val >= children.length - 1) {
-        return 0;
-      } else {
-        return val + 1;
-      }
-    });
-  };
+  }, [slideFinished, slideNext]);
 
   const slidePrev = () => {
     setActiveIndex((val) => (val === 0 ? children.length - 1 : val - 1));
@@ -59,22 +53,20 @@ const Slider = ({ children }) => {
         ))}
       </div>
       <div>
-        {children.map((item, index) => {
-          return (
-            <button
-              key={index}
-              className={
-                activeIndex === index
-                  ? "slider_container_links-small slider_container_links-small-active"
-                  : "container_slider_links-small"
-              }
-              onClick={(e) => {
-                e.preventDefault();
-                setActiveIndex(index);
-              }}
-            ></button>
-          );
-        })}
+        {children.map((item, index) => (
+          <button
+            key={index}
+            className={
+              activeIndex === index
+                ? "slider_container_links-small slider_container_links-small-active"
+                : "container_slider_links-small"
+            }
+            onClick={(e) => {
+              e.preventDefault();
+              setActiveIndex(index);
+            }}
+          ></button>
+        ))}
       </div>
       <button
         className="slider_button-prev"
