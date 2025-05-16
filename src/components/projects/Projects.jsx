@@ -26,7 +26,7 @@ const Projects = () => {
           desc: "UI/UX Design and Frontend Implementation for Quantumzyme's Industrial Training Program, using React.js and Tailwind.",
           alt: "Zummpath Website Image",
           imgsrc: ZummpathImg,
-          ahref: "https://zummpathbioinformatics.zummitlabs.com/",
+          ahref: "https://zummpath-bio-informatics.vercel.app/",
         },
         {
           id: 2,
