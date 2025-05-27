@@ -5,6 +5,7 @@ import BiasZeroImg from "../assets/Bias_Zero.png";
 import SmartLampImg from "../assets/Smart_Control_Lamp.png";
 import MultifunctionalImg from "../assets/Multifunctional_Storage.png";
 import ModularImg from "../assets/Modular_Bean_Bag.png";
+import DueMarkBlogImg from "../assets/duemark.png";
 import { Link } from "react-router-dom";
 
 const Projects = () => {
@@ -14,6 +15,14 @@ const Projects = () => {
       projects: [
         {
           id: 0,
+          title: "DueMark Blog",
+          desc: "UI/UX Design for a professional legal blog, aimed at legal practitioners that support community-driven discussions, using Figma.",
+          alt: "DueMark Blog Image",
+          imgsrc: DueMarkBlogImg,
+          ahref: "/projects/duemark",
+        },
+        {
+          id: 1,
           title: "Mini Arcade",
           desc: "UI/UX Design and Frontend Implementation for personal Mini-Arcade web app with classic games, using React.js and CSS.",
           alt: "Mini Arcade Website Image",
@@ -21,7 +30,7 @@ const Projects = () => {
           ahref: "https://arcademini.netlify.app/",
         },
         {
-          id: 1,
+          id: 2,
           title: "Zummpath",
           desc: "UI/UX Design and Frontend Implementation for Quantumzyme's Industrial Training Program, using React.js and Tailwind.",
           alt: "Zummpath Website Image",
@@ -29,7 +38,7 @@ const Projects = () => {
           ahref: "https://zummpath-bio-informatics.vercel.app/",
         },
         {
-          id: 2,
+          id: 3,
           title: "Bias Zero",
           desc: "UI/UX Design and User Flow Mapping for Zummmit Infolabs' AI Project - Bias Zero, using Figma and Adobe Photoshop.",
           alt: "Bias Zero Website Image",

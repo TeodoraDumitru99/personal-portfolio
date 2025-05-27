@@ -16,6 +16,7 @@ import Projects from "./components/projects/Projects";
 import Contact from "./components/contact/Contact";
 import Lamp from "./components/lamp/Lamp";
 import Multifunctional from "./components/multifunctional/Multifunctional";
+import DueMark from "./components/duemark/Duemark";
 
 function App() {
   return (
@@ -45,6 +46,7 @@ function App() {
                 path="/projects/multifunctional-storage"
                 element={<Multifunctional />}
               />
+              <Route path="/projects/duemark" element={<DueMark />} />
               <Route path="*" element={<Navigate to="/" />} />
             </Routes>
           </main>
