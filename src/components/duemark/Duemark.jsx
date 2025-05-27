@@ -1,6 +1,6 @@
 import "./duemark.css";
-import DueMarkBlogLaptop from "../assets/duemarkblog/duemark_hero_Laptop.png";
-import DueMarkBlogHome from "../assets/duemarkblog/DueMark_home.png";
+import DueMarkLaptop from "../assets/duemark/DueMark_Laptop.png";
+import DueMarkHome from "../assets/duemark/DueMark_HomePage.png";
 import DueMarkBlogPres1 from "../assets/duemarkblog/DueMark_Presentation1.png";
 import DueMarkBlogPres2 from "../assets/duemarkblog/DueMark_Presentation2.png";
 import DueMarkBlogWireframes from "../assets/duemarkblog/DueMarkBlog_wireframes.png";
@@ -9,7 +9,7 @@ const DueMark = () => {
   return (
     <section className="project">
       <div className="wrapper">
-        <h2 className="title">DueMark Blog</h2>
+        <h2 className="title">DueMark</h2>
         <div className="body_text multi_content">
           <div className="project_hero multi_hero">
             <div className="multi_img_div">
@@ -17,64 +17,81 @@ const DueMark = () => {
                 className="multi_img"
                 loading="lazy"
                 alt="DueMark Blog Laptop Render"
-                src={DueMarkBlogLaptop}
+                src={DueMarkLaptop}
               />
             </div>
             <div className="project_text multi_text">
+              <p>DueMark - Trademark Services Website Redesign</p>
               <p>
-                This website is designed as a professional legal blog platform
-                aimed at verified legal practitioners, researchers, and
-                academics. The homepage immediately sets a tone of trust and
-                credibility with a clean, structured layout and clear messaging:
-                “Trusted Legal Insights, Simplified.” Visitors are introduced to
-                the blog's purpose—offering expert commentary, real-world case
-                studies, and practical insights—through a bold hero section and
-                informative content blocks that emphasize transparency and
-                community.
+                DueMark is a global trademark services provider that specializes
+                in renewals and IP management across 200+ jurisdictions. The
+                redesigned website focuses on simplifying the complex trademark
+                renewal process for international businesses, making it
+                accessible, fast, and transparent. The new UI/UX revamp aims to
+                reflect the company's efficient, modern, and client-first
+                approach.
               </p>
-              <p>
-                The blog structure supports both curated content and
-                community-driven discussions. The "About Us" section highlights
-                real voices and experiences, reinforcing authenticity. The
-                "Community" and "Blog" sections encourage engagement, showcasing
-                how verified professionals can participate, contribute, or start
-                their own threads. From a usability standpoint, the blog listing
-                page includes filters by legal category (e.g., patents, criminal
-                law), a clean card-based layout for posts, and clear metadata
-                like author, topic, and publication date. These elements not
-                only provide a seamless browsing experience but also uphold the
-                professional tone required in a legal space.
-              </p>
-              <p>
+              <div>
+                Design Goals & Features:
+                <ul>
+                  <li>
+                    <b>Clear Value Proposition</b>: The hero section immediately
+                    communicates the core service—expert trademark
+                    renewals—paired with a strong call to action
+                  </li>
+                  <li>
+                    <b>Streamlined Process Visualization</b>: A visual
+                    step-by-step process flow was implemented to clearly explain
+                    how the service works, from checking prices to receiving
+                    final certificates.
+                  </li>
+                  <li>
+                    <b>Credibility Through Testimonials</b>: Real client reviews
+                    add trust and legitimacy, reinforcing the ease and
+                    reliability of DueMark's services.
+                  </li>
+                  <li>
+                    <b>Service Highlights</b>: Dedicated sections detail
+                    offerings like price transparency, customizable invoicing,
+                    and jurisdiction coverage, reinforcing the company's
+                    value-driven approach.
+                  </li>
+                  <li>
+                    <b>Professional & Accessible Aesthetic</b>: Clean
+                    typography, accessible color contrasts, and a responsive
+                    layout ensure usability across devices. The visual tone
+                    balances professionalism with warmth, appealing to global
+                    business clients.
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <p>Technical Touches:</p>
                 This structure strikes a balance between controlled quality
                 (through user verification and admin moderation tools) and
                 organic engagement—key for building a respected and sustainable
                 platform in the legal field.
-              </p>
+                <ul>
+                  <li>
+                    The UI was built to ensure mobile responsiveness, with
+                    touch-friendly components and fast load times.
+                  </li>
+                  <li>
+                    Icons and illustrations guide the user visually, reducing
+                    cognitive load while browsing services and processes.
+                  </li>
+                  <li>
+                    The contact and call-to-action sections are strategically
+                    placed for conversion optimization.
+                  </li>
+                </ul>
+              </div>
             </div>
             <img
               className="multi_img"
               loading="lazy"
-              alt="DueMark Blog Presentation 1"
-              src={DueMarkBlogPres1}
-            />
-            <img
-              className="multi_img"
-              loading="lazy"
-              alt="DueMark Blog Presentation 1"
-              src={DueMarkBlogPres2}
-            />
-            <img
-              className="multi_img"
-              loading="lazy"
-              alt="DueMark Blog Laptop Render"
-              src={DueMarkBlogHome}
-            />
-            <img
-              className="multi_img"
-              loading="lazy"
-              alt="DueMark Blog Wireframes"
-              src={DueMarkBlogWireframes}
+              alt="DueMark Home Page"
+              src={DueMarkHome}
             />
           </div>
         </div>

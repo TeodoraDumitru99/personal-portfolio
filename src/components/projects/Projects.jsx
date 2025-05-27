@@ -6,6 +6,7 @@ import SmartLampImg from "../assets/Smart_Control_Lamp.png";
 import MultifunctionalImg from "../assets/Multifunctional_Storage.png";
 import ModularImg from "../assets/Modular_Bean_Bag.png";
 import DueMarkBlogImg from "../assets/duemark.png";
+import DueMarkImg from "../assets/DueMark_Hero.png";
 import { Link } from "react-router-dom";
 
 const Projects = () => {
@@ -16,31 +17,39 @@ const Projects = () => {
         {
           id: 0,
           title: "DueMark Blog",
-          desc: "UI/UX Design for a professional legal blog, aimed at legal practitioners that support community-driven discussions, using Figma.",
+          desc: "UI/UX Design for a professional legal blog, aimed at legal practitioners that support community-driven discussions, built with Figma.",
           alt: "DueMark Blog Image",
           imgsrc: DueMarkBlogImg,
-          ahref: "/projects/duemark",
+          ahref: "/projects/duemarkblog",
         },
         {
           id: 1,
+          title: "DueMark",
+          desc: "UI/UX Design for a global trademark services provider that specializes in renewals and IP management, built with Figma.",
+          alt: "DueMark Image",
+          imgsrc: DueMarkImg,
+          ahref: "/projects/duemark",
+        },
+        {
+          id: 2,
           title: "Mini Arcade",
-          desc: "UI/UX Design and Frontend Implementation for personal Mini-Arcade web app with classic games, using React.js and CSS.",
+          desc: "UI/UX Design and Frontend Implementation for personal Mini-Arcade web app with classic games, built with React.js and CSS.",
           alt: "Mini Arcade Website Image",
           imgsrc: MiniArcadeImg,
           ahref: "https://arcademini.netlify.app/",
         },
         {
-          id: 2,
+          id: 3,
           title: "Zummpath",
-          desc: "UI/UX Design and Frontend Implementation for Quantumzyme's Industrial Training Program, using React.js and Tailwind.",
+          desc: "UI/UX Design and Frontend Implementation for Quantumzyme's Industrial Training Program, built with React.js and Tailwind.",
           alt: "Zummpath Website Image",
           imgsrc: ZummpathImg,
           ahref: "https://zummpath-bio-informatics.vercel.app/",
         },
         {
-          id: 3,
+          id: 4,
           title: "Bias Zero",
-          desc: "UI/UX Design and User Flow Mapping for Zummmit Infolabs' AI Project - Bias Zero, using Figma and Adobe Photoshop.",
+          desc: "UI/UX Design and User Flow Mapping for Zummmit Infolabs' AI Project - Bias Zero, built with Figma and Adobe Photoshop.",
           alt: "Bias Zero Website Image",
           imgsrc: BiasZeroImg,
           ahref: "https://biaszero.zummitlabs.com/",
