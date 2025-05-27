@@ -1,9 +1,6 @@
 import "./duemark.css";
 import DueMarkLaptop from "../assets/duemark/DueMark_Laptop.png";
 import DueMarkHome from "../assets/duemark/DueMark_HomePage.png";
-import DueMarkBlogPres1 from "../assets/duemarkblog/DueMark_Presentation1.png";
-import DueMarkBlogPres2 from "../assets/duemarkblog/DueMark_Presentation2.png";
-import DueMarkBlogWireframes from "../assets/duemarkblog/DueMarkBlog_wireframes.png";
 
 const DueMark = () => {
   return (
