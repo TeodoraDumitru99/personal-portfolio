@@ -3,27 +3,9 @@ import DueMarkBlogLaptop from "../assets/duemarkblog/duemark_hero_Laptop.png";
 import DueMarkBlogHome from "../assets/duemarkblog/DueMark_home.png";
 import DueMarkBlogPres1 from "../assets/duemarkblog/DueMark_Presentation1.png";
 import DueMarkBlogPres2 from "../assets/duemarkblog/DueMark_Presentation2.png";
-// import DueMarkSignUp from "../assets/duemarkblog/DueMark_Signup.png";
-// import DueMarkSignUpConfirmation from "../assets/duemarkblog/DueMark_SignupConfirmation.png";
-// import DueMarkBlogAcc from "../assets/duemarkblog/DueMark_Blog_account.png";
-// import DueMarkCategory from "../assets/duemarkblog/DueMark_Category_account.png";
-// import DueMarkThread from "../assets/duemarkblog/DueMark_Thread.png";
-// import DueMarkCreatePost from "../assets/duemarkblog/DueMark_CreatePost.png";
-// import DueMarkPostCreated from "../assets/duemarkblog/DueMark_PostCreated.png";
 import DueMarkBlogWireframes from "../assets/duemarkblog/DueMarkBlog_wireframes.png";
-import Slider from "../slider/Slider";
 
 const DueMark = () => {
-  // const lampSliderContent = [
-  //   { id: 0, alt: "Home Page", imgsrc: DueMarkBlogHome },
-  //   { id: 1, alt: "Sign Up Page", imgsrc: DueMarkSignUp },
-  //   { id: 2, alt: "Sign Up Confirmation", imgsrc: DueMarkSignUpConfirmation },
-  //   { id: 3, alt: "Blog", imgsrc: DueMarkBlogAcc },
-  //   { id: 4, alt: "Category", imgsrc: DueMarkCategory },
-  //   { id: 5, alt: "Thread", imgsrc: DueMarkThread },
-  //   { id: 6, alt: "Create Post", imgsrc: DueMarkCreatePost },
-  //   { id: 7, alt: "Post Created", imgsrc: DueMarkPostCreated },
-  // ];
   return (
     <section className="project">
       <div className="wrapper">
@@ -95,21 +77,6 @@ const DueMark = () => {
               src={DueMarkBlogWireframes}
             />
           </div>
-          {/* <div className="slider">
-            <Slider>
-              {lampSliderContent.map(({ id, alt, imgsrc }) => (
-                <div key={id} className="slider_item">
-                  <img
-                    src={imgsrc}
-                    alt={alt}
-                    loading="lazy"
-                    className="slider_image"
-                  />
-                  <span className="slider_desc">{alt}</span>
-                </div>
-              ))}
-            </Slider>
-          </div> */}
         </div>
       </div>
     </section>
