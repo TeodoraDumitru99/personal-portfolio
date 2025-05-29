@@ -2,7 +2,7 @@ import PlanetImg from "../assets/planet.png";
 import React, { useEffect, useRef } from "react";
 import * as THREE from "three";
 import "./hero.css";
-import resume from "../assets/files/Teodora-Dumitru-Resume.pdf";
+// import resume from "../assets/files/Teodora Dumitru_Resume.pdf";
 
 const Hero = () => {
   const containerRef = useRef(null);
@@ -224,7 +224,7 @@ const Hero = () => {
 
   const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = resume; //imports PDF file path
+    link.href = "/Teodora Dumitru_Resume.pdf"; //imports PDF file path
     link.download = "Teodora Dumitru_Resume.pdf";
     document.body.appendChild(link);
     link.click();
