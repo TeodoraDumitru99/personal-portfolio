@@ -18,6 +18,7 @@ import Lamp from "./components/lamp/Lamp";
 import Multifunctional from "./components/multifunctional/Multifunctional";
 import DueMarkBlog from "./components/duemarkblog/DuemarkBlog";
 import DueMark from "./components/duemark/Duemark";
+import Nexio from "./components/nexio/Nexio";
 
 function App() {
   return (
@@ -49,6 +50,7 @@ function App() {
               />
               <Route path="/projects/duemarkblog" element={<DueMarkBlog />} />
               <Route path="/projects/duemark" element={<DueMark />} />
+              <Route path="/projects/nexio" element={<Nexio />} />
               <Route path="*" element={<Navigate to="/" />} />
             </Routes>
           </main>
