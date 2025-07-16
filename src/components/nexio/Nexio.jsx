@@ -21,14 +21,14 @@ const Nexio = () => {
               />
             </div>
             <div className="project_text multi_text">
-              <p>DueMark - Trademark Services Website Redesign</p>
+              <p>Nexio - Online Shop Mobile App</p>
               <p>
-                Nexio is mobile app prototype reimagines the online shopping
-                experience with a fun, colorful, and intuitive design. Built
-                with a strong focus on user-centered design principles, the app
-                blends vibrant aesthetics with seamless functionality to make
-                browsing, discovering, and wishlisting products enjoyable and
-                effortless. From smooth navigation to a thoughtfully crafted
+                Nexio is a mobile app prototype that reimagines the online
+                shopping experience with a fun, colorful, and intuitive design.
+                Built with a strong focus on user-centered design principles,
+                the app blends vibrant aesthetics with seamless functionality to
+                make browsing, discovering, and wishlisting products enjoyable
+                and effortless. From smooth navigation to a thoughtfully crafted
                 wishlist feature, every screen is designed to keep users engaged
                 while maintaining a clean and accessible interface. Whether
                 you're casually exploring new finds or curating your perfect
