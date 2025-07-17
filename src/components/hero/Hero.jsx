@@ -224,8 +224,8 @@ const Hero = () => {
 
   const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = "/Teodora Dumitru_Resume.pdf"; //imports PDF file path
-    link.download = "Teodora Dumitru_Resume.pdf";
+    link.href = "/Teodora Dumitru Resume.pdf"; //imports PDF file path
+    link.download = "Teodora Dumitru Resume.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
