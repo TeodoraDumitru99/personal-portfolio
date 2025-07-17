@@ -1,9 +1,13 @@
 import "./nexio.css";
 import NexioImg from "../assets/nexio/Nexio.png";
-import NexioW1 from "../assets/nexio/Nexio Wireframes_1.png";
-import NexioW2 from "../assets/nexio/Nexio Wireframes_2.png";
 import NexioIso from "../assets/nexio/Nexio Isometric.png";
 import NexioPattern from "../assets/nexio/Nexio Pattern.png";
+import NexioMockup from "../assets/nexio/Nexio Mockup.png";
+import NexioW1 from "../assets/nexio/Nexio Wireframe Set 1.png";
+import NexioW2 from "../assets/nexio/Nexio Wireframe Set 2.png";
+import NexioW3 from "../assets/nexio/Nexio Wireframe Set 3.png";
+import NexioW4 from "../assets/nexio/Nexio Wireframe Set 4.png";
+import NexioW5 from "../assets/nexio/Nexio Wireframe Set 5.png";
 
 const Nexio = () => {
   return (
@@ -94,26 +98,50 @@ const Nexio = () => {
             <img
               className="multi_img"
               loading="lazy"
-              alt="DueMark Wireframes Set 1"
+              alt="Nexio Loading Mockup"
               src={NexioPattern}
             />
             <img
               className="multi_img"
               loading="lazy"
-              alt="DueMark Wireframes Set 1"
+              alt="Nexio Wireframe Mockup"
+              src={NexioMockup}
+            />
+            <img
+              className="multi_img"
+              loading="lazy"
+              alt="Nexio Isometric View  Mockup"
               src={NexioIso}
             />
             <img
               className="multi_img"
               loading="lazy"
-              alt="DueMark Wireframes Set 1"
+              alt="Nexio Wireframe Set"
               src={NexioW1}
             />
             <img
               className="multi_img"
               loading="lazy"
-              alt="DueMark Wireframe Pattern"
+              alt="Nexio Wireframe Set"
               src={NexioW2}
+            />
+            <img
+              className="multi_img"
+              loading="lazy"
+              alt="Nexio Wireframe Set"
+              src={NexioW3}
+            />
+            <img
+              className="multi_img"
+              loading="lazy"
+              alt="Nexio Wireframe Set"
+              src={NexioW4}
+            />
+            <img
+              className="multi_img"
+              loading="lazy"
+              alt="Nexio Wireframe Set"
+              src={NexioW5}
             />
           </div>
         </div>
