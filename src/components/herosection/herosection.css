@@ -1,0 +1,54 @@
+.approach{
+  padding:160px 0 120px 0;
+}
+
+.approach_content{
+  display:flex;
+  flex-direction:column;
+  gap:180px;
+}
+
+.approach_blurs{
+  position:relative;
+}
+
+.approach_blur_primary{
+  position:absolute;
+  top:-80px;
+  left:-50px;
+}
+
+.approach_blur_secondary{
+  position:absolute;
+  right:0;
+  bottom:120px;
+}
+
+.approach_heading{
+  text-align: right;
+  display:flex;
+  flex-direction:column;
+  gap:40px;
+}
+
+.approach_portfolio{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  gap: 64px;
+}
+
+.approach_port_button{
+  font-weight:500;
+  font-size:24px;
+}
+
+.approach_thumbnails{
+  display:flex;
+  gap:20px;
+}
+
+.approach_image{
+width:100%;
+max-width:220px;
+}

@@ -1,8 +1,8 @@
+import HeroSection from "./components/herosection/HeroSection";
 import Hero from "./components/hero/Hero";
 import Navbar from "./components/navbar/Navbar";
 import Services from "./components/services/Services";
 import Technologies from "./components/technologies/Technologies";
-import Approach from "./components/approach/Approach";
 import Collaborate from "./components/collaborate/Collaborate";
 import Footer from "./components/footer/Footer";
 import {
@@ -32,10 +32,10 @@ function App() {
                 path="/"
                 element={
                   <>
-                    <Hero />
+                    <HeroSection />
                     <Services />
+                    <Hero />
                     <Technologies />
-                    <Approach />
                     <Collaborate />
                   </>
                 }
