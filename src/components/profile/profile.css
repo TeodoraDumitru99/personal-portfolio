@@ -1,0 +1,42 @@
+.heading2 p span{
+    color:#545454;
+    font-size:500;
+}
+
+.profile_content{
+    display:flex;
+    justify-content: space-between;
+    min-height: 800px;
+}
+
+.profile_primary{
+    padding-top:40px;
+}
+
+.profile_secondary{
+    display:flex;
+    flex-direction:column-reverse;
+    gap:40px;
+    padding-bottom:100px;
+}
+
+.profile_point{
+    display:flex;
+    gap:24px;
+    align-items: center;
+    max-width:540px;
+    font-size: 20px;
+    text-align: justify;
+    color:#545454;
+}
+
+.profile_secondary span{
+font-size:24px;
+font-weight:500;
+padding-left:54px;
+}
+
+.profile_point img{
+width:100%;
+max-width: 30px;
+}
