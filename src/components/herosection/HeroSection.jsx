@@ -42,12 +42,12 @@ const HeroSection = () => {
             alt="Blur Image"
           />
           <div className="approach_heading">
-            <h1 className="heading1 heading1_dark">
+            <h1 className="heading1">
               <p>Achieve powerful</p>
               <p>results through</p>
               <p>digital ideas</p>
             </h1>
-            <h3 className="heading2 heading2_dark">
+            <h3 className="heading3 approach_h3">
               changing the world pixel by pixel
             </h3>
           </div>

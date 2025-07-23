@@ -31,6 +31,9 @@
   gap:40px;
 }
 
+.approach_h3{
+   color:#545454;
+}
 .approach_portfolio{
   display:flex;
   justify-content: center;
