@@ -2,9 +2,7 @@ import HeroSection from "./components/herosection/HeroSection";
 import Profile from "./components/profile/Profile";
 import Expertise from "./components/expertise/Expertise";
 import ProjectsPreview from "./components/projectspreview/ProjectsPreview";
-import Hero from "./components/hero/Hero";
 import Navbar from "./components/navbar/Navbar";
-import Services from "./components/services/Services";
 import Technologies from "./components/technologies/Technologies";
 import Collaborate from "./components/collaborate/Collaborate";
 import Footer from "./components/footer/Footer";
@@ -39,8 +37,6 @@ function App() {
                     <Profile />
                     <Expertise />
                     <ProjectsPreview />
-                    <Services />
-                    <Hero />
                     <Technologies />
                     <Collaborate />
                   </>
