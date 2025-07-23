@@ -1,0 +1,51 @@
+.expertise_content{
+    display:flex;
+    flex-direction: column;
+    gap:60px;
+}
+
+.expertise_cards{
+    display:flex;
+    flex-direction: column;
+    gap:24px;
+}
+
+.expertise_card{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px;
+    padding:36px 48px;
+    background-color: #f8f6f6;
+}
+
+.expertise_card div{
+    display:flex;
+    align-items: center;
+    gap:100px;
+}
+
+.expertise_card:nth-of-type(2){
+    background-color: #FAF0FC;
+}
+
+
+.expertise_card.reverse div{
+    display:flex;
+    flex-direction: row-reverse;
+}
+
+.expertise_card span{
+    font-size:32px;
+    font-weight:450;
+}
+
+.expertise_card p{
+    max-width:300px;
+    font-size:20px;
+    color:#545454;
+}
+
+.expertise_card img{
+    border-radius: 12px;
+}
