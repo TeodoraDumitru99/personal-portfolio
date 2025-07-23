@@ -1,6 +1,7 @@
 import HeroSection from "./components/herosection/HeroSection";
 import Profile from "./components/profile/Profile";
 import Expertise from "./components/expertise/Expertise";
+import ProjectsPreview from "./components/projectspreview/ProjectsPreview";
 import Hero from "./components/hero/Hero";
 import Navbar from "./components/navbar/Navbar";
 import Services from "./components/services/Services";
@@ -37,6 +38,7 @@ function App() {
                     <HeroSection />
                     <Profile />
                     <Expertise />
+                    <ProjectsPreview />
                     <Services />
                     <Hero />
                     <Technologies />

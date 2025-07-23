@@ -1,0 +1,43 @@
+import "./projectspreview.css";
+import NexioThumbnailImg from "../assets/projectspreviewImages/Nexio Thumbnail.png";
+import DuemarkBlogThumbnailImg from "../assets/projectspreviewImages/DuemarkBlog Thumbnail.png";
+import LampThumbnailImg from "../assets/projectspreviewImages/Lamp Thumbnail.png";
+
+const ProjectsPreview = () => {
+  return (
+    <section className="projectpreview">
+      <div className="wrapper">
+        <div className="projectpreview_content">
+          <h2 className="heading2 projectspreview_header">
+            Projects<span>SEE MORE</span>
+          </h2>
+
+          <div className="projectspreview_images">
+            <img
+              className="projectspreview_image_primary"
+              loading="lazy"
+              src={NexioThumbnailImg}
+              alt="Nexio Thumbnail Image"
+            />
+            <div className="projectspreview_image_row">
+              <img
+                className="projectspreview_image_secondary"
+                loading="lazy"
+                src={DuemarkBlogThumbnailImg}
+                alt="Duemark Blog Thumbnail Image"
+              />
+              <img
+                className="projectspreview_image_secondary"
+                loading="lazy"
+                src={LampThumbnailImg}
+                alt="Lamp Thumbnail Image"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default ProjectsPreview;

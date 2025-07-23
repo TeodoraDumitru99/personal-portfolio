@@ -1,0 +1,38 @@
+.projectpreview_content{
+    display:flex;
+    flex-direction: column;
+    gap:60px;
+}
+
+.projectspreview_header{
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+}
+
+.heading2.projectspreview_header span{
+    font-size:24px;
+    font-weight: 500;
+}
+
+.projectspreview_images{
+display: flex;
+flex-direction: column;
+gap:24px;
+}
+
+.projectspreview_images img{
+border-radius: 20px;
+width: 100%;
+}
+
+.projectspreview_image_primary{
+    width:100%;
+}
+
+.projectspreview_image_row{
+    display:flex;
+    justify-content:space-between;
+    gap:24px;
+}
+
