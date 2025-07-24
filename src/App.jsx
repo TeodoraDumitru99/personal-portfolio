@@ -2,6 +2,7 @@ import HeroSection from "./components/herosection/HeroSection";
 import Profile from "./components/profile/Profile";
 import Expertise from "./components/expertise/Expertise";
 import ProjectsPreview from "./components/projectspreview/ProjectsPreview";
+import Planet from "./components/planet/Planet";
 import Navbar from "./components/navbar/Navbar";
 import Technologies from "./components/technologies/Technologies";
 import Collaborate from "./components/collaborate/Collaborate";
@@ -37,6 +38,7 @@ function App() {
                     <Profile />
                     <Expertise />
                     <ProjectsPreview />
+                    <Planet />
                     <Technologies />
                     <Collaborate />
                   </>
