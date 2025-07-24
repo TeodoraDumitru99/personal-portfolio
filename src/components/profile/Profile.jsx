@@ -7,7 +7,7 @@ const Profile = () => {
       <div className="wrapper">
         <div className="profile_content">
           <div className="profile_primary">
-            <h1 className="heading2">
+            <h1 className="heading2 profile_heading">
               <p>
                 <span>I'm </span>Teodora Dumitru<span>,</span>
               </p>
