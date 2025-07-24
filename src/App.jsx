@@ -39,8 +39,12 @@ function App() {
                     <Expertise />
                     <ProjectsPreview />
                     <Planet />
-                    <Approach />
-                    <Collaborate />
+                    <div className="dark_background">
+                      <>
+                        <Approach />
+                        <Collaborate />
+                      </>
+                    </div>
                   </>
                 }
               />

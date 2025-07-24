@@ -185,7 +185,7 @@ const Planet = () => {
   }, []);
 
   return (
-    <section className="planet">
+    <section className="planet section">
       <div className="wrapper">
         <div className="planet_content">
           <h2 className="heading2 planet_heading">

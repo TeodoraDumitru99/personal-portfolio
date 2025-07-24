@@ -26,7 +26,7 @@ const HeroSection = () => {
   ];
 
   return (
-    <section className="herosection">
+    <section className="herosection section">
       <div className="wrapper">
         <div className="herosection_content">
           <img

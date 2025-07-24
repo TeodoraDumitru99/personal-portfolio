@@ -3,7 +3,7 @@ import StarPointImg from "../assets/approachImages/star_light.png";
 
 const Approach = () => {
   return (
-    <section className="approach">
+    <section className="approach section">
       <div className="wrapper">
         <div className="approach_content">
           <h2 className="heading2 approach_heading">

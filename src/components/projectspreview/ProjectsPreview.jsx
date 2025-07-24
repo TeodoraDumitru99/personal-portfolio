@@ -5,7 +5,7 @@ import LampThumbnailImg from "../assets/projectspreviewImages/Lamp Thumbnail.png
 
 const ProjectsPreview = () => {
   return (
-    <section className="projectpreview">
+    <section className="projectpreview section">
       <div className="wrapper">
         <div className="projectpreview_content">
           <h2 className="heading2 projectspreview_header">

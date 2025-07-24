@@ -28,7 +28,7 @@ const Expertise = () => {
     },
   ];
   return (
-    <section className="expertise">
+    <section className="expertise section">
       <div className="wrapper">
         <div className="expertise_content">
           <h2 className="heading2">Expertise</h2>

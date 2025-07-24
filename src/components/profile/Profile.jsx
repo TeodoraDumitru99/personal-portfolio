@@ -3,7 +3,7 @@ import StarPointImg from "../assets/profileImages/star point.png";
 
 const Profile = () => {
   return (
-    <section className="profile">
+    <section className="profile section">
       <div className="wrapper">
         <div className="profile_content">
           <div className="profile_primary">
