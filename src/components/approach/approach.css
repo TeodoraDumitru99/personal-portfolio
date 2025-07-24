@@ -1,0 +1,41 @@
+.approach{
+    background-color: #101012;
+}
+
+.approach_content{
+    display: flex;
+    justify-content: space-between;
+    min-height: 800px;
+}
+
+.approach_heading{
+    color: white;
+    padding-top:60px;
+}
+
+.approach_heading span{
+    color:#ADADAD;
+    font-size:500;
+}
+
+.approach_column{
+    display:flex;
+    flex-direction:column;
+    gap:40px;
+    justify-content: flex-end;
+    padding-bottom: 140px;
+}
+.approach_point{
+    display:flex;
+    gap:24px;
+    align-items: center;
+    max-width:540px;
+    font-size: 18px;
+    text-align: justify;
+    color:#ADADAD;
+}
+
+.approach_point img{
+width:100%;
+max-width: 30px;
+}

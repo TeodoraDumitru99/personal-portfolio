@@ -3,6 +3,7 @@ import Profile from "./components/profile/Profile";
 import Expertise from "./components/expertise/Expertise";
 import ProjectsPreview from "./components/projectspreview/ProjectsPreview";
 import Planet from "./components/planet/Planet";
+import Approach from "./components/approach/Approach";
 import Navbar from "./components/navbar/Navbar";
 import Collaborate from "./components/collaborate/Collaborate";
 import Footer from "./components/footer/Footer";
@@ -38,6 +39,7 @@ function App() {
                     <Expertise />
                     <ProjectsPreview />
                     <Planet />
+                    <Approach />
                     <Collaborate />
                   </>
                 }
