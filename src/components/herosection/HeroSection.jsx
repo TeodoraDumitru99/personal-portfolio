@@ -26,22 +26,22 @@ const HeroSection = () => {
   ];
 
   return (
-    <section className="approach">
+    <section className="herosection">
       <div className="wrapper">
-        <div className="approach_content">
+        <div className="herosection_content">
           <img
-            className="approach_blur_primary"
+            className="herosection_blur_primary"
             loading="lazy"
             src={Blur1Img}
             alt="Blur Image"
           />
           <img
-            className="approach_blur_secondary"
+            className="herosection_blur_secondary"
             loading="lazy"
             src={Blur2Img}
             alt="Blur Image"
           />
-          <div className="approach_heading">
+          <div className="herosection_heading">
             <h1 className="heading1">
               <p>Achieve powerful</p>
               <p>results through</p>
@@ -51,13 +51,13 @@ const HeroSection = () => {
               changing the world pixel by pixel
             </h3>
           </div>
-          <div className="approach_portfolio">
-            <p className="approach_port_button">SEE PORTFOLIO</p>
-            <div className="approach_thumbnails">
+          <div className="herosection_portfolio">
+            <p className="herosection_port_button">SEE PORTFOLIO</p>
+            <div className="herosection_thumbnails">
               {textContent.map(({ id, imgsrc, alt }) => (
-                <div key={id} className="approach_thumbnail">
+                <div key={id} className="herosection_thumbnail">
                   <img
-                    className="approach_image"
+                    className="herosectionh_image"
                     loading="lazy"
                     src={imgsrc}
                     alt={alt}
@@ -65,7 +65,7 @@ const HeroSection = () => {
                 </div>
               ))}
             </div>
-            <p className="approach_port_button">VIEW PROFILE</p>
+            <p className="herosection_port_button">VIEW PROFILE</p>
           </div>
         </div>
       </div>
