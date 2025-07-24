@@ -200,7 +200,9 @@ const Planet = () => {
               <span>system</span>
             </p>
           </h2>
-          <p className="planet_point">- just like gravity in an orbit.</p>
+          <p className="heading3 planet_heading3">
+            - just like gravity in an orbit.
+          </p>
         </div>
       </div>
       <div className="planet_planet" ref={containerRef}></div>

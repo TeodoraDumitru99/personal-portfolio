@@ -31,9 +31,10 @@
   gap:40px;
 }
 
-.herosection_h3{
+.herosection_heading3{
    color:#545454;
 }
+
 .herosection_portfolio{
   display:flex;
   justify-content: center;

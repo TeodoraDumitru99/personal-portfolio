@@ -47,7 +47,7 @@ const HeroSection = () => {
               <p>results through</p>
               <p>digital ideas</p>
             </h1>
-            <h3 className="heading3 approach_h3">
+            <h3 className="heading3 herosection_heading3">
               changing the world pixel by pixel
             </h3>
           </div>
@@ -57,7 +57,7 @@ const HeroSection = () => {
               {textContent.map(({ id, imgsrc, alt }) => (
                 <div key={id} className="herosection_thumbnail">
                   <img
-                    className="herosectionh_image"
+                    className="herosection_image"
                     loading="lazy"
                     src={imgsrc}
                     alt={alt}
