@@ -12,7 +12,7 @@ const Profile = () => {
                 <span>I'm </span>Teodora Dumitru<span>,</span>
               </p>
               <p>
-                UI/UX Designer<span> with a</span>
+                UI / UX Designer<span> with a</span>
               </p>
               <p>
                 <span>strong</span> Frontend<span> foundation</span>
@@ -23,7 +23,7 @@ const Profile = () => {
             <a className="route" href="/about">
               ABOUT
             </a>
-            <div className="profile_point">
+            <div className="profile_point body_text">
               <img
                 className="profile_star"
                 loading="lazy"
@@ -35,7 +35,7 @@ const Profile = () => {
                 systems and interaction.
               </p>
             </div>
-            <div className="profile_point">
+            <div className="profile_point body_text">
               <img
                 className="profile_star"
                 loading="lazy"
