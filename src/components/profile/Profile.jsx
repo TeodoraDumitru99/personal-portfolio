@@ -20,7 +20,9 @@ const Profile = () => {
             </h1>
           </div>
           <div className="profile_secondary">
-            <span>ABOUT</span>
+            <a className="route" href="/about">
+              ABOUT
+            </a>
             <div className="profile_point">
               <img
                 className="profile_star"
