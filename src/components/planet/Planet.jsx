@@ -9,14 +9,13 @@ const Planet = () => {
 
   useEffect(() => {
     const container = containerRef.current;
-    // scene.background = new THREE.Color("#101012");
     if (!container) {
       console.error("containerRef.current is null. Skipping initialization");
       return;
     }
 
     const scene = new THREE.Scene();
-    scene.background = new THREE.Color("#0f0f1c");
+    scene.background = new THREE.Color("#101012");
 
     const camera = new THREE.PerspectiveCamera(
       90,
@@ -30,12 +29,6 @@ const Planet = () => {
     renderer.shadowMap.enabled = true;
     renderer.outputEncoding = THREE.SRGBColorSpace;
     container.appendChild(renderer.domElement);
-    // // Debug: Log container dimensions
-    // console.log(
-    //   "Container dimensions:",
-    //   containerRef.current.clientWidth,
-    //   containerRef.current.clientHeight
-    // );
 
     //Resize Handling
     const onWindowResize = () => {
@@ -205,15 +198,13 @@ const Planet = () => {
       <div className="wrapper">
         <div className="hero_content">
           <div className="hero_text">
-            <div className="hero_column1">
-              <span className="heading3  planet_heading1">
-                Every detail matters in a
-              </span>
-              <h2 className="heading2">well-designed system</h2>
+            <div className="hero_column hero_column1">
+              <span className="heading3">Every detail matters in a</span>
+              <h2 className="heading2 planet_heading">well-designed system</h2>
             </div>
-            <div className="hero_column2">
-              <span className="heading3 planet_heading2">just like </span>
-              <h2 className="heading2 ">gravity in an orbit</h2>
+            <div className="hero_column hero_column2">
+              <span className="heading3">just like </span>
+              <h2 className="heading2 planet_heading">gravity in an orbit</h2>
             </div>
           </div>
         </div>
