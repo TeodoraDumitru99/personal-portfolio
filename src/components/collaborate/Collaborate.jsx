@@ -8,8 +8,10 @@ const Collaborate = () => {
         <div className="collaborate_content">
           <h2 className="collaborate_heading heading2">Collaborate</h2>
           <div className="collaborate_text">
-            <p className="collaborate_primary">Have a project in mind?</p>
             <div className="collaborate_secondary">
+              <p className="collaborate_primary heading3">
+                Have a project in mind?
+              </p>
               <div className="collaborate_point">
                 <img
                   className="collaborate_star"
@@ -17,7 +19,7 @@ const Collaborate = () => {
                   src={StarPointImg}
                   alt="Star Point Icon"
                 />
-                <p>
+                <p className="body_text">
                   Whether it's a web page, an illustration, or a creative
                   discussion, feel free to send me a message.
                 </p>
@@ -29,12 +31,12 @@ const Collaborate = () => {
                   src={StarPointImg}
                   alt="Star Point Icon"
                 />
-                <p>
+                <p className="body_text">
                   If you are ready to build something impactful together, let's
                   collaborate!
                 </p>
               </div>
-              <a className="collaborate_button" href="/contact">
+              <a className="collaborate_button route" href="/contact">
                 CONTACT
               </a>
             </div>

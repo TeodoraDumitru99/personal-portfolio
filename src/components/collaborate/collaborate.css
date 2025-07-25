@@ -4,9 +4,9 @@
 
 .collaborate_content{
   display:flex;
-  flex-direction: column;
   gap:40px;
   min-height: 800px;
+  justify-content: space-between;
 }
 
 .collaborate_text{
@@ -21,9 +21,7 @@
 }
 
 .collaborate_primary{
-  color:#ADADAD;
-  font-size:40px;
-  font-weight: 400;
+  color:white;
 }
 
 .collaborate_secondary{
@@ -38,7 +36,6 @@
     gap:24px;
     align-items: center;
     max-width:540px;
-    font-size: 18px;
     text-align: justify;
     color:#ADADAD;
 }
@@ -49,9 +46,27 @@ max-width: 30px;
 }
 
 .collaborate_button{
-  text-decoration: none;
   color:white;
-  font-size: 24px;
-  font-weight: 500;
   padding-left:54px;
+}
+
+@media (max-width: 900px) {
+  .collaborate_content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 100px;
+    min-height:400px;
+  }
+
+  .collaborate_point {
+    flex-direction: column;
+  }
+  .collaborate_point p {
+    text-align: center;
+  }
+
+  .collaborate_button{
+  padding-left:0;
+}
 }
