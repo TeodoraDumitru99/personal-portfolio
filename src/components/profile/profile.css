@@ -48,6 +48,10 @@ max-width: 30px;
     min-height: 400px;
     gap:100px;
    }
+
+   .profile_point p{
+    text-align: center;
+   }
 }
 
 @media(max-width:700px){
