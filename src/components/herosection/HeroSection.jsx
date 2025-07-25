@@ -54,7 +54,7 @@ const HeroSection = () => {
             </h3>
           </div>
           <div className="herosection_portfolio">
-            <a className="route" href="/projects">
+            <a className="route herosection_route" href="/projects">
               SEE PORTFOLIO
             </a>
             <div className="herosection_thumbnails">
@@ -69,7 +69,7 @@ const HeroSection = () => {
                 </div>
               ))}
             </div>
-            <a className="route" href="/about">
+            <a className="route herosection_route" href="/about">
               VIEW PROFILE
             </a>
           </div>
