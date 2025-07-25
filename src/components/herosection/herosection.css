@@ -5,7 +5,7 @@
 .herosection_content{
   display:flex;
   flex-direction:column;
-  gap:180px;
+  gap:100px;
 }
 
 .herosection_blurs{
@@ -55,4 +55,8 @@
 .herosection_image{
 width:100%;
 max-width:220px;
+}
+
+.herosection_portfolio a{
+  z-index:1;
 }

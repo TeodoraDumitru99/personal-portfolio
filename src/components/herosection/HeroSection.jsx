@@ -52,7 +52,9 @@ const HeroSection = () => {
             </h3>
           </div>
           <div className="herosection_portfolio">
-            <p className="herosection_port_button">SEE PORTFOLIO</p>
+            <a className="route" href="/projects">
+              SEE PORTFOLIO
+            </a>
             <div className="herosection_thumbnails">
               {textContent.map(({ id, imgsrc, alt }) => (
                 <div key={id} className="herosection_thumbnail">
@@ -65,7 +67,9 @@ const HeroSection = () => {
                 </div>
               ))}
             </div>
-            <p className="herosection_port_button">VIEW PROFILE</p>
+            <a className="route" href="/about">
+              VIEW PROFILE
+            </a>
           </div>
         </div>
       </div>

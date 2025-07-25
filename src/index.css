@@ -56,3 +56,10 @@ html, body{
 .body_text{
   font-size:20px;
 }
+
+.route{
+  font-size:24px;
+font-weight:500;
+text-decoration: none;
+color:black;
+}
