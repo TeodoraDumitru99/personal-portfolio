@@ -38,10 +38,13 @@ const Expertise = () => {
                 key={id}
                 className={`expertise_card ${id % 2 === 1 ? "reverse" : ""}`}
               >
-                <span>{title}</span>
-                <div>
+                <span className="heading3 expertise_card_heading">{title}</span>
+                <div className="expertise_card_container">
                   <img loading="lazy" src={imgsrc} alt={alt} />
-                  <p>{text}</p>
+                  <div className="body_text expertise_card_text">
+                    <p className="heading3">{title}</p>
+                    {text}
+                  </div>
                 </div>
               </div>
             ))}
