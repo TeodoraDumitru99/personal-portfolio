@@ -1,7 +1,7 @@
 .hero {
   /* min-height: 100dvh; */
   /* min-height: 800px; */
-  color: #f2eef9;
+  color: #adadad;
   overflow: hidden;
   position: relative;
   z-index: 1;
@@ -26,7 +26,7 @@
 }
 
 .planet_heading{
-  color:#adadad;
+  color:white;
 }
 
 .hero_column1{
