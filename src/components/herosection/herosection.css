@@ -1,11 +1,12 @@
 .herosection{
-  padding:160px 0 120px 0;
+  
 }
 
 .herosection_content{
   display:flex;
   flex-direction:column;
   gap:100px;
+  padding:160px 0 120px 0;
 }
 
 .herosection_blurs{
@@ -14,14 +15,14 @@
 
 .herosection_blur_primary{
   position:absolute;
-  top:-80px;
-  left:-50px;
+  top:-600px;
+  left:-600px;
 }
 
 .herosection_blur_secondary{
   position:absolute;
-  right:0;
-  bottom:120px;
+  right:-120px;
+  top:400px;
 }
 
 .herosection_heading{
@@ -57,6 +58,6 @@ width:100%;
 max-width:220px;
 }
 
-.herosection_portfolio a{
+.herosection_portfolio{
   z-index:1;
 }

@@ -28,7 +28,7 @@ const HeroSection = () => {
   return (
     <section className="herosection section">
       <div className="wrapper">
-        <div className="herosection_content">
+        <div className="herosection_blurs">
           <img
             className="herosection_blur_primary"
             loading="lazy"
@@ -41,6 +41,8 @@ const HeroSection = () => {
             src={Blur2Img}
             alt="Blur Image"
           />
+        </div>
+        <div className="herosection_content">
           <div className="herosection_heading">
             <h1 className="heading1">
               <p>Achieve powerful</p>
