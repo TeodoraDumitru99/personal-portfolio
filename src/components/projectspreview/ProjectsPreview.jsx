@@ -37,6 +37,9 @@ const ProjectsPreview = () => {
               />
             </div>
           </div>
+          <a className="route projects_preview_button" href="/projects">
+            SEE MORE
+          </a>
         </div>
       </div>
     </section>
