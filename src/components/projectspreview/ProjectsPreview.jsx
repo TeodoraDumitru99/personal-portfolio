@@ -9,7 +9,10 @@ const ProjectsPreview = () => {
       <div className="wrapper">
         <div className="projectpreview_content">
           <h2 className="heading2 projectspreview_header">
-            Projects<span>SEE MORE</span>
+            Projects
+            <a className="route" href="/projects">
+              SEE MORE
+            </a>
           </h2>
 
           <div className="projectspreview_images">
