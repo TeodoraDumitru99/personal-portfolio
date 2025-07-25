@@ -39,3 +39,30 @@
 width:100%;
 max-width: 30px;
 }
+
+@media (max-width: 900px) {
+  .approach_content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 100px;
+    min-height:400px;
+  }
+
+  .approach_point {
+    flex-direction: column;
+  }
+  .approach_point p {
+    text-align: center;
+  }
+}
+
+@media(max-width:750px){
+    .approach_content{
+   height:fit-content;
+}
+
+.approach_column{
+    padding-bottom:0;
+}
+}
