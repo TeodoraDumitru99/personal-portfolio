@@ -184,15 +184,6 @@ const Planet = () => {
     };
   }, []);
 
-  const handleDownload = () => {
-    const link = document.createElement("a");
-    link.href = "/Teodora Dumitru Resume.pdf"; //imports PDF file path
-    link.download = "Teodora Dumitru Resume.pdf";
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
-
   return (
     <section className="hero">
       <div className="wrapper">
