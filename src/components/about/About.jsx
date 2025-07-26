@@ -4,10 +4,10 @@ const About = () => {
   const descriptionContent = [
     {
       id: 0,
-      title: "Frontend Developer with a Passion for User-Centered Design",
+      title: "UI / UX Designer with a strong Frontend foundation",
       text: (
         <>
-          Hello! I'm a <b>Frontend Developer</b> with a strong foundation in
+          Hello! I'm a <b>UI / UX Designer</b> with a strong foundation in
           creating user-friendly, visually appealing, and functional digital
           experiences. I am currently working as a Web Developer at Zummit
           Infolabs, where I design projects in tools like <b>React.js</b>,{" "}
@@ -89,12 +89,12 @@ const About = () => {
   return (
     <section className="about">
       <div className="wrapper">
-        <h2 className="about_title">About</h2>
         <div className="about_content">
+          <h2 className="about_title heading1">About</h2>
           {descriptionContent.map(({ id, title, text }) => (
             <div key={id} className="about_div">
-              <h3 className="about_header">{title}</h3>
-              <div className="about_text">{text}</div>
+              <h3 className="about_header heading3">{title}</h3>
+              <div className="about_text body_text">{text}</div>
             </div>
           ))}
         </div>
@@ -104,5 +104,3 @@ const About = () => {
 };
 
 export default About;
-
-// {accordionContent.map(({ id, title, text, shorttext, imgsrc }) => ())}
