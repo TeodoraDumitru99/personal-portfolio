@@ -27,21 +27,19 @@ const HeroSection = () => {
 
   return (
     <section className="herosection section">
+      <img
+        className="herosection_blur_primary"
+        loading="lazy"
+        src={Blur1Img}
+        alt="Blur Image"
+      />
+      <img
+        className="herosection_blur_secondary"
+        loading="lazy"
+        src={Blur2Img}
+        alt="Blur Image"
+      />
       <div className="wrapper">
-        <div className="herosection_blurs">
-          <img
-            className="herosection_blur_primary"
-            loading="lazy"
-            src={Blur1Img}
-            alt="Blur Image"
-          />
-          <img
-            className="herosection_blur_secondary"
-            loading="lazy"
-            src={Blur2Img}
-            alt="Blur Image"
-          />
-        </div>
         <div className="herosection_content">
           <div className="herosection_heading">
             <h1 className="heading1">
