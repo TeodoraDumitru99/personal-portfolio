@@ -13,12 +13,12 @@ import { Link } from "react-router-dom";
 const Projects = () => {
   const cardsContent = [
     {
-      category: "Web Applications",
+      category: "Applications",
       projects: [
         {
           id: 0,
           title: "Nexio App",
-          desc: "UI/UX Design & Prototype for an online store mobile app, aimed to make your online shopping easy and fun, built with Figma.",
+          desc: "UI/UX Design & Prototype for an online store mobile app, aimed to make your online shopping easy and fun.",
           alt: "Nexio App Image",
           imgsrc: NexioPreview,
           ahref: "/projects/nexio",
@@ -26,7 +26,7 @@ const Projects = () => {
         {
           id: 1,
           title: "DueMark Blog",
-          desc: "UI/UX Design for a professional legal blog, aimed at legal practitioners that support community-driven discussions, built with Figma.",
+          desc: "UI/UX Design for a professional blog, aimed at legal practitioners that support community-driven discussions.",
           alt: "DueMark Blog Image",
           imgsrc: DueMarkBlogImg,
           ahref: "/projects/duemarkblog",
@@ -34,7 +34,7 @@ const Projects = () => {
         {
           id: 2,
           title: "DueMark",
-          desc: "UI/UX Design for a global trademark services provider that specializes in renewals and IP management, built with Figma.",
+          desc: "UI/UX Design for a global trademark services provider that specializes in renewals and IP management.",
           alt: "DueMark Image",
           imgsrc: DueMarkImg,
           ahref: "/projects/duemark",
@@ -42,27 +42,27 @@ const Projects = () => {
         {
           id: 3,
           title: "Mini Arcade",
-          desc: "UI/UX Design and Frontend Implementation for personal Mini-Arcade web app with classic games, built with React.js and CSS.",
+          desc: "UI/UX Design and Frontend Implementation for personal Arcade Application with classic games.",
           alt: "Mini Arcade Website Image",
           imgsrc: MiniArcadeImg,
           ahref: "https://arcademini.netlify.app/",
         },
-        {
-          id: 4,
-          title: "Zummpath",
-          desc: "UI/UX Design and Frontend Implementation for Quantumzyme's Industrial Training Program, built with React.js and Tailwind.",
-          alt: "Zummpath Website Image",
-          imgsrc: ZummpathImg,
-          ahref: "https://zummpath-bio-informatics.vercel.app/",
-        },
-        {
-          id: 5,
-          title: "Bias Zero",
-          desc: "UI/UX Design and User Flow Mapping for Zummmit Infolabs' AI Project - Bias Zero, built with Figma and Adobe Photoshop.",
-          alt: "Bias Zero Website Image",
-          imgsrc: BiasZeroImg,
-          ahref: "https://biaszero.zummitlabs.com/",
-        },
+        // {
+        //   id: 4,
+        //   title: "Zummpath",
+        //   desc: "UI/UX Design and Frontend Implementation for Quantumzyme's Industrial Training Program.",
+        //   alt: "Zummpath Website Image",
+        //   imgsrc: ZummpathImg,
+        //   ahref: "https://zummpath-bio-informatics.vercel.app/",
+        // },
+        // {
+        //   id: 5,
+        //   title: "Bias Zero",
+        //   desc: "UI/UX Design and User Flow Mapping for Zummmit Infolabs' AI Project - Bias Zero, built with Figma and Adobe Photoshop.",
+        //   alt: "Bias Zero Website Image",
+        //   imgsrc: BiasZeroImg,
+        //   ahref: "https://biaszero.zummitlabs.com/",
+        // },
       ],
     },
     {
@@ -71,7 +71,7 @@ const Projects = () => {
         {
           id: 0,
           title: "Smart Control Lamp",
-          desc: "Design and Prototype for a smart lamp with remote control, operable via a mobile app or automatically through integrated sensors.",
+          desc: "Prototype of a smart controlled lamp, operable via a mobile app or automatically through integrated sensors.",
           alt: "Smart Control Lamp Image",
           imgsrc: SmartLampImg,
           ahref: "/projects/smart-lamp",
@@ -98,10 +98,10 @@ const Projects = () => {
   return (
     <section className="projects">
       <div className="wrapper">
-        <div className="projects_content">
+        <div className="project_content">
           {cardsContent.map(({ category, projects }) => (
-            <div key={category}>
-              <h2 className="projects_title">{category}</h2>
+            <div className="projects_content_container" key={category}>
+              <h2 className="projects_title heading1">{category}</h2>
               <div className="projects_cards">
                 {projects.map(({ id, title, desc, alt, imgsrc, ahref }) => (
                   <div className="projects_card" key={id}>
@@ -111,11 +111,16 @@ const Projects = () => {
                       alt={alt}
                       className="projects_element_image"
                     />
-                    <h3 className="projects_element_title">{title}</h3>
-                    <p className="projects_element_desc">{desc}</p>
-                    <Link to={ahref} className="projects_element_button">
-                      View More
-                    </Link>
+                    <h3 className="projects_element_title heading3">{title}</h3>
+                    <div className="projects_element_container">
+                      <p className="projects_element_desc body_text">{desc}</p>
+                      <Link
+                        to={ahref}
+                        className="projects_element_button route"
+                      >
+                        View more
+                      </Link>
+                    </div>
                   </div>
                 ))}
               </div>
