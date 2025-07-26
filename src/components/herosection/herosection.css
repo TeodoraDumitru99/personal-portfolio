@@ -19,13 +19,19 @@
 }
 
 .herosection_blur_primary{
-  left:-500px;
-  top:-500px;
+  left:-300px;
+  top:-300px;
+  width:800px;
+  height:800px;
+  opacity:0.8;
 }
 
 .herosection_blur_secondary{
   right:-80px;
   bottom:120px;
+  width:200px;
+  height:200px;
+  opacity:0.8;
 }
 
 
@@ -80,12 +86,12 @@ max-width:220px;
 
 @media(max-width:900px){
 .herosection_blur_primary{
-  left:-800px;
-  top:-800px;
+  left:-300px;
+  top:-300px;
 }
 
 .herosection_blur_secondary{
-  right:-120px;
+  right:-80px;
   top:600px;
 }
   
