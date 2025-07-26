@@ -67,72 +67,72 @@ const Contact = () => {
       alert("Something went wrong. Please try again.");
     }
   };
-};
 
-return (
-  <section className="contact">
-    <div className="wrapper">
-      <div className="contact_content">
-        <h3 className="contact_title heading1">Contact</h3>
-        <div className="contact_container body_text">
-          <p className="contact_text ">
-            You can contact me using my social media links or simply write a
-            message using the form below. Whether it is a project, feedback or
-            recommendation, feel free to reach out. I am sure we can achieve
-            wonderful things together!
-          </p>
-          <form className="contact_form" onSubmit={handleSubmit} noValidate>
-            <div className="contact_form_inputs">
-              <input
-                className="contact_form_input body_text"
-                type="text"
-                name="user_name"
-                placeholder="Your Name"
-                value={formData.user_name}
-                onChange={handleChange}
-                aria-label="Your Name"
-                required
-              />
-              {errors.user_name && (
-                <p className="contact_error_text">{errors.user_name}</p>
-              )}
+  return (
+    <section className="contact">
+      <div className="wrapper">
+        <div className="contact_content">
+          <h3 className="contact_title heading1">Contact</h3>
+          <div className="contact_container body_text">
+            <p className="contact_text ">
+              You can contact me using my social media links or simply write a
+              message using the form below. Whether it is a project, feedback or
+              recommendation, feel free to reach out. I am sure we can achieve
+              wonderful things together!
+            </p>
+            <form className="contact_form" onSubmit={handleSubmit} noValidate>
+              <div className="contact_form_inputs">
+                <input
+                  className="contact_form_input body_text"
+                  type="text"
+                  name="user_name"
+                  placeholder="Your Name"
+                  value={formData.user_name}
+                  onChange={handleChange}
+                  aria-label="Your Name"
+                  required
+                />
+                {errors.user_name && (
+                  <p className="contact_error_text">{errors.user_name}</p>
+                )}
 
-              <input
-                className="contact_form_input body_text"
-                type="email"
-                name="user_email"
-                placeholder="Your Email"
-                value={formData.user_email}
-                onChange={handleChange}
-                aria-label="Your Email"
-                required
-              />
-              {errors.user_email && (
-                <p className="contact_error_text">{errors.user_email}</p>
-              )}
-              <textarea
-                className="contact_form_input contact_form_input--text body_text"
-                name="message"
-                placeholder="Your Message"
-                value={formData.message}
-                onChange={handleChange}
-                aria-label="Your Message"
-                rows={7}
-                required
-              ></textarea>
-              {errors.message && (
-                <p className="contact_error_text">{errors.message}</p>
-              )}
-            </div>
+                <input
+                  className="contact_form_input body_text"
+                  type="email"
+                  name="user_email"
+                  placeholder="Your Email"
+                  value={formData.user_email}
+                  onChange={handleChange}
+                  aria-label="Your Email"
+                  required
+                />
+                {errors.user_email && (
+                  <p className="contact_error_text">{errors.user_email}</p>
+                )}
+                <textarea
+                  className="contact_form_input contact_form_input--text body_text"
+                  name="message"
+                  placeholder="Your Message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  aria-label="Your Message"
+                  rows={7}
+                  required
+                ></textarea>
+                {errors.message && (
+                  <p className="contact_error_text">{errors.message}</p>
+                )}
+              </div>
 
-            <button className="form_button heading3" type="submit">
-              Submit
-            </button>
-          </form>
+              <button className="form_button heading3" type="submit">
+                Submit
+              </button>
+            </form>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
-);
+    </section>
+  );
+};
 
 export default Contact;
