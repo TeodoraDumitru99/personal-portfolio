@@ -71,9 +71,9 @@ const Contact = () => {
     <section className="contact">
       <div className="wrapper">
         <div className="contact_content">
-          <h3 className="contact_title">Contact</h3>
-          <div className="contact_container">
-            <p className="contact_text">
+          <h3 className="contact_title heading1">Contact</h3>
+          <div className="contact_container body_text">
+            <p className="contact_text ">
               You can contact me using my social media links or simply write a
               message using the form below. Whether it is a project, feedback or
               recommendation, feel free to reach out. I am sure we can achieve
@@ -82,7 +82,7 @@ const Contact = () => {
             <form className="contact_form" onSubmit={handleSubmit} noValidate>
               <div className="contact_form_inputs">
                 <input
-                  className="contact_form_input"
+                  className="contact_form_input body_text"
                   type="text"
                   name="user_name"
                   placeholder="Your Name"
@@ -96,7 +96,7 @@ const Contact = () => {
                 )}
 
                 <input
-                  className="contact_form_input"
+                  className="contact_form_input body_text"
                   type="email"
                   name="user_email"
                   placeholder="Your Email"
@@ -109,7 +109,7 @@ const Contact = () => {
                   <p className="contact_error_text">{errors.user_email}</p>
                 )}
                 <textarea
-                  className="contact_form_input contact_form_input--text"
+                  className="contact_form_input contact_form_input--text body_text"
                   name="message"
                   placeholder="Your Message"
                   value={formData.message}
@@ -123,7 +123,7 @@ const Contact = () => {
                 )}
               </div>
 
-              <button className="form_button" type="submit">
+              <button className="form_button heading3" type="submit">
                 Submit
               </button>
             </form>
