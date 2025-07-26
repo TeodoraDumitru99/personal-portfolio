@@ -31,13 +31,13 @@ const HeroSection = () => {
         className="herosection_blur_primary"
         loading="lazy"
         src={Blur1Img}
-        alt="Blur Image"
+        alt="Blur"
       />
       <img
         className="herosection_blur_secondary"
         loading="lazy"
         src={Blur2Img}
-        alt="Blur Image"
+        alt="Blur"
       />
       <div className="wrapper">
         <div className="herosection_content">
