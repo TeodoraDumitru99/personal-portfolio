@@ -20,20 +20,20 @@ const ProjectsPreview = () => {
               className="projectspreview_image_primary"
               loading="lazy"
               src={NexioThumbnailImg}
-              alt="Nexio Thumbnail Image"
+              alt="Nexio Thumbnail"
             />
             <div className="projectspreview_image_row">
               <img
                 className="projectspreview_image_secondary"
                 loading="lazy"
                 src={DuemarkBlogThumbnailImg}
-                alt="Duemark Blog Thumbnail Image"
+                alt="Duemark Blog Thumbnail"
               />
               <img
                 className="projectspreview_image_secondary"
                 loading="lazy"
                 src={LampThumbnailImg}
-                alt="Lamp Thumbnail Image"
+                alt="Lamp Thumbnail"
               />
             </div>
           </div>
