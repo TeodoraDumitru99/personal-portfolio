@@ -1,5 +1,4 @@
 import "./contact.css";
-import emailjs from "emailjs-com";
 import { useState } from "react";
 
 const Contact = () => {
@@ -41,107 +40,99 @@ const Contact = () => {
     return Object.keys(newErrors).length === 0; //return true if no errors
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault(); //prevent page relaod on submit
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
-    if (!validateForm()) {
-      return; //stop submission if validation fails
-    }
+    if (!validateForm()) return;
 
-    const handleSubmit = async (e) => {
-      e.preventDefault();
+    try {
+      const response = await fetch("/.netlify/functions/sendEmail", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
 
-      if (!validateForm()) return;
+      const data = await response.json();
 
-      try {
-        const response = await fetch("/.netlify/functions/sendEmail", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(formData),
-        });
-
-        const data = await response.json();
-
-        if (response.ok) {
-          alert("Message sent!");
-          setFormData({ user_name: "", user_email: "", message: "" });
-        } else {
-          alert(`Failed to send message: ${data.error}`);
-        }
-      } catch (error) {
-        console.error("Error:", error);
-        alert("Something went wrong. Please try again.");
+      if (response.ok) {
+        alert("Message sent!");
+        setFormData({ user_name: "", user_email: "", message: "" });
+      } else {
+        alert(`Failed to send message: ${data.error}`);
       }
-    };
+    } catch (error) {
+      console.error("Error:", error);
+      alert("Something went wrong. Please try again.");
+    }
   };
+};
 
-  return (
-    <section className="contact">
-      <div className="wrapper">
-        <div className="contact_content">
-          <h3 className="contact_title heading1">Contact</h3>
-          <div className="contact_container body_text">
-            <p className="contact_text ">
-              You can contact me using my social media links or simply write a
-              message using the form below. Whether it is a project, feedback or
-              recommendation, feel free to reach out. I am sure we can achieve
-              wonderful things together!
-            </p>
-            <form className="contact_form" onSubmit={handleSubmit} noValidate>
-              <div className="contact_form_inputs">
-                <input
-                  className="contact_form_input body_text"
-                  type="text"
-                  name="user_name"
-                  placeholder="Your Name"
-                  value={formData.user_name}
-                  onChange={handleChange}
-                  aria-label="Your Name"
-                  required
-                />
-                {errors.user_name && (
-                  <p className="contact_error_text">{errors.user_name}</p>
-                )}
+return (
+  <section className="contact">
+    <div className="wrapper">
+      <div className="contact_content">
+        <h3 className="contact_title heading1">Contact</h3>
+        <div className="contact_container body_text">
+          <p className="contact_text ">
+            You can contact me using my social media links or simply write a
+            message using the form below. Whether it is a project, feedback or
+            recommendation, feel free to reach out. I am sure we can achieve
+            wonderful things together!
+          </p>
+          <form className="contact_form" onSubmit={handleSubmit} noValidate>
+            <div className="contact_form_inputs">
+              <input
+                className="contact_form_input body_text"
+                type="text"
+                name="user_name"
+                placeholder="Your Name"
+                value={formData.user_name}
+                onChange={handleChange}
+                aria-label="Your Name"
+                required
+              />
+              {errors.user_name && (
+                <p className="contact_error_text">{errors.user_name}</p>
+              )}
 
-                <input
-                  className="contact_form_input body_text"
-                  type="email"
-                  name="user_email"
-                  placeholder="Your Email"
-                  value={formData.user_email}
-                  onChange={handleChange}
-                  aria-label="Your Email"
-                  required
-                />
-                {errors.user_email && (
-                  <p className="contact_error_text">{errors.user_email}</p>
-                )}
-                <textarea
-                  className="contact_form_input contact_form_input--text body_text"
-                  name="message"
-                  placeholder="Your Message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  aria-label="Your Message"
-                  rows={7}
-                  required
-                ></textarea>
-                {errors.message && (
-                  <p className="contact_error_text">{errors.message}</p>
-                )}
-              </div>
+              <input
+                className="contact_form_input body_text"
+                type="email"
+                name="user_email"
+                placeholder="Your Email"
+                value={formData.user_email}
+                onChange={handleChange}
+                aria-label="Your Email"
+                required
+              />
+              {errors.user_email && (
+                <p className="contact_error_text">{errors.user_email}</p>
+              )}
+              <textarea
+                className="contact_form_input contact_form_input--text body_text"
+                name="message"
+                placeholder="Your Message"
+                value={formData.message}
+                onChange={handleChange}
+                aria-label="Your Message"
+                rows={7}
+                required
+              ></textarea>
+              {errors.message && (
+                <p className="contact_error_text">{errors.message}</p>
+              )}
+            </div>
 
-              <button className="form_button heading3" type="submit">
-                Submit
-              </button>
-            </form>
-          </div>
+            <button className="form_button heading3" type="submit">
+              Submit
+            </button>
+          </form>
         </div>
       </div>
-    </section>
-  );
-};
+    </div>
+  </section>
+);
 
 export default Contact;
