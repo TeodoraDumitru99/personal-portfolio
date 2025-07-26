@@ -1,7 +1,5 @@
 import "./projects.css";
-import ZummpathImg from "../assets/Zummpath.png";
 import MiniArcadeImg from "../assets/Mini_Arcade.png";
-import BiasZeroImg from "../assets/Bias_Zero.png";
 import SmartLampImg from "../assets/Smart_Control_Lamp.png";
 import MultifunctionalImg from "../assets/Multifunctional_Storage.png";
 import ModularImg from "../assets/Modular_Bean_Bag.png";
@@ -47,22 +45,6 @@ const Projects = () => {
           imgsrc: MiniArcadeImg,
           ahref: "https://arcademini.netlify.app/",
         },
-        // {
-        //   id: 4,
-        //   title: "Zummpath",
-        //   desc: "UI/UX Design and Frontend Implementation for Quantumzyme's Industrial Training Program.",
-        //   alt: "Zummpath Website Image",
-        //   imgsrc: ZummpathImg,
-        //   ahref: "https://zummpath-bio-informatics.vercel.app/",
-        // },
-        // {
-        //   id: 5,
-        //   title: "Bias Zero",
-        //   desc: "UI/UX Design and User Flow Mapping for Zummmit Infolabs' AI Project - Bias Zero, built with Figma and Adobe Photoshop.",
-        //   alt: "Bias Zero Website Image",
-        //   imgsrc: BiasZeroImg,
-        //   ahref: "https://biaszero.zummitlabs.com/",
-        // },
       ],
     },
     {
