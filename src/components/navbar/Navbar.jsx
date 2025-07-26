@@ -30,7 +30,17 @@ const Navbar = () => {
   }, []);
 
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
+    setIsMenuOpen((prev) => {
+      const newState = !prev;
+
+      if (newState) {
+        document.body.classList.add("no-scroll");
+      } else {
+        document.body.classList.remove("no-scroll");
+      }
+
+      return newState;
+    });
   };
 
   useEffect(() => {
@@ -40,6 +50,7 @@ const Navbar = () => {
 
   const handleNavClick = () => {
     setIsMenuOpen(false);
+    document.body.classList.remove("no-scroll");
     if (window.scrollY > 0) {
       window.scrollTo({ top: 0, behavior: "smooth" });
     }
