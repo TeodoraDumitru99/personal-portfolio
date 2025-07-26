@@ -1,5 +1,4 @@
-const emailjs = require("emailjs-com");
-require(".env").config();
+// const emailjs = require("emailjs-com");
 
 exports.handler = async (event) => {
   try {
