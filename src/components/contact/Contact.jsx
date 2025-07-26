@@ -15,8 +15,6 @@ const Contact = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const apiKey = process.env.REACT_APP_API_KEY;
-
   const validateForm = () => {
     let newErrors = {};
 
@@ -50,21 +48,33 @@ const Contact = () => {
       return; //stop submission if validation fails
     }
 
-    emailjs.send("service_bober", "template_vntxzsc", formData, apiKey).then(
-      (result) => {
-        console.log("Email sent successfully:", result.text);
-        alert("Message sent!");
-        setFormData({
-          user_name: "",
-          user_email: "",
-          message: "",
-        }); //clear form after successful send
-      },
-      (error) => {
-        console.error("Error sending email:", error.text);
-        alert("Failed to send message, please try again.");
+    const handleSubmit = async (e) => {
+      e.preventDefault();
+
+      if (!validateForm()) return;
+
+      try {
+        const response = await fetch("/.netlify/functions/sendEmail", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        });
+
+        const data = await response.json();
+
+        if (response.ok) {
+          alert("Message sent!");
+          setFormData({ user_name: "", user_email: "", message: "" });
+        } else {
+          alert(`Failed to send message: ${data.error}`);
+        }
+      } catch (error) {
+        console.error("Error:", error);
+        alert("Something went wrong. Please try again.");
       }
-    );
+    };
   };
 
   return (
