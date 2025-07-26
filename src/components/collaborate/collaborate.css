@@ -22,6 +22,7 @@
 
 .collaborate_primary{
   color:white;
+  padding-left:54px;
 }
 
 .collaborate_secondary{
@@ -66,7 +67,7 @@ max-width: 30px;
     text-align: center;
   }
 
-  .collaborate_button{
+  .collaborate_button,.collaborate_primary{
   padding-left:0;
 }
 }
