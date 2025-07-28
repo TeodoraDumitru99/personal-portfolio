@@ -38,10 +38,10 @@ function App() {
                     <Profile />
                     <Expertise />
                     <ProjectsPreview />
-                    <Planet />
                     <div className="dark_background">
                       <>
                         <Approach />
+                        <Planet />
                         <Collaborate />
                       </>
                     </div>
