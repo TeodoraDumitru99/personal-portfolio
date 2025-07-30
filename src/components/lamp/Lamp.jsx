@@ -21,7 +21,7 @@ const Lamp = () => {
   return (
     <section className="project">
       <div className="wrapper">
-        <h2 className="title">Smart Control Lamp</h2>
+        <h2 className="heading1 route_heading">Smart Control Lamp</h2>
         <div className="project_content body_text">
           <div className="project_hero">
             <div className="lamp_img_div">
