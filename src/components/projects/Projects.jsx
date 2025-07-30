@@ -66,14 +66,14 @@ const Projects = () => {
           imgsrc: MultifunctionalImg,
           ahref: "/projects/multifunctional-storage",
         },
-        {
-          id: 2,
-          title: "Modular Bean Bag",
-          desc: "Design and Prototype for a modular bean bag family, as part of the Askia Young Designers Award 2022 competition.",
-          alt: "Modular Bean Bag Image",
-          imgsrc: ModularImg,
-          ahref: "/",
-        },
+        // {
+        //   id: 2,
+        //   title: "Modular Bean Bag",
+        //   desc: "Design and Prototype for a modular bean bag family, as part of the Askia Young Designers Award 2022 competition.",
+        //   alt: "Modular Bean Bag Image",
+        //   imgsrc: ModularImg,
+        //   ahref: "/",
+        // },
       ],
     },
   ];
