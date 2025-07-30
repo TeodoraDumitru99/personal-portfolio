@@ -6,7 +6,7 @@ const DueMark = () => {
   return (
     <section className="project">
       <div className="wrapper">
-        <h2 className="title">DueMark</h2>
+        <h2 className="heading1 route_heading">DueMark</h2>
         <div className="body_text multi_content">
           <div className="project_hero multi_hero">
             <div className="multi_img_div">
@@ -17,7 +17,7 @@ const DueMark = () => {
                 src={DueMarkLaptop}
               />
             </div>
-            <div className="project_text multi_text">
+            <div className="multi_text body_text">
               <p>DueMark - Trademark Services Website Redesign</p>
               <p>
                 DueMark is a global trademark services provider that specializes
