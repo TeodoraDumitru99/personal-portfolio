@@ -9,7 +9,7 @@ const DueMarkBlog = () => {
   return (
     <section className="project">
       <div className="wrapper">
-        <h2 className="title">DueMark Blog</h2>
+        <h2 className="heading1 route_heading">DueMark Blog</h2>
         <div className="body_text multi_content">
           <div className="project_hero multi_hero">
             <div className="multi_img_div">
@@ -27,7 +27,7 @@ const DueMarkBlog = () => {
                 academics. The homepage immediately sets a tone of trust and
                 credibility with a clean, structured layout and clear messaging:
                 “Trusted Legal Insights, Simplified.” Visitors are introduced to
-                the blog's purpose—offering expert commentary, real-world case
+                the blog's purpose-offering expert commentary, real-world case
                 studies, and practical insights—through a bold hero section and
                 informative content blocks that emphasize transparency and
                 community.
@@ -48,7 +48,7 @@ const DueMarkBlog = () => {
               <p>
                 This structure strikes a balance between controlled quality
                 (through user verification and admin moderation tools) and
-                organic engagement—key for building a respected and sustainable
+                organic engagement, key for building a respected and sustainable
                 platform in the legal field.
               </p>
             </div>
