@@ -32,7 +32,7 @@ const Multifunctional = () => {
   return (
     <section className="project">
       <div className="wrapper">
-        <h2 className="title">Smart Control Lamp</h2>
+        <h2 className="heading1 route_heading">Multifunctional Storage Unit</h2>
         <div className="body_text multi_content">
           <div className="project_hero multi_hero">
             <div className="multi_img_div">
