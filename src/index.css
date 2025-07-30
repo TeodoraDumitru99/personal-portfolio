@@ -25,7 +25,7 @@ html, body{
   max-width:1400px;
   width:100%;
   margin:0 auto;
-  padding:0 30px;
+  /* padding:0 30px; */
 }
 
 .dark_background{
@@ -34,6 +34,8 @@ html, body{
 .section{
   margin-bottom:100px;
 }
+
+
 .heading1{
   font-size:60px;
   font-weight:600;
@@ -63,6 +65,47 @@ font-size:24px;
 font-weight:500;
 text-decoration: none;
 color:black;
+}
+
+.star_dark{
+  width: auto;
+  max-height: 30px;
+  height:100%;
+  max-width:30px;
+}
+
+.point{
+  display:flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.point_text{
+  display:flex;
+  flex-direction: column;
+  gap:16px;
+  width:100%;
+  max-width: 600px;
+  color:#545454;
+}
+
+.point_question{
+  font-weight:600;
+  color:black;
+}
+
+.point_answer{
+  color:#545454;
+}
+
+.route_content{
+  padding-top: 60px;
+  padding-bottom: 50px;
+}
+
+.route_heading{
+  text-align: center;
+  padding-bottom: 32px;
 }
 
 @media(max-width:1300px){
