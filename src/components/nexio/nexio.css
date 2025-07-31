@@ -140,3 +140,36 @@ height:auto;
 .nexio_design_reverse{
  flex-direction: row-reverse;
 }
+
+.nexio_design_div{
+  background-color:#E9E0F3;
+  display:flex;
+  justify-content:center;
+  width:100dvw;
+  margin-left: calc(-1 * ((100vw - 100%) / 2));
+}
+
+.nexio_mockups{
+align-items:center;
+}
+
+.nexio_mockup_img {
+  width: 100dvw;
+ max-width:1400px;
+  
+}
+
+.nexio_mockups_heading{
+  align-self:flex-end;
+}
+
+.nexio_mockup_fw-green, .nexio_mockup_fw-blue{
+  display:flex;
+  justify-content:center;
+  width:100dvw;
+}
+
+
+.nexio_mockup_fw-blue{
+background-color:#86BDDB;
+}

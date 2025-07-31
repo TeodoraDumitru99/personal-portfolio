@@ -53,6 +53,11 @@ import ProfileScreen from "../assets/nexioImages/Profile.png";
 import NoOrdersScreen from "../assets/nexioImages/No Orders Screen.png";
 import OrdersScreen from "../assets/nexioImages/Orders Screen.png";
 import AccountSettScreen from "../assets/nexioImages/Account Settings creen.png";
+import NexioPattern from "../assets/nexioImages/Nexio Pattern.png";
+import NexioPresentation from "../assets/nexioImages/Presentation.png";
+import NexioMockup from "../assets/nexioImages/Mockup.png";
+import NexioIsometric from "../assets/nexioImages/Iphone Isometric Mockup.png";
+import NexioElements from "../assets/nexioImages/Nexio Elements Mockup.png";
 
 const Nexio = () => {
   const overviewContent = [
@@ -380,6 +385,13 @@ const Nexio = () => {
     },
   ];
 
+  const mockupContent = [
+    { id: 0, imgsrc: NexioPresentation, alt: "Nexio Presentation Mockup" },
+    { id: 1, imgsrc: NexioMockup, alt: "Nexio Mobile Mockup;" },
+    { id: 2, imgsrc: NexioElements, alt: "Nexio Elements Mockup" },
+    { id: 3, imgsrc: NexioIsometric, alt: "Nexio Isometric Mockup" },
+  ];
+
   return (
     <section className="nexio">
       <div className="wrapper">
@@ -593,47 +605,97 @@ const Nexio = () => {
                   </div>
                 </div>
               ))}
-              {DesignContent.map(({ section, content, images }) => (
-                <div
-                  key={section}
-                  className={`nexio_container_row_start ${
-                    section === "Search product" || section === "Account"
-                      ? "nexio_design_reverse"
-                      : "nexio_design"
-                  }`}
-                >
-                  {content.map(({ id, text1, text2 }) => (
-                    <div key={id} className="nexio_container_column">
-                      <p className="heading3 body_text">{section}</p>
-                      <div className="point nexio_container_row_center">
-                        <img
-                          className="star_dark"
-                          loading="lazy"
-                          src={StarPointImg}
-                          alt="Star Point Icon"
-                        />
-                        <p className="body_text point_text">{text1}</p>
-                      </div>
-                      <div className="point nexio_container_row_center">
-                        <img
-                          className="star_dark"
-                          loading="lazy"
-                          src={StarPointImg}
-                          alt="Star Point Icon"
-                        />
-                        <p className="body_text point_text">{text2}</p>
-                      </div>
-                    </div>
-                  ))}
-
-                  <div className="nexio_container_row_start nexio_design_images">
-                    {images.map(({ id, imgsrc, alt }) => (
-                      <img key={id} src={imgsrc} alt={alt} loading="lazy" />
-                    ))}
-                  </div>
+              <div className="nexio_design nexio_container_column">
+                <h3 className="nexio_container_heading heading2">Design</h3>
+                <div className="point">
+                  <img
+                    className="star_dark"
+                    loading="lazy"
+                    src={StarPointImg}
+                    alt="Star Point Icon"
+                  />
+                  <p className="body_text point_text">
+                    Designed to be both visually appealing and highly
+                    functional, the app creates an experience that feels more
+                    like playful discovery than just browsing.
+                  </p>
                 </div>
-              ))}
+                <div className="nexio_design_div">
+                  <img
+                    className="nexio_mockup_img"
+                    loading="lazy"
+                    src={NexioPattern}
+                    alt="Nexio Pattern"
+                  />
+                </div>
+
+                {DesignContent.map(({ section, content, images }) => (
+                  <div
+                    key={section}
+                    className={`nexio_container_row_center ${
+                      section === "Search product" || section === "Account"
+                        ? "nexio_design_reverse"
+                        : "nexio_design_content"
+                    }`}
+                  >
+                    {content.map(({ id, text1, text2 }) => (
+                      <div key={id} className="nexio_container_column">
+                        <p className="heading3 body_text">{section}</p>
+                        <div className="point nexio_container_row_center">
+                          <img
+                            className="star_dark"
+                            loading="lazy"
+                            src={StarPointImg}
+                            alt="Star Point Icon"
+                          />
+                          <p className="body_text point_text">{text1}</p>
+                        </div>
+                        <div className="point nexio_container_row_center">
+                          <img
+                            className="star_dark"
+                            loading="lazy"
+                            src={StarPointImg}
+                            alt="Star Point Icon"
+                          />
+                          <p className="body_text point_text">{text2}</p>
+                        </div>
+                      </div>
+                    ))}
+
+                    <div className="nexio_container_row_start nexio_design_images">
+                      {images.map(({ id, imgsrc, alt }) => (
+                        <img key={id} src={imgsrc} alt={alt} loading="lazy" />
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
+          </div>
+
+          <div className="nexio_container_column nexio_mockups">
+            <h3 className="nexio_container_heading heading2 nexio_mockups_heading">
+              Mockups
+            </h3>
+            {mockupContent.map(({ id, imgsrc, alt }) => (
+              <div
+                key={id}
+                className={`nexio_mockup_div  ${
+                  alt === "Nexio Isometric Mockup"
+                    ? "nexio_mockup_fw-green"
+                    : alt === "Nexio Elements Mockup"
+                    ? "nexio_mockup_fw-blue"
+                    : ""
+                } `}
+              >
+                <img
+                  src={imgsrc}
+                  alt={alt}
+                  loading="lazy"
+                  className="nexio_mockup_img"
+                />
+              </div>
+            ))}
           </div>
         </div>
       </div>
