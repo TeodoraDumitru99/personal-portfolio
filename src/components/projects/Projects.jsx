@@ -2,7 +2,6 @@ import "./projects.css";
 import MiniArcadeImg from "../assets/Mini_Arcade.png";
 import SmartLampImg from "../assets/Smart_Control_Lamp.png";
 import MultifunctionalImg from "../assets/Multifunctional_Storage.png";
-import ModularImg from "../assets/Modular_Bean_Bag.png";
 import DueMarkBlogImg from "../assets/duemark.png";
 import DueMarkImg from "../assets/DueMark_Hero.png";
 import NexioPreview from "../assets/Nexio Preview.png";
