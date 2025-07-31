@@ -413,7 +413,7 @@ const Nexio = () => {
               />
               <h3 className="nexio_container_heading heading2">Overview</h3>
               {overviewContent.map(({ id, question, answer }) => (
-                <div key="id" className="nexio_container_row_start">
+                <div key={id} className="nexio_container_row_start">
                   <img
                     className="star_dark"
                     loading="lazy"
@@ -424,7 +424,7 @@ const Nexio = () => {
                   <div className="point_text">
                     <p className="heading3 point_question">{question}</p>
 
-                    <p className="point_answer body_text">{answer}</p>
+                    <div className="point_answer body_text">{answer}</div>
                   </div>
                 </div>
               ))}
@@ -482,7 +482,7 @@ const Nexio = () => {
             <div className="nexio_process">
               <div className="nexio_process_text">
                 <h3 className="nexio_container_heading heading2">Process</h3>
-                <div key="id" className="point">
+                <div className="point">
                   <img
                     className="star_dark"
                     loading="lazy"
@@ -500,33 +500,24 @@ const Nexio = () => {
                 </div>
               </div>
               <div className="nexio_lowfi_colors nexio_container_row_start">
-                {imageContent
-                  .filter(({ section }) => section !== "Visual Exploration")
-                  .map(({ section, images }) =>
-                    section === "Low Fidelity Wireframes" ? (
-                      <div className="nexio_container_column">
-                        <p className="body_text heading3">{section}</p>
-                        <div
-                          key={section}
-                          className="nexio_container_row_start nexio_lowfi"
-                        >
-                          {images.map(({ id, imgsrc, alt }) => (
-                            <img
-                              className="nexio_images"
-                              key={id}
-                              src={imgsrc}
-                              alt={alt}
-                              loading="lazy"
-                            />
-                          ))}
-                        </div>
+                {imageContent.map(({ section, images }) => (
+                  <div className="nexio_container_column" key={section}>
+                    <p className="body_text heading3">{section}</p>
+
+                    {section === "Low Fidelity Wireframes" ? (
+                      <div className="nexio_container_row_start nexio_lowfi">
+                        {images.map(({ id, imgsrc, alt }) => (
+                          <img
+                            className="nexio_images"
+                            key={id}
+                            src={imgsrc}
+                            alt={alt}
+                            loading="lazy"
+                          />
+                        ))}
                       </div>
-                    ) : (
-                      <div
-                        key={section}
-                        className="nexio_container_column nexio_colors"
-                      >
-                        <p className="body_text heading3">{section}</p>
+                    ) : section === "Color Exploration" ? (
+                      <>
                         <div className="nexio_container_column">
                           {images.slice(0, 2).map(({ id, imgsrc, alt }) => (
                             <img
@@ -560,9 +551,22 @@ const Nexio = () => {
                             />
                           ))}
                         </div>
+                      </>
+                    ) : (
+                      <div className="nexio_container_row_start nexio_wireframes">
+                        {images.map(({ id, imgsrc, alt }) => (
+                          <img
+                            key={id}
+                            src={imgsrc}
+                            alt={alt}
+                            loading="lazy"
+                            className="nexio_images"
+                          />
+                        ))}
                       </div>
-                    )
-                  )}
+                    )}
+                  </div>
+                ))}
               </div>
 
               {imageContent
@@ -583,7 +587,7 @@ const Nexio = () => {
                     </div>
                   </div>
                 ))}
-              <div key="id" className="nexio_process_point point">
+              <div className="nexio_process_point point">
                 <img
                   className="star_dark"
                   loading="lazy"
