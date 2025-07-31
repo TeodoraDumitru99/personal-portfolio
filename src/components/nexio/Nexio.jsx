@@ -287,17 +287,17 @@ const Nexio = () => {
       images: [
         {
           id: 0,
-          imgsrc: NoOrdersScreen,
+          imgsrc: HeaderNavImg,
           alt: "No Orders Screen",
         },
         {
           id: 1,
-          imgsrc: OrdersScreen,
+          imgsrc: CategoryChipImg,
           alt: "Orders Screen",
         },
         {
           id: 2,
-          imgsrc: AccountSettScreen,
+          imgsrc: SearchListImg,
           alt: "SAccount Settings Screen",
         },
       ],
@@ -339,13 +339,13 @@ const Nexio = () => {
       ],
     },
     {
-      section: "Account benefits",
+      section: "Profile",
       content: [
         {
           id: 0,
-          text1: "Track all your orders from the profile section.",
-          text2:
-            "Find all your vouchers, pre-saved payment options or any account setting in your profile section.",
+          text1:
+            "Use as guest or create an account in just a couple of seconds. Mark your goals and your interest and you are ready to use the app.",
+          text2: "Create themed wishlists for all your favourite products.",
         },
       ],
       images: [
@@ -360,6 +360,22 @@ const Nexio = () => {
           alt: "Onboarding Interests Screen",
         },
         { id: 2, imgsrc: ProfileScreen, alt: "rofile Screen" },
+      ],
+    },
+    {
+      section: "Account",
+      content: [
+        {
+          id: 0,
+          text1: "Track all your orders from the profile section.",
+          text2:
+            "Find all your vouchers, pre-saved payment options or any account setting in your profile section.",
+        },
+      ],
+      images: [
+        { id: 0, imgsrc: AccountSettScreen, alt: "Account Settings Screen" },
+        { id: 1, imgsrc: NoOrdersScreen, alt: "No Orders Screen" },
+        { id: 2, imgsrc: OrdersScreen, alt: "Orders Screen" },
       ],
     },
   ];
@@ -385,7 +401,7 @@ const Nexio = () => {
               />
               <h3 className="nexio_container_heading heading2">Overview</h3>
               {overviewContent.map(({ id, question, answer }) => (
-                <div key="id" className="point">
+                <div key="id" className="nexio_container_row_start">
                   <img
                     className="star_dark"
                     loading="lazy"
@@ -477,7 +493,7 @@ const Nexio = () => {
                   .map(({ section, images }) =>
                     section === "Low Fidelity Wireframes" ? (
                       <div className="nexio_container_column">
-                        <p className="body_text nexio_label">{section}</p>
+                        <p className="body_text heading3">{section}</p>
                         <div
                           key={section}
                           className="nexio_container_row_start nexio_lowfi"
@@ -497,7 +513,7 @@ const Nexio = () => {
                         key={section}
                         className="nexio_container_column nexio_colors"
                       >
-                        <p className="body_text nexio_label">{section}</p>
+                        <p className="body_text heading3">{section}</p>
                         <div className="nexio_container_column">
                           {images.slice(0, 2).map(({ id, imgsrc, alt }) => (
                             <img
@@ -537,7 +553,7 @@ const Nexio = () => {
                 .filter(({ section }) => section === "Visual Exploration")
                 .map(({ section, images }) => (
                   <div className="nexio_container_column" key={section}>
-                    <p className="body_text nexio_label">{section}</p>
+                    <p className="body_text heading3">{section}</p>
                     <div className="nexio_container_row_start nexio_wireframes">
                       {images.map(({ id, imgsrc, alt }) => (
                         <img key={id} src={imgsrc} alt={alt} loading="lazy" />
@@ -563,7 +579,7 @@ const Nexio = () => {
               </div>
               {elementsContent.map(({ section, images }) => (
                 <div className="nexio_container_column" key={section}>
-                  <p className="body_text nexio_label">{section}</p>
+                  <p className="body_text heading3">{section}</p>
                   <div className="nexio_container_row_center nexio_images">
                     {images.map(({ id, imgsrc, alt }) => (
                       <img
@@ -580,12 +596,16 @@ const Nexio = () => {
               {DesignContent.map(({ section, content, images }) => (
                 <div
                   key={section}
-                  className="nexio_design_section nexio_container_row_start"
+                  className={`nexio_container_row_start ${
+                    section === "Search product" || section === "Account"
+                      ? "nexio_design_reverse"
+                      : "nexio_design"
+                  }`}
                 >
                   {content.map(({ id, text1, text2 }) => (
                     <div key={id} className="nexio_container_column">
-                      <p className="nexio_label body_text">{section}</p>
-                      <div className="point nexio_container_row_start">
+                      <p className="heading3 body_text">{section}</p>
+                      <div className="point nexio_container_row_center">
                         <img
                           className="star_dark"
                           loading="lazy"
@@ -594,7 +614,7 @@ const Nexio = () => {
                         />
                         <p className="body_text point_text">{text1}</p>
                       </div>
-                      <div className="point nexio_container_row_start">
+                      <div className="point nexio_container_row_center">
                         <img
                           className="star_dark"
                           loading="lazy"

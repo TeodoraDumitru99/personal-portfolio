@@ -1,4 +1,8 @@
-
+.nexio_content{
+display:flex;
+flex-direction: column;
+gap:100px;
+}
 
 .nexio_container_row_center{
   display:flex;
@@ -15,7 +19,7 @@
 .nexio_container_column{
   display:flex;
   flex-direction: column;
-  gap:24px;
+  gap:40px;
 }
 
 .nexio_container_heading{
@@ -95,8 +99,13 @@
 .nexio_process{
   display:flex;
   flex-direction: column;
-  /* align-items:flex-end; */
-  gap:40px;
+  gap:80px;
+}
+
+.nexio_process_text{
+  display:flex;
+  flex-direction: column;
+  gap:16px;
 }
 
 .nexio_lowfi img{
@@ -113,10 +122,21 @@ height:auto;
   padding-top:400px;
 }
 
-.nexio_label{
-  color:#4A4A4A;
+
+.nexio_point_header{
+  padding-left:54px;
+  font-weight:500;
+  font-size:24px;
 }
 
 .nexio_process_text,.nexio_colors, .nexio_process_point{
   align-self: flex-end;
+}
+
+.nexio_design, .nexio_design_reverse{
+  justify-content:space-between;
+}
+
+.nexio_design_reverse{
+ flex-direction: row-reverse;
 }
