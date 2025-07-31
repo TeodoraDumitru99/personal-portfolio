@@ -8,9 +8,10 @@ gap:100px;
   display:flex;
   justify-content: space-between;
   align-items: center;
+  gap:24px;
 }
 
-.nexio_container_row_start{
+.nexio_container_row_start, .nexio_container_row_start_cl{
    display:flex;
   gap:24px;
   align-items: flex-start;
@@ -108,12 +109,6 @@ gap:100px;
   gap:16px;
 }
 
-.nexio_lowfi img{
-width:100%;
-max-width:200px;
-height:auto;
-}
-
 .nexio_lowfi_colors{
   justify-content: space-between;
 }
@@ -172,4 +167,39 @@ align-items:center;
 
 .nexio_mockup_fw-blue{
 background-color:#86BDDB;
+}
+
+.nexio_images{
+  width:100%;
+  max-width:300px;
+  height:auto;
+}
+
+.nexio_elements{
+  height:auto;
+}
+
+.nexio_images.arrow_button_image{
+  max-width:64px;
+  width:100%;
+  height:auto;
+}
+
+@media(max-width:1300px){
+  .nexio_colors{
+    padding-top:0;
+  }
+}
+
+
+
+@media(max-width:900px){
+  .nexio_container_row_center, .nexio_container_row_start{
+    flex-direction:column;
+    align-items:center;
+  }
+
+  .nexio_colors, .nexio_process_point{
+    align-self:center;
+  }
 }

@@ -25,7 +25,7 @@ html, body{
   max-width:1400px;
   width:100%;
   margin:0 auto;
-  /* padding:0 30px; */
+  padding:0 50px;
 }
 
 .dark_background{
@@ -141,13 +141,15 @@ color:black;
   margin-bottom:60px;
 }
   
-  .heading1{
+  .heading1, .heading2, .heading3{
     text-align:center;
   }
-  
-  .heading3{
 
+  .body_text, .point_text, .point_question, .point_answer{
     text-align:center;
+  }
+  .point{
+    flex-direction:column;
   }
 }
 

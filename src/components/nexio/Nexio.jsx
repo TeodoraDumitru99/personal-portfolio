@@ -322,8 +322,8 @@ const Nexio = () => {
         },
       ],
       images: [
-        { id: 0, imgsrc: HomeScreen, alt: "Home Screen" },
-        { id: 1, imgsrc: InterestScreen, alt: "Interests Screen" },
+        { idimg: 0, imgsrc: HomeScreen, alt: "Home Screen" },
+        { idimg: 1, imgsrc: InterestScreen, alt: "Interests Screen" },
       ],
     },
     {
@@ -334,13 +334,13 @@ const Nexio = () => {
           text1:
             "Built with familiar search - product flows that have a bit more life to their design.",
           text2:
-            "Filter searches by preferences and check out all the details and options for the product youa re looking for.",
+            "Filter searches by preferences and check out all the details and options for the product you are looking for.",
         },
       ],
       images: [
-        { id: 0, imgsrc: FiltersScreen, alt: "Filters Screen" },
-        { id: 1, imgsrc: SearchScreen, alt: "Search Screen" },
-        { id: 2, imgsrc: ProductScreen, alt: "Product Screen" },
+        { idimg: 0, imgsrc: FiltersScreen, alt: "Filters Screen" },
+        { idimg: 1, imgsrc: SearchScreen, alt: "Search Screen" },
+        { idimg: 2, imgsrc: ProductScreen, alt: "Product Screen" },
       ],
     },
     {
@@ -355,16 +355,16 @@ const Nexio = () => {
       ],
       images: [
         {
-          id: 0,
+          idimg: 0,
           imgsrc: OnboardingGoalsScreen,
           alt: "Onboarding Goals Screen",
         },
         {
-          id: 1,
+          idimg: 1,
           imgsrc: OnboardingInterestsScreen,
           alt: "Onboarding Interests Screen",
         },
-        { id: 2, imgsrc: ProfileScreen, alt: "rofile Screen" },
+        { idimg: 2, imgsrc: ProfileScreen, alt: "rofile Screen" },
       ],
     },
     {
@@ -378,9 +378,9 @@ const Nexio = () => {
         },
       ],
       images: [
-        { id: 0, imgsrc: AccountSettScreen, alt: "Account Settings Screen" },
-        { id: 1, imgsrc: NoOrdersScreen, alt: "No Orders Screen" },
-        { id: 2, imgsrc: OrdersScreen, alt: "Orders Screen" },
+        { idimg: 0, imgsrc: AccountSettScreen, alt: "Account Settings Screen" },
+        { idimg: 1, imgsrc: NoOrdersScreen, alt: "No Orders Screen" },
+        { idimg: 2, imgsrc: OrdersScreen, alt: "Orders Screen" },
       ],
     },
   ];
@@ -512,6 +512,7 @@ const Nexio = () => {
                         >
                           {images.map(({ id, imgsrc, alt }) => (
                             <img
+                              className="nexio_images"
                               key={id}
                               src={imgsrc}
                               alt={alt}
@@ -529,6 +530,7 @@ const Nexio = () => {
                         <div className="nexio_container_column">
                           {images.slice(0, 2).map(({ id, imgsrc, alt }) => (
                             <img
+                              className="nexio_images"
                               key={id}
                               src={imgsrc}
                               alt={alt}
@@ -536,9 +538,10 @@ const Nexio = () => {
                             />
                           ))}
                         </div>
-                        <div className="nexio_container_row_start">
+                        <div className="nexio_container_row_start_cl">
                           {images.slice(2, 4).map(({ id, imgsrc, alt }) => (
                             <img
+                              className="nexio_images"
                               key={id}
                               src={imgsrc}
                               alt={alt}
@@ -546,9 +549,10 @@ const Nexio = () => {
                             />
                           ))}
                         </div>
-                        <div className="nexio_container_row_start">
+                        <div className="nexio_container_row_start_cl">
                           {images.slice(4, 6).map(({ id, imgsrc, alt }) => (
                             <img
+                              className="nexio_images"
                               key={id}
                               src={imgsrc}
                               alt={alt}
@@ -568,7 +572,13 @@ const Nexio = () => {
                     <p className="body_text heading3">{section}</p>
                     <div className="nexio_container_row_start nexio_wireframes">
                       {images.map(({ id, imgsrc, alt }) => (
-                        <img key={id} src={imgsrc} alt={alt} loading="lazy" />
+                        <img
+                          key={id}
+                          src={imgsrc}
+                          alt={alt}
+                          loading="lazy"
+                          className="nexio_images"
+                        />
                       ))}
                     </div>
                   </div>
@@ -592,14 +602,23 @@ const Nexio = () => {
               {elementsContent.map(({ section, images }) => (
                 <div className="nexio_container_column" key={section}>
                   <p className="body_text heading3">{section}</p>
-                  <div className="nexio_container_row_center nexio_images">
+                  <div className="nexio_container_row_center">
                     {images.map(({ id, imgsrc, alt }) => (
                       <img
                         key={id}
                         src={imgsrc}
                         alt={alt}
                         loading="lazy"
-                        className={alt === "Order Card" ? "order_card_img" : ""}
+                        className={`nexio_images ${
+                          alt === "Order Card"
+                            ? "order_card_img"
+                            : alt === "Arrow Button Primary" ||
+                              alt === "Arrow Button Secondary" ||
+                              alt === "Arrow Button Tertiary" ||
+                              alt === "Arrow Button Inverted"
+                            ? "arrow_button_image"
+                            : ""
+                        }`}
                       />
                     ))}
                   </div>
@@ -663,8 +682,14 @@ const Nexio = () => {
                     ))}
 
                     <div className="nexio_container_row_start nexio_design_images">
-                      {images.map(({ id, imgsrc, alt }) => (
-                        <img key={id} src={imgsrc} alt={alt} loading="lazy" />
+                      {images.map(({ idimg, imgsrc, alt }) => (
+                        <img
+                          key={idimg}
+                          src={imgsrc}
+                          alt={alt}
+                          loading="lazy"
+                          className="nexio_images"
+                        />
                       ))}
                     </div>
                   </div>
