@@ -396,48 +396,51 @@ const Nexio = () => {
     <section className="nexio">
       <div className="wrapper">
         <div className="nexio_content route_content">
-          <h2 className="heading1 route_heading">Nexio</h2>
-          <div className="nexio_container_row_center">
-            <div className="nexio_overview">
-              <img
-                className="nexio_blur_large"
-                src={Blur1Img}
-                loading="lazy"
-                alt="Blur"
-              />
-              <img
-                className="nexio_blur_small"
-                src={Blur2Img}
-                loading="lazy"
-                alt="Blur"
-              />
-              <h3 className="nexio_container_heading heading2">Overview</h3>
-              {overviewContent.map(({ id, question, answer }) => (
-                <div key={id} className="nexio_container_row_start">
-                  <img
-                    className="star_dark"
-                    loading="lazy"
-                    src={StarPointImg}
-                    alt="Star Point Icon"
-                  />
+          <div className="nexio_container_column">
+            <h2 className="heading1 route_heading">Nexio</h2>
+            <div className="nexio_container_row_center">
+              <div className="nexio_overview">
+                <img
+                  className="nexio_blur_large"
+                  src={Blur1Img}
+                  loading="lazy"
+                  alt="Blur"
+                />
+                <img
+                  className="nexio_blur_small"
+                  src={Blur2Img}
+                  loading="lazy"
+                  alt="Blur"
+                />
+                <h3 className="nexio_container_heading heading2">Overview</h3>
+                {overviewContent.map(({ id, question, answer }) => (
+                  <div key={id} className="nexio_container_row_start">
+                    <img
+                      className="star_dark"
+                      loading="lazy"
+                      src={StarPointImg}
+                      alt="Star Point Icon"
+                    />
 
-                  <div className="point_text">
-                    <p className="heading3 point_question">{question}</p>
+                    <div className="point_text">
+                      <p className="heading3 point_question">{question}</p>
 
-                    <div className="point_answer body_text">{answer}</div>
+                      <div className="point_answer body_text">{answer}</div>
+                    </div>
                   </div>
-                </div>
-              ))}
-            </div>
-            <div className="nexio_img_div">
-              <img
-                className="nexio_welcome_img"
-                src={NexioWelcomeImg}
-                loading="lazy"
-                alt="Nexio Welcome Page"
-              />
+                ))}
+              </div>
+              <div className="nexio_img_div">
+                <img
+                  className="nexio_welcome_img"
+                  src={NexioWelcomeImg}
+                  loading="lazy"
+                  alt="Nexio Welcome Page"
+                />
+              </div>
             </div>
           </div>
+
           <div className="nexio_container_row_center">
             <div className="nexio_goals_imgs">
               <img
