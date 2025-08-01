@@ -500,26 +500,19 @@ const Nexio = () => {
                 </div>
               </div>
               <div className="nexio_lowfi_colors nexio_container_row_start">
-                {imageContent.map(({ section, images }) => (
-                  <div className="nexio_container_column" key={section}>
-                    <p className="body_text heading3">{section}</p>
+                {imageContent
+                  .filter(
+                    ({ section }) =>
+                      section === "Low Fidelity Wireframes" ||
+                      section === "Color Exploration"
+                  )
+                  .map(({ section, images }) => (
+                    <div className="nexio_container_column" key={section}>
+                      <p className="body_text heading3">{section}</p>
 
-                    {section === "Low Fidelity Wireframes" ? (
-                      <div className="nexio_container_row_start nexio_lowfi">
-                        {images.map(({ id, imgsrc, alt }) => (
-                          <img
-                            className="nexio_images"
-                            key={id}
-                            src={imgsrc}
-                            alt={alt}
-                            loading="lazy"
-                          />
-                        ))}
-                      </div>
-                    ) : section === "Color Exploration" ? (
-                      <>
-                        <div className="nexio_container_column">
-                          {images.slice(0, 2).map(({ id, imgsrc, alt }) => (
+                      {section === "Low Fidelity Wireframes" ? (
+                        <div className="nexio_container_row_start nexio_lowfi">
+                          {images.map(({ id, imgsrc, alt }) => (
                             <img
                               className="nexio_images"
                               key={id}
@@ -529,44 +522,57 @@ const Nexio = () => {
                             />
                           ))}
                         </div>
-                        <div className="nexio_container_row_start_cl">
-                          {images.slice(2, 4).map(({ id, imgsrc, alt }) => (
+                      ) : section === "Color Exploration" ? (
+                        <>
+                          <div className="nexio_container_column">
+                            {images.slice(0, 2).map(({ id, imgsrc, alt }) => (
+                              <img
+                                className="nexio_images"
+                                key={id}
+                                src={imgsrc}
+                                alt={alt}
+                                loading="lazy"
+                              />
+                            ))}
+                          </div>
+                          <div className="nexio_container_row_start_cl">
+                            {images.slice(2, 4).map(({ id, imgsrc, alt }) => (
+                              <img
+                                className="nexio_images"
+                                key={id}
+                                src={imgsrc}
+                                alt={alt}
+                                loading="lazy"
+                              />
+                            ))}
+                          </div>
+                          <div className="nexio_container_row_start_cl">
+                            {images.slice(4, 6).map(({ id, imgsrc, alt }) => (
+                              <img
+                                className="nexio_images"
+                                key={id}
+                                src={imgsrc}
+                                alt={alt}
+                                loading="lazy"
+                              />
+                            ))}
+                          </div>
+                        </>
+                      ) : (
+                        <div className="nexio_container_row_start nexio_wireframes">
+                          {images.map(({ id, imgsrc, alt }) => (
                             <img
-                              className="nexio_images"
                               key={id}
                               src={imgsrc}
                               alt={alt}
                               loading="lazy"
-                            />
-                          ))}
-                        </div>
-                        <div className="nexio_container_row_start_cl">
-                          {images.slice(4, 6).map(({ id, imgsrc, alt }) => (
-                            <img
                               className="nexio_images"
-                              key={id}
-                              src={imgsrc}
-                              alt={alt}
-                              loading="lazy"
                             />
                           ))}
                         </div>
-                      </>
-                    ) : (
-                      <div className="nexio_container_row_start nexio_wireframes">
-                        {images.map(({ id, imgsrc, alt }) => (
-                          <img
-                            key={id}
-                            src={imgsrc}
-                            alt={alt}
-                            loading="lazy"
-                            className="nexio_images"
-                          />
-                        ))}
-                      </div>
-                    )}
-                  </div>
-                ))}
+                      )}
+                    </div>
+                  ))}
               </div>
 
               {imageContent
