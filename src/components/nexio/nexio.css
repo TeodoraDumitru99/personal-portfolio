@@ -59,9 +59,10 @@ gap:100px;
 
 .nexio_img_div{
   width:100%;
-  max-width:700px;
+  max-width:600px;
   display:flex;
   justify-content: center;
+  padding-left:60px;
 }
 
 .nexio_welcome_img{
