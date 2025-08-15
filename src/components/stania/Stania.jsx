@@ -59,7 +59,7 @@ const Stania = () => {
             <div className="stania_overview_content">
               <h3 className="heading2 container_heading">Overview</h3>
               {overviewContent.map(({ id, question, answer }) => (
-                <div id={id} className="container_row_start">
+                <div key={id} className="container_row_start">
                   <img
                     className="star_dark"
                     loading="lazy"
