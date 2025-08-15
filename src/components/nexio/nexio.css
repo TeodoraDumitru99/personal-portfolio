@@ -23,11 +23,6 @@ gap:100px;
   gap:40px;
 }
 
-.nexio_container_heading{
-  color:#4A4A4A;
-  font-weight:600;
-}
-
 .nexio_overview{
   display:flex;
   flex-direction: column;
@@ -201,6 +196,14 @@ background-color:#86BDDB;
   }
 
   .nexio_colors, .nexio_process_point{
+    align-self:center;
+  }
+
+  .nexio_img_div{
+    padding-left:0;
+  }
+
+  .nexio_process_text, .nexio_mockups_heading{
     align-self:center;
   }
 }

@@ -412,7 +412,7 @@ const Nexio = () => {
                   loading="lazy"
                   alt="Blur"
                 />
-                <h3 className="nexio_container_heading heading2">Overview</h3>
+                <h3 className="container_heading heading2">Overview</h3>
                 {overviewContent.map(({ id, question, answer }) => (
                   <div key={id} className="nexio_container_row_start">
                     <img
@@ -457,7 +457,7 @@ const Nexio = () => {
               />
             </div>
             <div className="nexio_goals">
-              <h3 className="nexio_container_heading heading2">Goals</h3>
+              <h3 className="container_heading heading2">Goals</h3>
               <div className="point_text body_text">
                 <p>
                   Design a visually appealing, interest-driven app discovery
@@ -473,7 +473,7 @@ const Nexio = () => {
           </div>
           <div className="nexio_container_column">
             <div className="nexio_inspiration">
-              <h3 className="nexio_container_heading heading2">Inspiration</h3>
+              <h3 className="container_heading heading2">Inspiration</h3>
               <p className="point_text body_text">
                 Your personalized Pinterest board. An organized assortment of
                 pictures that follow the same pattern.
@@ -484,7 +484,7 @@ const Nexio = () => {
           <div className="nexio_container_column">
             <div className="nexio_process">
               <div className="nexio_process_text">
-                <h3 className="nexio_container_heading heading2">Process</h3>
+                <h3 className="container_heading heading2">Process</h3>
                 <div className="point">
                   <img
                     className="star_dark"
@@ -638,7 +638,7 @@ const Nexio = () => {
                 </div>
               ))}
               <div className="nexio_design nexio_container_column">
-                <h3 className="nexio_container_heading heading2">Design</h3>
+                <h3 className="container_heading heading2">Design</h3>
                 <div className="point">
                   <img
                     className="star_dark"
@@ -712,7 +712,7 @@ const Nexio = () => {
           </div>
 
           <div className="nexio_container_column nexio_mockups">
-            <h3 className="nexio_container_heading heading2 nexio_mockups_heading">
+            <h3 className="container_heading heading2 nexio_mockups_heading">
               Mockups
             </h3>
             {mockupContent.map(({ id, imgsrc, alt }) => (
