@@ -5,6 +5,7 @@ import MultifunctionalImg from "../assets/Multifunctional_Storage.png";
 import DueMarkBlogImg from "../assets/duemark.png";
 import DueMarkImg from "../assets/DueMark_Hero.png";
 import NexioPreview from "../assets/Nexio Preview.png";
+import StaniaPreview from "../assets/Stania Preview.png";
 import { Link } from "react-router-dom";
 
 const Projects = () => {
@@ -14,6 +15,14 @@ const Projects = () => {
       projects: [
         {
           id: 0,
+          title: "Stania",
+          desc: "UI/UX Design & Prototype commissioned for a booking page that displays the natural beauty of North Macedonia.",
+          alt: "Stania Booking",
+          imgsrc: StaniaPreview,
+          ahref: "/projects/stania",
+        },
+        {
+          id: 1,
           title: "Nexio App",
           desc: "UI/UX Design & Prototype for an online store mobile app, aimed to make your online shopping easy and fun.",
           alt: "Nexio App",
@@ -21,7 +30,7 @@ const Projects = () => {
           ahref: "/projects/nexio",
         },
         {
-          id: 1,
+          id: 2,
           title: "DueMark Blog",
           desc: "UI/UX Design for a professional blog, aimed at legal practitioners that support community-driven discussions.",
           alt: "DueMark Blog",
@@ -29,7 +38,7 @@ const Projects = () => {
           ahref: "/projects/duemarkblog",
         },
         {
-          id: 2,
+          id: 3,
           title: "DueMark",
           desc: "UI/UX Design for a global trademark services provider that specializes in renewals and IP management.",
           alt: "DueMark",
@@ -37,7 +46,7 @@ const Projects = () => {
           ahref: "/projects/duemark",
         },
         {
-          id: 3,
+          id: 4,
           title: "Mini Arcade",
           desc: "UI/UX Design and Frontend Implementation for personal Arcade Application with classic games.",
           alt: "Mini Arcade Website",
