@@ -1,6 +1,7 @@
 import "./stania.css";
 import StarPointImg from "../assets/profileImages/star point.png";
 import StaniaLaptopMockup from "../assets/staniaImages/Stania Laptop Mockup.png";
+import StaniaGoalImg from "../assets/staniaImages/Goal Images.png";
 import Blur1Img from "../assets/heroImages/Blur Large.png";
 import Blur2Img from "../assets/heroImages/Blur Small.png";
 
@@ -36,6 +37,64 @@ const Stania = () => {
           </ul>
         </>
       ),
+    },
+  ];
+
+  const goalResearchContent = [
+    {
+      section: "Goal",
+      imgsrc: StaniaGoalImg,
+      alt: "Stania Ui Elements",
+
+      text: [
+        {
+          id: 0,
+          text1:
+            "Create a booking platform that highlights the beauty of North Macedonia while also:",
+          text2: (
+            <ul>
+              <li>Offering a familiar but fresh design.</li>
+              <li>Reduce cognitive overload.</li>
+              <li>Improving transparency.</li>
+              <li>Maintaining local relevance.</li>
+              <li>Integrate existing booking behaviors.</li>
+            </ul>
+          ),
+        },
+      ],
+    },
+    {
+      section: "Research",
+      imgsrc: 0,
+      alt: "",
+
+      text: [
+        {
+          id: 1,
+          text1: (
+            <>
+              We analized:
+              <ul>
+                <li>Global booking sites (Booking.com, Airbnb).</li>
+                <li>Patterns users are already familiar with.</li>
+                <li>
+                  Local booking behaviors (interviews with owners & travelers).
+                </li>
+              </ul>
+            </>
+          ),
+          text2: (
+            <>
+              Pain points:
+              <ul>
+                <li>Too much repetitive text.</li>
+                <li>Lack of visual hierarchy → important info is buried.</li>
+                <li>Booking process felt informal and inconsistent.</li>
+              </ul>
+            </>
+          ),
+        },
+      ],
     },
   ];
   return (
@@ -82,6 +141,56 @@ const Stania = () => {
               alt="Stania Laptop Mockup"
             />
           </div>
+
+          {goalResearchContent.map(({ section, imgsrc, alt, text }) => (
+            <div key={section}>
+              {section === "Goal" && (
+                <div className="container_row_center">
+                  <img
+                    className="stania_goal_img"
+                    loading="lazy"
+                    src={imgsrc}
+                    alt={alt}
+                  />
+                  <div className="container_column">
+                    <h3 className="heading2">{section}</h3>
+                    {text.map(({ id, text1, text2 }) => (
+                      <div key={id} className="container_column point_text">
+                        <div className="body_text">{text1}</div>
+                        <div className="body_text">{text2}</div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {section === "Research" && (
+                <div className="container_row_start stania_research">
+                  <div className="container_column">
+                    <h3 className="heading2">{section}</h3>
+                    {text.map(({ id, text1 }) => (
+                      <div key={id} className="body_text point_text">
+                        {text1}
+                      </div>
+                    ))}
+                  </div>
+                  <img
+                    className="stania_blur_research"
+                    src={Blur2Img}
+                    loading="lazy"
+                    alt="Blur"
+                  />
+                  <div className="container_column point_text stania_research_column">
+                    {text.map(({ id, text2 }) => (
+                      <div key={id} className="body_text">
+                        {text2}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+          ))}
         </div>
       </div>
     </section>

@@ -35,11 +35,43 @@ width: 100%;
   opacity:0.6;
 }
 
+.stania_goal{
+  max-width:600px;
+}
+
+.stania_goal_img{
+  width:100%;
+  max-width:500px;
+  height:auto;
+  padding-right:60px;
+}
+
+.stania_research{
+  height:420px;
+  justify-content: space-between;
+  position:relative;
+}
+
+.stania_research_column{
+  align-self: flex-end;
+}
+
+.stania_blur_research{
+  position:absolute;
+  right:10%;
+  width:360px;
+  height:auto;
+  top:-100px;
+}
+
 @media(max-width:1200px){
   
   .stania_overview_img{
   padding-left: 24px;
   max-width: 440px;
+}
+.stania_goal_img{
+  padding-right:24px;
 }
 }
 
@@ -47,4 +79,10 @@ width: 100%;
   .stania_overview_img{
     padding-left:0;
   }
+  .stania_goal_img{
+  padding-right:0;
+}
+.stania_research_column{
+  align-self: center;
+}
 }
