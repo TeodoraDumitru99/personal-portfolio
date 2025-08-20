@@ -1,3 +1,7 @@
+.stania_content{
+  gap:100px;
+}
+
 .stania_overview_content{
 display:flex;
   flex-direction: column;
@@ -64,22 +68,49 @@ width: 100%;
   top:-100px;
 }
 
+.stania_image_block img, .stania_info_arhi img{
+  width:100%;
+  height:auto;
+}
+
+.stania_image_block{
+  width:100%;
+  max-width:600px;
+}
+
+.stania_filters > .stania_image_block{
+  max-width:100%;
+}
+
+.stania_info_img{
+  padding-left:60px;
+}
+
+.stania_ui > .stania_image_block, .stania_dm > .stania_image_block{
+  padding-right:60px;
+}
+
 @media(max-width:1200px){
   
   .stania_overview_img{
   padding-left: 24px;
   max-width: 440px;
 }
-.stania_goal_img{
+
+.stania_info_img{
+    padding-left:24px;
+  }
+
+.stania_goal_img, .stania_ui > .stania_image_block, .stania_dm > .stania_image_block{
   padding-right:24px;
 }
 }
 
 @media(max-width:900px){
-  .stania_overview_img{
+  .stania_overview_img, .stania_info_img{
     padding-left:0;
   }
-  .stania_goal_img{
+  .stania_goal_img, .stania_ui > .stania_image_block, .stania_dm > .stania_image_block{
   padding-right:0;
 }
 .stania_research_column{

@@ -4,6 +4,15 @@ import StaniaLaptopMockup from "../assets/staniaImages/Stania Laptop Mockup.png"
 import StaniaGoalImg from "../assets/staniaImages/Goal Images.png";
 import Blur1Img from "../assets/heroImages/Blur Large.png";
 import Blur2Img from "../assets/heroImages/Blur Small.png";
+import UiImg from "../assets/staniaImages/UI Direction Image.png";
+import PropertyPicsImg from "../assets/staniaImages/Property Images.png";
+import InfoElements1Img from "../assets/staniaImages/Info UI 1.png";
+import InfoElements2Img from "../assets/staniaImages/Info UI 2.png";
+import PropertyImgBlock from "../assets/staniaImages/Property Image Block.png";
+import OwnerImg from "../assets/staniaImages/Owner Image.png";
+import FiltersImg1 from "../assets/staniaImages/Filters 1.png";
+import FiltersImg2 from "../assets/staniaImages/Filters 2.png";
+import FiltersImg3 from "../assets/staniaImages/Filters 3.png";
 
 const Stania = () => {
   const overviewContent = [
@@ -97,6 +106,81 @@ const Stania = () => {
       ],
     },
   ];
+
+  const solutionContent = [
+    {
+      section: "UI direction",
+      images: [{ id: 0, imagesrc: UiImg, alt: "UI Direction Elements" }],
+      text: (
+        <ul>
+          <li>
+            Chose green + orange (energetic, warm, nature-inspired) instead of
+            standard booking blues.
+          </li>
+          <li>Rounded borders, softer hues, clear visual hierarchy.</li>
+          <li>Soft icons with using colors.</li>
+        </ul>
+      ),
+    },
+    {
+      section: "Information arhitecture",
+      images: [
+        { id: 0, imagesrc: PropertyPicsImg, alt: "Property Pictures" },
+        { id: 1, imagesrc: InfoElements1Img, alt: "Information UI Element 1" },
+        { id: 2, imagesrc: InfoElements2Img, alt: "Information UI Element 2" },
+      ],
+      text: (
+        <>
+          Each property page follows a consistent structure:
+          <ul>
+            <li>Key details first (location, price, rating).</li>
+            <li>No redundant text.</li>
+            <li>Photos.</li>
+            <li>Short, scannable description.</li>
+            <li>Amenities.</li>
+            <li>Reviews.</li>
+          </ul>
+        </>
+      ),
+    },
+    {
+      section: "DM booking system",
+      images: [
+        { id: 0, imagesrc: PropertyImgBlock, alt: "Property Image Block" },
+        { id: 1, imagesrc: OwnerImg, alt: "Owner UI Element" },
+      ],
+      text: (
+        <ul>
+          <li>
+            Users can start a conversation with the owner directly from the
+            property page.
+          </li>
+          <li>
+            Owner profile page shows all their listings for trust-building.
+          </li>
+        </ul>
+      ),
+    },
+    {
+      section: "Filters for all",
+      images: [
+        { id: 0, imagesrc: FiltersImg1, alt: "Filters 1" },
+        { id: 1, imagesrc: FiltersImg2, alt: "Filters 2" },
+        { id: 2, imagesrc: FiltersImg3, alt: "Filters 3" },
+      ],
+      text: (
+        <ul>
+          <li>
+            Specific filters for every need, from amenities to surroundings.
+          </li>
+          <li>
+            Extra attention was given to the Accessibility section: everyone
+            needs to feel welcomed.
+          </li>
+        </ul>
+      ),
+    },
+  ];
   return (
     <section className="stania">
       <div className="wrapper">
@@ -153,7 +237,7 @@ const Stania = () => {
                     alt={alt}
                   />
                   <div className="container_column">
-                    <h3 className="heading2">{section}</h3>
+                    <h3 className="heading2 container_heading">{section}</h3>
                     {text.map(({ id, text1, text2 }) => (
                       <div key={id} className="container_column point_text">
                         <div className="body_text">{text1}</div>
@@ -167,7 +251,7 @@ const Stania = () => {
               {section === "Research" && (
                 <div className="container_row_start stania_research">
                   <div className="container_column">
-                    <h3 className="heading2">{section}</h3>
+                    <h3 className="heading2 container_heading">{section}</h3>
                     {text.map(({ id, text1 }) => (
                       <div key={id} className="body_text point_text">
                         {text1}
@@ -191,6 +275,95 @@ const Stania = () => {
               )}
             </div>
           ))}
+
+          {solutionContent.map(({ section, images, text }) => {
+            const SectionText = (
+              <div className="container_row_start stania_section_text">
+                <img
+                  loading="lazy"
+                  src={StarPointImg}
+                  alt="Star Point Icon"
+                  className="star_dark"
+                />
+                <div className="container_column point_text">
+                  <p className="heading3 point_question">{section}</p>
+                  <div className="point_answer body_text">{text}</div>
+                </div>
+              </div>
+            );
+            const ImageBlock = (
+              <div className="container_row_center stania_image_block">
+                {images.map(({ id, imagesrc, alt }) => (
+                  <img key={id} loading="lazy" src={imagesrc} alt={alt} />
+                ))}
+              </div>
+            );
+
+            if (section === "UI direction") {
+              return (
+                <div key={section} className="container_row_start stania_ui">
+                  {ImageBlock}
+                  <div className="container_column">
+                    <h3 className="heading2 container_heading">Solutions</h3>
+                    {SectionText}
+                  </div>
+                </div>
+              );
+            }
+            if (section === "DM booking system") {
+              return (
+                <div key={section} className="container_row_center stania_dm">
+                  {ImageBlock}
+                  {SectionText}
+                </div>
+              );
+            }
+
+            if (section === "Information arhitecture") {
+              return (
+                <div className="container_column stania_info_arhi">
+                  <div key={section} className="container_row_center">
+                    {SectionText}
+                    {images[0] && (
+                      <img
+                        key={images[0].id}
+                        loading="lazy"
+                        src={images[0].imagesrc}
+                        alt={images[0].alt}
+                        className="stania_image_block stania_info_img"
+                      />
+                    )}
+                  </div>
+                  <div className="container_row_start stania_info_ui">
+                    {images[1] && (
+                      <img
+                        key={images[1].id}
+                        loading="lazy"
+                        src={images[1].imagesrc}
+                        alt={images[1].alt}
+                      />
+                    )}
+                    {images[2] && (
+                      <img
+                        key={images[2].id}
+                        loading="lazy"
+                        src={images[2].imagesrc}
+                        alt={images[2].alt}
+                      />
+                    )}
+                  </div>
+                </div>
+              );
+            }
+            if (section === "Filters for all") {
+              return (
+                <div key={section} className="container_column stania_filters">
+                  {SectionText}
+                  {ImageBlock}
+                </div>
+              );
+            }
+          })}
         </div>
       </div>
     </section>
