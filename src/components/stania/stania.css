@@ -90,6 +90,11 @@ width: 100%;
   padding-right:60px;
 }
 
+.stania_design_img{
+  width:100%;
+  height:auto;
+}
+
 @media(max-width:1200px){
   
   .stania_overview_img{

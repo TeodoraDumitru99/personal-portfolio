@@ -13,6 +13,12 @@ import OwnerImg from "../assets/staniaImages/Owner Image.png";
 import FiltersImg1 from "../assets/staniaImages/Filters 1.png";
 import FiltersImg2 from "../assets/staniaImages/Filters 2.png";
 import FiltersImg3 from "../assets/staniaImages/Filters 3.png";
+import LandingImg from "../assets/staniaImages/Landing Page.png";
+import HouseImg from "../assets/staniaImages/House Page.png";
+import LandingMockupImg from "../assets/staniaImages/Landing Mockup.png";
+import FiltersMockupImg from "../assets/staniaImages/Filters mockup.png";
+import PersonMockupImg from "../assets/staniaImages/Person Scrolling Mockup.png";
+import PhoneMockupImg from "../assets/staniaImages/Table Phone Mockup.png";
 
 const Stania = () => {
   const overviewContent = [
@@ -181,6 +187,28 @@ const Stania = () => {
       ),
     },
   ];
+
+  const designMockupContent = [
+    {
+      section: "Design",
+      text: "Familiar but fresh. Browse and explore freely.",
+      images: [
+        { id: 0, imgsrc: LandingImg, alt: "Landing Page" },
+        { id: 1, imgsrc: HouseImg, alt: "House Page" },
+      ],
+    },
+    {
+      section: "Mockups",
+      text: "See Stania's assets. Seamless experience on desktop or mobile.",
+      images: [
+        { id: 0, imgsrc: LandingMockupImg, alt: "Landing Mockup Page" },
+        { id: 1, imgsrc: FiltersMockupImg, alt: "Filters Mockup Page" },
+        { id: 2, imgsrc: PersonMockupImg, alt: "Person Mockup Page" },
+        { id: 3, imgsrc: PhoneMockupImg, alt: "Phone Mockup Page" },
+      ],
+    },
+  ];
+
   return (
     <section className="stania">
       <div className="wrapper">
@@ -364,6 +392,30 @@ const Stania = () => {
               );
             }
           })}
+          {designMockupContent.map(({ section, text, images }) => (
+            <div key={section} className="container_column">
+              <h3 className="heading2 container_heading">{section}</h3>
+              <div className="container_row_start">
+                <img
+                  loading="lazy"
+                  src={StarPointImg}
+                  alt="Star Point Icon"
+                  className="star_dark"
+                />
+                <p className="point_answer body_text">{text}</p>
+              </div>
+              {images.map(({ id, imgsrc, alt }) => (
+                <div key={id} className="container_column">
+                  <img
+                    loading="lazy"
+                    src={imgsrc}
+                    alt={alt}
+                    className="stania_design_img"
+                  />
+                </div>
+              ))}
+            </div>
+          ))}
         </div>
       </div>
     </section>
