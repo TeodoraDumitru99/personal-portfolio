@@ -230,7 +230,7 @@ const Stania = () => {
             <div className="stania_overview_content">
               <h3 className="heading2 container_heading">Overview</h3>
               {overviewContent.map(({ id, question, answer }) => (
-                <div key={id} className="container_row_start">
+                <div key={`overview-${id}`} className="container_row_start">
                   <img
                     className="star_dark"
                     loading="lazy"
@@ -255,7 +255,7 @@ const Stania = () => {
           </div>
 
           {goalResearchContent.map(({ section, imgsrc, alt, text }) => (
-            <div key={section}>
+            <div key={`goal-${section}`}>
               {section === "Goal" && (
                 <div className="container_row_center">
                   <img
@@ -267,7 +267,10 @@ const Stania = () => {
                   <div className="container_column">
                     <h3 className="heading2 container_heading">{section}</h3>
                     {text.map(({ id, text1, text2 }) => (
-                      <div key={id} className="container_column point_text">
+                      <div
+                        key={`${section}-text-${id}`}
+                        className="container_column point_text"
+                      >
                         <div className="body_text">{text1}</div>
                         <div className="body_text">{text2}</div>
                       </div>
@@ -281,7 +284,10 @@ const Stania = () => {
                   <div className="container_column">
                     <h3 className="heading2 container_heading">{section}</h3>
                     {text.map(({ id, text1 }) => (
-                      <div key={id} className="body_text point_text">
+                      <div
+                        key={`research-t1-${id}`}
+                        className="body_text point_text"
+                      >
                         {text1}
                       </div>
                     ))}
@@ -294,7 +300,7 @@ const Stania = () => {
                   />
                   <div className="container_column point_text stania_research_column">
                     {text.map(({ id, text2 }) => (
-                      <div key={id} className="body_text">
+                      <div key={`research-t2-${id}`} className="body_text">
                         {text2}
                       </div>
                     ))}
@@ -322,14 +328,22 @@ const Stania = () => {
             const ImageBlock = (
               <div className="container_row_center stania_image_block">
                 {images.map(({ id, imagesrc, alt }) => (
-                  <img key={id} loading="lazy" src={imagesrc} alt={alt} />
+                  <img
+                    key={`${section}-image-${id}`}
+                    loading="lazy"
+                    src={imagesrc}
+                    alt={alt}
+                  />
                 ))}
               </div>
             );
 
             if (section === "UI direction") {
               return (
-                <div key={section} className="container_row_start stania_ui">
+                <div
+                  key={`solution-${section}`}
+                  className="container_row_start stania_ui"
+                >
                   {ImageBlock}
                   <div className="container_column">
                     <h3 className="heading2 container_heading">Solutions</h3>
@@ -340,7 +354,10 @@ const Stania = () => {
             }
             if (section === "DM booking system") {
               return (
-                <div key={section} className="container_row_center stania_dm">
+                <div
+                  key={`solution-${section}`}
+                  className="container_row_center stania_dm"
+                >
                   {ImageBlock}
                   {SectionText}
                 </div>
@@ -350,11 +367,14 @@ const Stania = () => {
             if (section === "Information arhitecture") {
               return (
                 <div className="container_column stania_info_arhi">
-                  <div key={section} className="container_row_center">
+                  <div
+                    key={`solution-${section}`}
+                    className="container_row_center"
+                  >
                     {SectionText}
                     {images[0] && (
                       <img
-                        key={images[0].id}
+                        key={`${section}-image-${images[0].id}`}
                         loading="lazy"
                         src={images[0].imagesrc}
                         alt={images[0].alt}
@@ -365,7 +385,7 @@ const Stania = () => {
                   <div className="container_row_start stania_info_ui">
                     {images[1] && (
                       <img
-                        key={images[1].id}
+                        key={`${section}-image-${images[1].id}`}
                         loading="lazy"
                         src={images[1].imagesrc}
                         alt={images[1].alt}
@@ -373,7 +393,7 @@ const Stania = () => {
                     )}
                     {images[2] && (
                       <img
-                        key={images[2].id}
+                        key={`${section}-image-${images[2].id}`}
                         loading="lazy"
                         src={images[2].imagesrc}
                         alt={images[2].alt}
@@ -385,7 +405,10 @@ const Stania = () => {
             }
             if (section === "Filters for all") {
               return (
-                <div key={section} className="container_column stania_filters">
+                <div
+                  key={`filters-${section}`}
+                  className="container_column stania_filters"
+                >
                   {SectionText}
                   {ImageBlock}
                 </div>
@@ -393,7 +416,7 @@ const Stania = () => {
             }
           })}
           {designMockupContent.map(({ section, text, images }) => (
-            <div key={section} className="container_column">
+            <div key={`design-${section}`} className="container_column">
               <h3 className="heading2 container_heading">{section}</h3>
               <div className="container_row_start">
                 <img
@@ -405,7 +428,10 @@ const Stania = () => {
                 <p className="point_answer body_text">{text}</p>
               </div>
               {images.map(({ id, imgsrc, alt }) => (
-                <div key={id} className="container_column">
+                <div
+                  key={`${section}-design-${id}`}
+                  className="container_column"
+                >
                   <img
                     loading="lazy"
                     src={imgsrc}
