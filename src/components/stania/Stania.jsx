@@ -212,237 +212,239 @@ const Stania = () => {
   return (
     <section className="stania">
       <div className="wrapper">
-        <div className="stania_content route_content container_column">
-          <h2 className="heading1 route_heading">Stania</h2>
-          <div className="stania_overview container_row_center">
-            <img
-              className="stania_blur_large"
-              src={Blur1Img}
-              loading="lazy"
-              alt="Blur"
-            />
-            <img
-              className="stania_blur_small"
-              src={Blur2Img}
-              loading="lazy"
-              alt="Blur"
-            />
-            <div className="stania_overview_content">
-              <h3 className="heading2 container_heading">Overview</h3>
-              {overviewContent.map(({ id, question, answer }) => (
-                <div key={`overview-${id}`} className="container_row_start">
+        <div className="stania_content route_content">
+          <div className="container_column">
+            <h2 className="heading1 route_heading">Stania</h2>
+            <div className="stania_overview container_row_center">
+              <img
+                className="stania_blur_large"
+                src={Blur1Img}
+                loading="lazy"
+                alt="Blur"
+              />
+              <img
+                className="stania_blur_small"
+                src={Blur2Img}
+                loading="lazy"
+                alt="Blur"
+              />
+              <div className="stania_overview_content">
+                <h3 className="heading2 container_heading">Overview</h3>
+                {overviewContent.map(({ id, question, answer }) => (
+                  <div key={`overview-${id}`} className="container_row_start">
+                    <img
+                      className="star_dark"
+                      loading="lazy"
+                      src={StarPointImg}
+                      alt="Star Point Icon"
+                    />
+
+                    <div className="point_text">
+                      <p className="heading3 point_question">{question}</p>
+
+                      <div className="point_answer body_text">{answer}</div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <img
+                className="stania_overview_img"
+                loading="lazy"
+                src={StaniaLaptopMockup}
+                alt="Stania Laptop Mockup"
+              />
+            </div>
+
+            {goalResearchContent.map(({ section, imgsrc, alt, text }) => (
+              <div key={`goal-${section}`}>
+                {section === "Goal" && (
+                  <div className="container_row_center">
+                    <img
+                      className="stania_goal_img"
+                      loading="lazy"
+                      src={imgsrc}
+                      alt={alt}
+                    />
+                    <div className="container_column">
+                      <h3 className="heading2 container_heading">{section}</h3>
+                      {text.map(({ id, text1, text2 }) => (
+                        <div
+                          key={`${section}-text-${id}`}
+                          className="container_column point_text"
+                        >
+                          <div className="body_text">{text1}</div>
+                          <div className="body_text">{text2}</div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {section === "Research" && (
+                  <div className="container_row_start stania_research">
+                    <div className="container_column">
+                      <h3 className="heading2 container_heading">{section}</h3>
+                      {text.map(({ id, text1 }) => (
+                        <div
+                          key={`research-t1-${id}`}
+                          className="body_text point_text"
+                        >
+                          {text1}
+                        </div>
+                      ))}
+                    </div>
+                    <img
+                      className="stania_blur_research"
+                      src={Blur2Img}
+                      loading="lazy"
+                      alt="Blur"
+                    />
+                    <div className="container_column point_text stania_research_column">
+                      {text.map(({ id, text2 }) => (
+                        <div key={`research-t2-${id}`} className="body_text">
+                          {text2}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
+            ))}
+
+            {solutionContent.map(({ section, images, text }) => {
+              const SectionText = (
+                <div className="container_row_start stania_section_text">
                   <img
-                    className="star_dark"
                     loading="lazy"
                     src={StarPointImg}
                     alt="Star Point Icon"
+                    className="star_dark"
                   />
-
-                  <div className="point_text">
-                    <p className="heading3 point_question">{question}</p>
-
-                    <div className="point_answer body_text">{answer}</div>
-                  </div>
-                </div>
-              ))}
-            </div>
-            <img
-              className="stania_overview_img"
-              loading="lazy"
-              src={StaniaLaptopMockup}
-              alt="Stania Laptop Mockup"
-            />
-          </div>
-
-          {goalResearchContent.map(({ section, imgsrc, alt, text }) => (
-            <div key={`goal-${section}`}>
-              {section === "Goal" && (
-                <div className="container_row_center">
-                  <img
-                    className="stania_goal_img"
-                    loading="lazy"
-                    src={imgsrc}
-                    alt={alt}
-                  />
-                  <div className="container_column">
-                    <h3 className="heading2 container_heading">{section}</h3>
-                    {text.map(({ id, text1, text2 }) => (
-                      <div
-                        key={`${section}-text-${id}`}
-                        className="container_column point_text"
-                      >
-                        <div className="body_text">{text1}</div>
-                        <div className="body_text">{text2}</div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              )}
-
-              {section === "Research" && (
-                <div className="container_row_start stania_research">
-                  <div className="container_column">
-                    <h3 className="heading2 container_heading">{section}</h3>
-                    {text.map(({ id, text1 }) => (
-                      <div
-                        key={`research-t1-${id}`}
-                        className="body_text point_text"
-                      >
-                        {text1}
-                      </div>
-                    ))}
-                  </div>
-                  <img
-                    className="stania_blur_research"
-                    src={Blur2Img}
-                    loading="lazy"
-                    alt="Blur"
-                  />
-                  <div className="container_column point_text stania_research_column">
-                    {text.map(({ id, text2 }) => (
-                      <div key={`research-t2-${id}`} className="body_text">
-                        {text2}
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              )}
-            </div>
-          ))}
-
-          {solutionContent.map(({ section, images, text }) => {
-            const SectionText = (
-              <div className="container_row_start stania_section_text">
-                <img
-                  loading="lazy"
-                  src={StarPointImg}
-                  alt="Star Point Icon"
-                  className="star_dark"
-                />
-                <div className="container_column point_text">
-                  <p className="heading3 point_question">{section}</p>
-                  <div className="point_answer body_text">{text}</div>
-                </div>
-              </div>
-            );
-            const ImageBlock = (
-              <div className="container_row_center stania_image_block">
-                {images.map(({ id, imagesrc, alt }) => (
-                  <img
-                    key={`${section}-image-${id}`}
-                    loading="lazy"
-                    src={imagesrc}
-                    alt={alt}
-                  />
-                ))}
-              </div>
-            );
-
-            if (section === "UI direction") {
-              return (
-                <div
-                  key={`solution-${section}`}
-                  className="container_row_start stania_ui"
-                >
-                  {ImageBlock}
-                  <div className="container_column">
-                    <h3 className="heading2 container_heading">Solutions</h3>
-                    {SectionText}
+                  <div className="container_column point_text">
+                    <p className="heading3 point_question">{section}</p>
+                    <div className="point_answer body_text">{text}</div>
                   </div>
                 </div>
               );
-            }
-            if (section === "DM booking system") {
-              return (
-                <div
-                  key={`solution-${section}`}
-                  className="container_row_center stania_dm"
-                >
-                  {ImageBlock}
-                  {SectionText}
+              const ImageBlock = (
+                <div className="container_row_center stania_image_block">
+                  {images.map(({ id, imagesrc, alt }) => (
+                    <img
+                      key={`${section}-image-${id}`}
+                      loading="lazy"
+                      src={imagesrc}
+                      alt={alt}
+                    />
+                  ))}
                 </div>
               );
-            }
 
-            if (section === "Information arhitecture") {
-              return (
-                <div className="container_column stania_info_arhi">
+              if (section === "UI direction") {
+                return (
                   <div
                     key={`solution-${section}`}
-                    className="container_row_center"
+                    className="container_row_start stania_ui"
+                  >
+                    {ImageBlock}
+                    <div className="container_column">
+                      <h3 className="heading2 container_heading">Solutions</h3>
+                      {SectionText}
+                    </div>
+                  </div>
+                );
+              }
+              if (section === "DM booking system") {
+                return (
+                  <div
+                    key={`solution-${section}`}
+                    className="container_row_center stania_dm"
+                  >
+                    {ImageBlock}
+                    {SectionText}
+                  </div>
+                );
+              }
+
+              if (section === "Information arhitecture") {
+                return (
+                  <div className="container_column stania_info_arhi">
+                    <div
+                      key={`solution-${section}`}
+                      className="container_row_center"
+                    >
+                      {SectionText}
+                      {images[0] && (
+                        <img
+                          key={`${section}-image-${images[0].id}`}
+                          loading="lazy"
+                          src={images[0].imagesrc}
+                          alt={images[0].alt}
+                          className="stania_image_block stania_info_img"
+                        />
+                      )}
+                    </div>
+                    <div className="container_row_start stania_info_ui">
+                      {images[1] && (
+                        <img
+                          key={`${section}-image-${images[1].id}`}
+                          loading="lazy"
+                          src={images[1].imagesrc}
+                          alt={images[1].alt}
+                        />
+                      )}
+                      {images[2] && (
+                        <img
+                          key={`${section}-image-${images[2].id}`}
+                          loading="lazy"
+                          src={images[2].imagesrc}
+                          alt={images[2].alt}
+                        />
+                      )}
+                    </div>
+                  </div>
+                );
+              }
+              if (section === "Filters for all") {
+                return (
+                  <div
+                    key={`filters-${section}`}
+                    className="container_column stania_filters"
                   >
                     {SectionText}
-                    {images[0] && (
-                      <img
-                        key={`${section}-image-${images[0].id}`}
-                        loading="lazy"
-                        src={images[0].imagesrc}
-                        alt={images[0].alt}
-                        className="stania_image_block stania_info_img"
-                      />
-                    )}
+                    {ImageBlock}
                   </div>
-                  <div className="container_row_start stania_info_ui">
-                    {images[1] && (
-                      <img
-                        key={`${section}-image-${images[1].id}`}
-                        loading="lazy"
-                        src={images[1].imagesrc}
-                        alt={images[1].alt}
-                      />
-                    )}
-                    {images[2] && (
-                      <img
-                        key={`${section}-image-${images[2].id}`}
-                        loading="lazy"
-                        src={images[2].imagesrc}
-                        alt={images[2].alt}
-                      />
-                    )}
-                  </div>
-                </div>
-              );
-            }
-            if (section === "Filters for all") {
-              return (
-                <div
-                  key={`filters-${section}`}
-                  className="container_column stania_filters"
-                >
-                  {SectionText}
-                  {ImageBlock}
-                </div>
-              );
-            }
-            return null;
-          })}
-          {designMockupContent.map(({ section, text, images }) => (
-            <div key={`design-${section}`} className="container_column">
-              <h3 className="heading2 container_heading">{section}</h3>
-              <div className="container_row_start">
-                <img
-                  loading="lazy"
-                  src={StarPointImg}
-                  alt="Star Point Icon"
-                  className="star_dark"
-                />
-                <p className="point_answer body_text">{text}</p>
-              </div>
-              {images.map(({ id, imgsrc, alt }) => (
-                <div
-                  key={`${section}-design-${id}`}
-                  className="container_column"
-                >
+                );
+              }
+              return null;
+            })}
+            {designMockupContent.map(({ section, text, images }) => (
+              <div key={`design-${section}`} className="container_column">
+                <h3 className="heading2 container_heading">{section}</h3>
+                <div className="container_row_start">
                   <img
                     loading="lazy"
-                    src={imgsrc}
-                    alt={alt}
-                    className="stania_design_img"
+                    src={StarPointImg}
+                    alt="Star Point Icon"
+                    className="star_dark"
                   />
+                  <p className="point_answer body_text">{text}</p>
                 </div>
-              ))}
-            </div>
-          ))}
+                {images.map(({ id, imgsrc, alt }) => (
+                  <div
+                    key={`${section}-design-${id}`}
+                    className="container_column"
+                  >
+                    <img
+                      loading="lazy"
+                      src={imgsrc}
+                      alt={alt}
+                      className="stania_design_img"
+                    />
+                  </div>
+                ))}
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
