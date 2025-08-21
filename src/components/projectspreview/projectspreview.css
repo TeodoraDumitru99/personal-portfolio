@@ -19,6 +19,17 @@
   font-weight: 500;
 }
 
+.projectspreview_thumbnail{
+  position:relative;
+  overflow:hidden;
+  border-radius:12px;
+  display:block;
+}
+
+.projectspreview_overlay{
+
+}
+
 .projectspreview_images {
   display: flex;
   flex-direction: column;
@@ -30,8 +41,10 @@
   width: 100%;
 }
 
-.projectspreview_image_primary {
+.projectspreview_image_primary, .projectspreview_image_secondary {
   width: 100%;
+  height:auto;
+  display:block;
 }
 
 .projectspreview_image_row {
@@ -39,6 +52,31 @@
   justify-content: space-between;
   gap: 24px;
 }
+.projectspreview_overlay{
+  position:absolute;
+  background:rgba(0,0,0,0.6);
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  color:white;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  opacity:0;
+  transition:all 0.5s ease-in-out;
+  pointer-events:none;
+  font-size:2rem;
+  font-weight:600;
+}
+
+.projectspreview_thumbnail:hover .projectspreview_overlay{
+opacity:1;
+}
+
+.projectspreview_duemark{
+    border:solid 1px #adadad;
+  }
 
 @media (max-width: 700px) {
   .projectspreview_images img {

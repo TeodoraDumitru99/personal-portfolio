@@ -1,7 +1,7 @@
 import "./projectspreview.css";
 import NexioThumbnailImg from "../assets/projectspreviewImages/Nexio Thumbnail.png";
-import DuemarkBlogThumbnailImg from "../assets/projectspreviewImages/DuemarkBlog Thumbnail.png";
-import LampThumbnailImg from "../assets/projectspreviewImages/Lamp Thumbnail.png";
+import DuemarkThumbnailImg from "../assets/projectspreviewImages/Duemark Preview.png";
+import StaniaThumbnailImg from "../assets/projectspreviewImages/Stania Preview.png";
 
 const ProjectsPreview = () => {
   return (
@@ -16,25 +16,35 @@ const ProjectsPreview = () => {
           </h2>
 
           <div className="projectspreview_images">
-            <img
-              className="projectspreview_image_primary"
-              loading="lazy"
-              src={NexioThumbnailImg}
-              alt="Nexio Thumbnail"
-            />
+            <a href="projects/nexio" className="projectspreview_thumbnail">
+              <img
+                className="projectspreview_image_primary"
+                loading="lazy"
+                src={NexioThumbnailImg}
+                alt="Nexio Thumbnail"
+              />
+              <div className="projectspreview_overlay">NEXIO</div>
+            </a>
+
             <div className="projectspreview_image_row">
-              <img
-                className="projectspreview_image_secondary"
-                loading="lazy"
-                src={DuemarkBlogThumbnailImg}
-                alt="Duemark Blog Thumbnail"
-              />
-              <img
-                className="projectspreview_image_secondary"
-                loading="lazy"
-                src={LampThumbnailImg}
-                alt="Lamp Thumbnail"
-              />
+              <a href="projects/stania" className="projectspreview_thumbnail">
+                <img
+                  className="projectspreview_image_secondary"
+                  loading="lazy"
+                  src={StaniaThumbnailImg}
+                  alt="Lamp Thumbnail"
+                />
+                <div className="projectspreview_overlay">STANIA</div>
+              </a>
+              <a href="/projects/duemark" className="projectspreview_thumbnail">
+                <img
+                  className="projectspreview_image_secondary projectspreview_duemark"
+                  loading="lazy"
+                  src={DuemarkThumbnailImg}
+                  alt="Duemark Blog Thumbnail"
+                />
+                <div className="projectspreview_overlay">DUEMARK</div>
+              </a>
             </div>
           </div>
           <a className="route projects_preview_button" href="/projects">
