@@ -1,9 +1,11 @@
 .stania_content{
+  display:flex;
+  flex-direction: column;
   gap:100px;
 }
 
 .stania_overview_content{
-display:flex;
+  display:flex;
   flex-direction: column;
   gap:20px;
   justify-content: flex-start;
