@@ -10,8 +10,6 @@
   padding:160px 0 120px 0;
 }
 
-
-
 .herosection_blur_primary, .herosection_blur_secondary{
   position:absolute;
   z-index:0;
@@ -33,8 +31,6 @@
   height:200px;
   opacity:0.8;
 }
-
-
 
 .herosection_heading{
   text-align: right;
@@ -65,9 +61,48 @@ text-align: center;
   gap:20px;
 }
 
+.herosection_thumbnail{
+  position:relative;
+  overflow:hidden;
+  border-radius:12px;
+  box-shadow: 2px 5px 5px rgba(186, 185, 186, 0.4);
+}
+
+.herosection_link{
+  display:block;
+  position:relative;
+}
+
 .herosection_image{
-width:100%;
-max-width:220px;
+  display:block;
+  width:100%;
+  height:auto;
+}
+
+.herosection_overlay{
+  position:absolute;
+  background:rgba(0,0,0,0.6);
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  color:white;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  opacity:0;
+  transition:all 0.5s ease-in-out;
+  pointer-events:none;
+}
+
+.herosection_thumbnail:hover .herosection_overlay{
+opacity:1;
+}
+
+.herosection_overlay_text{
+  font-size:1rem;
+  font-weight:600;
+  text-transform:uppercase;
 }
 
 @media(max-width:1300px){

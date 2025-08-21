@@ -1,7 +1,7 @@
 import "./herosection.css";
-import DuemarkBImg from "../assets/heroImages/duemarkblog_preview.png";
-import DuemarkImg from "../assets/heroImages/duemark_preview.png";
-import NexioImg from "../assets/heroImages/nexio_preview.png";
+import DuemarkBImg from "../assets/heroImages/Duemark Preview Blog.png";
+import NexioImg from "../assets/heroImages/Nexio Preview.png";
+import StaniaImg from "../assets/heroImages/Stania Preview.png";
 import Blur1Img from "../assets/heroImages/Blur Large.png";
 import Blur2Img from "../assets/heroImages/Blur Small.png";
 
@@ -9,19 +9,21 @@ const HeroSection = () => {
   const textContent = [
     {
       id: 0,
-      imgsrc: DuemarkBImg,
-      alt: "Duemark Blog Preview",
+      imgsrc: NexioImg,
+      alt: "Nexio",
+      link: "/projects/nexio",
     },
-
     {
       id: 1,
-      imgsrc: NexioImg,
-      alt: "Nexio Preview",
+      imgsrc: DuemarkBImg,
+      alt: "Duemark Blog",
+      link: "/projects/duemarkblog",
     },
     {
       id: 2,
-      imgsrc: DuemarkImg,
-      alt: "Duemark Preview",
+      imgsrc: StaniaImg,
+      alt: "Stania",
+      link: "projects/stania",
     },
   ];
 
@@ -56,14 +58,19 @@ const HeroSection = () => {
               SEE PORTFOLIO
             </a>
             <div className="herosection_thumbnails">
-              {textContent.map(({ id, imgsrc, alt }) => (
+              {textContent.map(({ id, imgsrc, alt, link }) => (
                 <div key={id} className="herosection_thumbnail">
-                  <img
-                    className="herosection_image"
-                    loading="lazy"
-                    src={imgsrc}
-                    alt={alt}
-                  />
+                  <a key={id} href={link} className="herosection_link">
+                    <img
+                      className="herosection_image"
+                      loading="lazy"
+                      src={imgsrc}
+                      alt={alt}
+                    />
+                    <div className="herosection_overlay">
+                      <span className="herosection_overlay_text">{alt}</span>
+                    </div>
+                  </a>
                 </div>
               ))}
             </div>
