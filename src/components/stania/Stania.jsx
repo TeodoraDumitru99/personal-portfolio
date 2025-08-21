@@ -414,6 +414,7 @@ const Stania = () => {
                 </div>
               );
             }
+            return null;
           })}
           {designMockupContent.map(({ section, text, images }) => (
             <div key={`design-${section}`} className="container_column">
