@@ -107,6 +107,9 @@ transition: all 0.5s ease-in-out;
 .route_content{
   padding-top: 60px;
   padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  gap:100px;
 }
 
 .route_heading{
@@ -130,6 +133,13 @@ transition: all 0.5s ease-in-out;
   display:flex;
   flex-direction: column;
   gap:40px;
+}
+
+.container_row_between{
+  display:flex;
+  flex-direction: row;
+  min-height:600px;
+  justify-content: space-between;
 }
 
 .container_heading{
@@ -184,9 +194,17 @@ transition: all 0.5s ease-in-out;
   .point{
     flex-direction:column;
   }
-  .container_row_center, .container_row_start{
+  .container_row_center, .container_row_start, .container_row_between{
     flex-direction:column;
     align-items:center;
+  }
+
+  .container_row_between{
+    gap:40px;
+  }
+
+  .route{
+  text-align:center;
   }
 }
 
