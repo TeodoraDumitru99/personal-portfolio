@@ -1,12 +1,6 @@
 .technologies {
-  background-color: #0f0f1c;
   color: white;
   padding: 100px 0;
-}
-.technologies_title {
-  text-align: center;
-  font-size: 50px;
-  padding-bottom: 100px;
 }
 
 .technologies_element {
@@ -14,7 +8,6 @@
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 100px;
   justify-items: center;
-  /* box-sizing:border-box; */
 }
 
 .technologies_box {
@@ -31,7 +24,8 @@
   text-align: center;
   padding-top: 30px;
   font-size: 20px;
-  font-weight: 400;
+  font-weight: 600;
+  color:#545454;
 }
 
 @media (max-width: 1000px) {
@@ -40,7 +34,7 @@
   }
 }
 
-@media (max-width: 750px) {
+@media (max-width: 700px) {
   .technologies_title {
     text-align: center;
     font-size: 40px;
@@ -49,7 +43,7 @@
 
   .technologies_element {
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 30px;
+    grid-gap: 40px;
   }
 
   .technologies_icons {
@@ -84,3 +78,10 @@
     font-size: 16px;
   }
 }
+
+@media (max-width: 360px) {
+  .technologies_element {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+

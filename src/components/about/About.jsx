@@ -1,6 +1,7 @@
 import "./about.css";
 import ProfilePicture from "../assets/aboutImages/Profile Image.png";
 import StarPointImg from "../assets/profileImages/star point.png";
+import Technologies from "../technologies/Technologies";
 
 const About = () => {
   const contactIcons = [
@@ -129,6 +130,10 @@ const About = () => {
                 {experienceInfo.slice(1).map(pointText)}
               </div>
             </div>
+          </div>
+          <div className="about_technologies">
+            <h2 className="heading2 container_heading">Technologies</h2>
+            <Technologies />
           </div>
         </div>
       </div>
