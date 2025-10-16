@@ -3,6 +3,7 @@ import ProfilePicture from "../assets/aboutImages/Profile Image.png";
 import StarPointImg from "../assets/profileImages/star point.png";
 import Technologies from "../technologies/Technologies";
 import LampCollage from "../assets/aboutImages/Lamp Collage.png";
+import Mockups from "../assets/aboutImages/Display & Phone Mockup.png";
 
 const About = () => {
   const contactIcons = [
@@ -71,14 +72,14 @@ const About = () => {
   ];
 
   const pointText = (item) => (
-    <div key={item.id} className="container_row_start">
+    <div key={item.id} className="point_start">
       <img
-        className="profile_star"
+        className="star_dark"
         loading="lazy"
         src={StarPointImg}
         alt="Star Point Icon"
       />
-      <div className="container_column about_experience_item">
+      <div className="point_text about_experience_item">
         <h5 className="heading3 point_question">{item.title}</h5>
         <p className="point_answer body_text">{item.description}</p>
         <span className="about_point_italic">{item.duration}</span>
@@ -89,12 +90,12 @@ const About = () => {
   const bGApproachText = (item, index) => (
     <div
       key={item.id}
-      className={`container_row_start about_bg_item ${
+      className={`point_center about_bg_item ${
         index === 1 ? "about_bg_item--2" : ""
       }`}
     >
       <img
-        className="profile_star"
+        className="star_dark"
         loading="lazy"
         src={StarPointImg}
         alt="Star Point Icon"
@@ -156,7 +157,7 @@ const About = () => {
           </div>
           <div className="about_experience container_column">
             <h2 className="heading2 container_heading">Experience</h2>
-            <div className="about_experience_content container_row_between">
+            <div className="about_experience_content container_row_start">
               <div className="container_column about_experience_item">
                 <span className="route profile_route" onClick={handleDownload}>
                   RESUME
@@ -174,7 +175,7 @@ const About = () => {
           </div>
           <div className="container_column about_bg">
             <h2 className="heading2 container_heading">Background</h2>
-            <div className="container_row_between about_bg">
+            <div className="container_row_start about_bg">
               {bGAppInfo.slice(2).map(bGApproachText)}
             </div>
             <img
@@ -184,8 +185,20 @@ const About = () => {
               className="about_bg_lamp"
             />
             <span className="about_point_italic">
-              - Smart Controlled Lamp for people with locomotor disabilities
+              Smart Controlled Lamp for people with locomotor disabilities
             </span>
+          </div>
+          <div className="container_row_center about_approach">
+            <img
+              src={Mockups}
+              alt="Lamp Collage"
+              loading="lazy"
+              className="about_app_mockup"
+            />
+            <div className="container_column">
+              <h2 className="heading2 container_heading">Approach</h2>
+              {bGAppInfo.slice(2, 4).map(bGApproachText)}
+            </div>
           </div>
         </div>
       </div>

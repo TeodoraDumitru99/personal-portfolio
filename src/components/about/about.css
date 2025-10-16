@@ -73,7 +73,6 @@ height:auto;
 }
 
 .about_bg{
-  gap:56px;
   min-height:400px;
 }
 
@@ -86,6 +85,12 @@ height:auto;
 }
 
 .about_bg_lamp{
+  width:100%;
+  height:auto;
+}
+
+.about_app_mockup{
+  max-width:620px;
   width:100%;
   height:auto;
 }
@@ -119,6 +124,13 @@ height:auto;
   font-size:14px;
 }
 
+.about_experience_item2, .about_bg_item--2{
+  align-self:center;
+}
+
+.about_point_italic{
+  align-self:center;
+}
 
 }
 @media(max-width:400px){
