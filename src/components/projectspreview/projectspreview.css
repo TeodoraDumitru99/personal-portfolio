@@ -26,10 +26,6 @@
   display:block;
 }
 
-.projectspreview_overlay{
-
-}
-
 .projectspreview_images {
   display: flex;
   flex-direction: column;
