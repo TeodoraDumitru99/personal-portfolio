@@ -2,6 +2,7 @@ import "./about.css";
 import ProfilePicture from "../assets/aboutImages/Profile Image.png";
 import StarPointImg from "../assets/profileImages/star point.png";
 import Technologies from "../technologies/Technologies";
+import LampCollage from "../assets/aboutImages/Lamp Collage.png";
 
 const About = () => {
   const contactIcons = [
@@ -80,7 +81,7 @@ const About = () => {
       <div className="container_column about_experience_item">
         <h5 className="heading3 point_question">{item.title}</h5>
         <p className="point_answer body_text">{item.description}</p>
-        <span className="about_point_duration">{item.duration}</span>
+        <span className="about_point_italic">{item.duration}</span>
       </div>
     </div>
   );
@@ -171,11 +172,20 @@ const About = () => {
             <h2 className="heading2 container_heading">Technologies</h2>
             <Technologies />
           </div>
-          <div className="container_column">
+          <div className="container_column about_bg">
             <h2 className="heading2 container_heading">Background</h2>
             <div className="container_row_between about_bg">
               {bGAppInfo.slice(2).map(bGApproachText)}
             </div>
+            <img
+              src={LampCollage}
+              alt="Lamp Collage"
+              loading="lazy"
+              className="about_bg_lamp"
+            />
+            <span className="about_point_italic">
+              - Smart Controlled Lamp for people with locomotor disabilities
+            </span>
           </div>
         </div>
       </div>
