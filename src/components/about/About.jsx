@@ -213,7 +213,7 @@ const About = () => {
               <p className="body_text point_answer">
                 Let's connect and start a wonderful project together!
               </p>
-              <a class="route" href="/contact">
+              <a className="route" href="/contact">
                 CONTACT
               </a>
             </div>
