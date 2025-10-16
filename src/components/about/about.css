@@ -3,6 +3,7 @@
   background: linear-gradient(#FFFFFF, #F9E8FB);
   border-radius:20px;
   overflow:hidden;
+    justify-content: space-between;
 }
 
 .about_profile_contact{
@@ -89,7 +90,7 @@ height:auto;
   height:auto;
 }
 
-.about_app_mockup{
+.about_img_half{
   max-width:620px;
   width:100%;
   height:auto;

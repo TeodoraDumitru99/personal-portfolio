@@ -128,7 +128,6 @@ transition: all 0.5s ease-in-out;
 
 .container_row_center{
   display:flex;
-  justify-content: space-between;
   align-items: center;
   gap:60px;
 }

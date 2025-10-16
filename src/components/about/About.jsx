@@ -4,6 +4,7 @@ import StarPointImg from "../assets/profileImages/star point.png";
 import Technologies from "../technologies/Technologies";
 import LampCollage from "../assets/aboutImages/Lamp Collage.png";
 import Mockups from "../assets/aboutImages/Display & Phone Mockup.png";
+import LogoDark from "../assets/Logo_dark.png";
 
 const About = () => {
   const contactIcons = [
@@ -193,11 +194,28 @@ const About = () => {
               src={Mockups}
               alt="Lamp Collage"
               loading="lazy"
-              className="about_app_mockup"
+              className="about_img_half"
             />
             <div className="container_column">
               <h2 className="heading2 container_heading">Approach</h2>
               {bGAppInfo.slice(2, 4).map(bGApproachText)}
+            </div>
+          </div>
+          <div className="container_row_center">
+            <img
+              src={LogoDark}
+              alt="Logo"
+              loading="lazy"
+              className="about_img_half"
+            />
+            <div className="container_column">
+              <h2 className="heading2 container_heading">Convinced ?</h2>
+              <p className="body_text point_answer">
+                Let's connect and start a wonderful project together!
+              </p>
+              <a class="route" href="/contact">
+                CONTACT
+              </a>
             </div>
           </div>
         </div>
