@@ -51,9 +51,16 @@ height:auto;
   fill: #954edd;
 }
 
+.about_experience_content{
+  min-height:600px;
+}
 
-.about_experience_item{
-  align-items: start;
+.about_experience_item, .about_experience_item2{
+  height:fit-content;
+}
+
+.about_experience_item2{
+  align-self:flex-end;
 }
 
 
@@ -64,14 +71,18 @@ height:auto;
   color:#161616;
 }
 
-.about_experience_column1{
-  padding-right:56px;
+.about_bg{
+  gap:56px;
+  min-height:400px;
 }
 
-.about_experience_column2{
-  justify-content: flex-end;
+.about_bg_item{
+  height:fit-content;
 }
 
+.about_bg_item--2{
+  align-self:flex-end;
+}
 
 @media(max-width:1200px){
   .about_profile_contact{
@@ -96,9 +107,6 @@ height:auto;
 .about_experience_item{
   align-items:center;
   /* justify-content: center; */
-}
-.about_experience_column1{
-  padding-right:0;
 }
 .about_point_duration{
   align-self:center;

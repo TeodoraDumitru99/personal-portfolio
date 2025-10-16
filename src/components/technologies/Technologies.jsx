@@ -27,20 +27,18 @@ const Technologies = () => {
   ];
   return (
     <section className="technologies">
-      <div className="wrapper">
-        <div className="technologies_element">
-          {iconsList.map(({ id, title, alt, imgsrc }) => (
-            <div className="technologies_box" key={id}>
-              <img
-                loading="lazy"
-                src={imgsrc}
-                alt={alt}
-                className="technologies_icons"
-              />
-              <h5 className="technologies_name body_text">{title}</h5>
-            </div>
-          ))}
-        </div>
+      <div className="technologies_element">
+        {iconsList.map(({ id, title, alt, imgsrc }) => (
+          <div className="technologies_box" key={id}>
+            <img
+              loading="lazy"
+              src={imgsrc}
+              alt={alt}
+              className="technologies_icons"
+            />
+            <h5 className="technologies_name body_text">{title}</h5>
+          </div>
+        ))}
       </div>
     </section>
   );

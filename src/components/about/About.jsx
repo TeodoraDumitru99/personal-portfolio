@@ -50,6 +50,25 @@ const About = () => {
     },
   ];
 
+  const bGAppInfo = [
+    {
+      id: 0,
+      text: "My background is in Product Design, where I learned to see how art and engineering come together to create products that feel “just right.",
+    },
+    {
+      id: 1,
+      text: "During my studies, I worked on projects ranging from modular furniture to a smart lamp designed for people with disabilities - experiences that sharpened my eye for detail and taught me to think from multiple perspectives.",
+    },
+    {
+      id: 2,
+      text: "Over time, I realized I loved not just physical products, but also the digital space where design meets interaction. That's what led me into web design and development.",
+    },
+    {
+      id: 3,
+      text: "Now I bring the same curiosity and craft - from sketching and prototyping to building with Figma, code, and modern web tools - into creating digital experiences.",
+    },
+  ];
+
   const pointText = (item) => (
     <div key={item.id} className="container_row_start">
       <img
@@ -63,6 +82,23 @@ const About = () => {
         <p className="point_answer body_text">{item.description}</p>
         <span className="about_point_duration">{item.duration}</span>
       </div>
+    </div>
+  );
+
+  const bGApproachText = (item, index) => (
+    <div
+      key={item.id}
+      className={`container_row_start about_bg_item ${
+        index === 1 ? "about_bg_item--2" : ""
+      }`}
+    >
+      <img
+        className="profile_star"
+        loading="lazy"
+        src={StarPointImg}
+        alt="Star Point Icon"
+      />
+      <p className="point_answer body_text">{item.text}</p>
     </div>
   );
 
@@ -120,20 +156,26 @@ const About = () => {
           <div className="about_experience container_column">
             <h2 className="heading2 container_heading">Experience</h2>
             <div className="about_experience_content container_row_between">
-              <div className="container_column about_experience_column1">
+              <div className="container_column about_experience_item">
                 <span className="route profile_route" onClick={handleDownload}>
                   RESUME
                 </span>
                 {pointText(experienceInfo[0])}
               </div>
-              <div className="container_column about_experience_column2">
+              <div className="container_column about_experience_item2">
                 {experienceInfo.slice(1).map(pointText)}
               </div>
             </div>
           </div>
-          <div className="about_technologies">
+          <div className="about_technologies container_column">
             <h2 className="heading2 container_heading">Technologies</h2>
             <Technologies />
+          </div>
+          <div className="container_column">
+            <h2 className="heading2 container_heading">Background</h2>
+            <div className="container_row_between about_bg">
+              {bGAppInfo.slice(2).map(bGApproachText)}
+            </div>
           </div>
         </div>
       </div>

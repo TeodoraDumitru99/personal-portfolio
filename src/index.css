@@ -58,6 +58,7 @@ html, body{
 
 .body_text{
   font-size:20px;
+  text-align:justify;
 }
 
 .route{
@@ -138,8 +139,9 @@ transition: all 0.5s ease-in-out;
 .container_row_between{
   display:flex;
   flex-direction: row;
-  min-height:600px;
-  justify-content: space-between;
+  gap:56px;
+  /* justify-content: space-between;
+  align-content: space-between; */
 }
 
 .container_heading{
