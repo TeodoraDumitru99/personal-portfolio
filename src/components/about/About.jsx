@@ -153,7 +153,7 @@ const About = () => {
               className="about_profile_img"
               loading="lazy"
               src={ProfilePicture}
-              alt="Profile Picture"
+              alt="Profile"
             />
           </div>
           <div className="about_experience container_column">
