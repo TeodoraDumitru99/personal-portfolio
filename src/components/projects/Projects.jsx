@@ -1,11 +1,12 @@
 import "./projects.css";
-import MiniArcadeImg from "../assets/Mini_Arcade.png";
-import SmartLampImg from "../assets/Smart_Control_Lamp.png";
-import MultifunctionalImg from "../assets/Multifunctional_Storage.png";
-import DueMarkBlogImg from "../assets/duemark.png";
-import DueMarkImg from "../assets/DueMark_Hero.png";
-import NexioPreview from "../assets/Nexio Preview.png";
-import StaniaPreview from "../assets/Stania Preview.png";
+import MiniArcadeImg from "../assets/projectsImages/Mini_Arcade.png";
+import SmartLampImg from "../assets/projectsImages/Smart_Control_Lamp.png";
+import MultifunctionalImg from "../assets/projectsImages/Multifunctional_Storage.png";
+import DueMarkBlogImg from "../assets/projectsImages/duemark.png";
+import DueMarkImg from "../assets/projectsImages/DueMark_Hero.png";
+import NexioPreview from "../assets/projectsImages/Nexio Preview.png";
+import StaniaPreview from "../assets/projectsImages/Stania Preview.png";
+import PortfolioPreview from "../assets/projectsImages/Portfolio Projects Preview.png";
 import { Link } from "react-router-dom";
 
 const Projects = () => {
@@ -31,6 +32,14 @@ const Projects = () => {
         },
         {
           id: 2,
+          title: "Portfolio",
+          desc: "UI/UX Design & Frontend Implementation for a portfolio showcasing personal projects and presenting my design philosophy.",
+          alt: "Portfolio",
+          imgsrc: PortfolioPreview,
+          ahref: "/projects/portfolio",
+        },
+        {
+          id: 3,
           title: "DueMark Blog",
           desc: "UI/UX Design for a professional blog, aimed at legal practitioners that support community-driven discussions.",
           alt: "DueMark Blog",
@@ -38,7 +47,7 @@ const Projects = () => {
           ahref: "/projects/duemarkblog",
         },
         {
-          id: 3,
+          id: 4,
           title: "DueMark",
           desc: "UI/UX Design for a global trademark services provider that specializes in renewals and IP management.",
           alt: "DueMark",
@@ -46,7 +55,7 @@ const Projects = () => {
           ahref: "/projects/duemark",
         },
         {
-          id: 4,
+          id: 5,
           title: "Mini Arcade",
           desc: "UI/UX Design and Frontend Implementation for personal Arcade Application with classic games.",
           alt: "Mini Arcade Website",
