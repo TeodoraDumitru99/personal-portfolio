@@ -22,6 +22,7 @@ import DueMarkBlog from "./components/duemarkblog/DuemarkBlog";
 import DueMark from "./components/duemark/Duemark";
 import Nexio from "./components/nexio/Nexio";
 import Stania from "./components/stania/Stania";
+import Portfolio from "./components/portfolio/Portfolio";
 
 function App() {
   return (
@@ -59,6 +60,7 @@ function App() {
               />
               <Route path="/projects/duemarkblog" element={<DueMarkBlog />} />
               <Route path="/projects/duemark" element={<DueMark />} />
+              <Route path="projects/portfolio" element={<Portfolio />} />
               <Route path="/projects/nexio" element={<Nexio />} />
               <Route path="projects/stania" element={<Stania />} />
               <Route path="*" element={<Navigate to="/" />} />
