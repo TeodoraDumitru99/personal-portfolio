@@ -1,0 +1,12 @@
+.portfolio_ov_img_div{
+    display:flex;
+    justify-content: center;
+    width:100%;
+    max-width:620px;
+}
+
+.portfolio_ov_img{
+    width:100%;
+    max-width:360px;
+    height:auto;
+}
