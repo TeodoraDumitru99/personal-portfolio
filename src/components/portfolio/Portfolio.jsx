@@ -3,6 +3,8 @@ import StarPointImg from "../assets/profileImages/star point.png";
 import Blur1Img from "../assets/heroImages/Blur Large.png";
 // import Blur2Img from "../assets/heroImages/Blur Small.png";
 import OverviewMockup from "../assets/portfolioImages/Overview Phone Mockup.png";
+import GoalPreview from "../assets/portfolioImages/Goal Projects Preview.png";
+import ResearchOldDesign from "../assets/portfolioImages/Research Old Design.png";
 
 const Portfolio = () => {
   const overviewContent = [
@@ -44,6 +46,58 @@ const Portfolio = () => {
     },
   ];
 
+  const goalResContent = [
+    {
+      section: "Goal",
+      content: [
+        {
+          image_src: GoalPreview,
+          image_alt: "Projects Preview",
+          text1: (
+            <ul>
+              <li>Make the site lighter, cleaner, and easier to scan.</li>
+              <li>Improve visual hierarchy and section separation.</li>
+              <li>Keep consistency across project pages.</li>
+              <li>Reflect both design sensibility and technical skill.</li>
+              <li>Ensure responsive behavior and accessibility.</li>
+            </ul>
+          ),
+        },
+      ],
+    },
+    {
+      section: "Research",
+      content: [
+        {
+          image_src: ResearchOldDesign,
+          image_alt: "Old Portfolio Design",
+          text1: (
+            <>
+              <p>
+                I reviewed modern portfolio patterns and analyzed other
+                designers' sites on Behance and Dribbble for structure,
+                typography, and information flow. I also conducted quick
+                interviews and usability testing with peers and mentors
+              </p>
+            </>
+          ),
+          text2: (
+            <>
+              <p>Feedback highlights:</p>
+              <ul>
+                <li>“It looks impressive but heavy.”</li>
+                <li>
+                  “I'd like to see more about your process, not just visuals.”
+                </li>
+                <li>“I don't see any case studies”.</li>
+              </ul>
+            </>
+          ),
+        },
+      ],
+    },
+  ];
+
   return (
     <section>
       <div className="wrapper">
@@ -81,15 +135,43 @@ const Portfolio = () => {
                   </div>
                 ))}
               </div>
-              <div className="portfolio_ov_img_div">
+              <div className="portfolio_img_div">
                 <img
-                  className="portfolio_ov_img"
+                  className="portfolio_img"
                   src={OverviewMockup}
-                  loading="lazy"
-                  alt="Blur"
+                  alt="Portfolio Mockup"
                 />
               </div>
             </div>
+
+            {goalResContent.map(({ section, content }) => (
+              <div key={section} className="portfolio_goal_res">
+                {content.map(({ image_src, image_alt, text1, text2 }) => (
+                  <div
+                    className={`container_row_center ${
+                      section === "Research"
+                        ? "portfolio_container_reverse"
+                        : ""
+                    }`}
+                  >
+                    <div className="portfolio_img_div">
+                      <img
+                        className="portfolio_img"
+                        src={image_src}
+                        loading="lazy"
+                        alt={image_alt}
+                      />
+                    </div>
+
+                    <div className="portfolio_goal_res container_column">
+                      <h3 className="container_heading heading2">{section}</h3>
+                      <p className="body_text point_answer">{text1}</p>
+                      <p className="body_text point_answer">{text2}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            ))}
           </div>
         </div>
       </div>

@@ -1,12 +1,17 @@
-.portfolio_ov_img_div{
+.portfolio_img_div{
     display:flex;
     justify-content: center;
     width:100%;
     max-width:620px;
 }
 
-.portfolio_ov_img{
+.portfolio_img{
     width:100%;
     max-width:360px;
     height:auto;
+}
+
+
+.portfolio_container_reverse{
+flex-direction:row-reverse;
 }
