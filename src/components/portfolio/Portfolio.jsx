@@ -127,7 +127,7 @@ const Portfolio = () => {
                       src={StarPointImg}
                       alt="Star Point Icon"
                     />
-                    <div className="point_text">
+                    <div className="point_text portfolio_grow">
                       <p className="heading3 point_question">{question}</p>
 
                       <div className="point_answer body_text">{answer}</div>
@@ -135,7 +135,7 @@ const Portfolio = () => {
                   </div>
                 ))}
               </div>
-              <div className="portfolio_img_div">
+              <div className="portfolio_img_div portfolio_shrink">
                 <img
                   className="portfolio_img"
                   src={OverviewMockup}
@@ -154,7 +154,13 @@ const Portfolio = () => {
                         : ""
                     }`}
                   >
-                    <div className="portfolio_img_div">
+                    <div
+                      className={` ${
+                        section === "Goal"
+                          ? "portfolio_shrink portfolio_img_div_rev"
+                          : "portfolio_img_div"
+                      }`}
+                    >
                       <img
                         className="portfolio_img"
                         src={image_src}
@@ -163,10 +169,21 @@ const Portfolio = () => {
                       />
                     </div>
 
-                    <div className="portfolio_goal_res container_column">
+                    <div
+                      className={`portfolio_goal_res container_column ${
+                        section === "Goal" ? "portfolio_text" : ""
+                      }`}
+                    >
                       <h3 className="container_heading heading2">{section}</h3>
-                      <p className="body_text point_answer">{text1}</p>
-                      <p className="body_text point_answer">{text2}</p>
+                      <div
+                        className={`body_text point_answer ${
+                          section === "Research" ? "portfolio_shrink" : ""
+                        }`}
+                      >
+                        {text1}
+                        <br />
+                        {text2}
+                      </div>
                     </div>
                   </div>
                 ))}

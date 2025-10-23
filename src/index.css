@@ -18,7 +18,7 @@ html, body{
   background-color: white;
   color:black;
   line-height: 1.5;
-  overflow-x:hidden;
+  overflow:hidden;
 }
 
 .wrapper{
@@ -100,7 +100,7 @@ transition: all 0.5s ease-in-out;
   flex-direction: column;
   gap:16px;
   width:100%;
-  max-width: 600px;
+  max-width: 620px;
   color:#545454;
   text-align:justify;
 }
@@ -120,6 +120,7 @@ transition: all 0.5s ease-in-out;
   display: flex;
   flex-direction: column;
   gap:24px;
+  position:relative;
 }
 
 .route_heading{
@@ -129,13 +130,15 @@ transition: all 0.5s ease-in-out;
 .container_row_center{
   display:flex;
   align-items: center;
-  gap:60px;
+  justify-content: space-between;
+  /* gap:60px; */
 }
 
 .container_row_start{
   display:flex;
-  gap:60px;
+  /* gap:60px; */
   align-items: flex-start;
+  justify-content: space-between;
 }
 
 .container_column{
