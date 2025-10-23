@@ -1,10 +1,12 @@
 import "./portfolio.css";
 import StarPointImg from "../assets/profileImages/star point.png";
 import Blur1Img from "../assets/heroImages/Blur Large.png";
-// import Blur2Img from "../assets/heroImages/Blur Small.png";
 import OverviewMockup from "../assets/portfolioImages/Overview Phone Mockup.png";
 import GoalPreview from "../assets/portfolioImages/Goal Projects Preview.png";
 import ResearchOldDesign from "../assets/portfolioImages/Research Old Design.png";
+import PortoflioHero from "../assets/portfolioImages/Portfolio Hero Section.png";
+import ProjectStudy from "../assets/portfolioImages/Project Case Study.png";
+import AboutSection from "../assets/portfolioImages/About Section Preview.png";
 
 const Portfolio = () => {
   const overviewContent = [
@@ -98,6 +100,70 @@ const Portfolio = () => {
     },
   ];
 
+  const solutionsContent = [
+    {
+      id: 0,
+      header: "UI direction",
+      text: (
+        <ul>
+          <li>
+            Switched from dark purple to a light neutral palette with soft
+            accent gradients.
+          </li>
+          <li>
+            Simplified typography with stronger contrasts between headings and
+            body text.
+          </li>
+          <li>Added breathing space (padding, gaps) to create rhythm.</li>
+        </ul>
+      ),
+      imgSrc: PortoflioHero,
+      imgAlt: "Portoflio Hero Section",
+    },
+    {
+      id: 1,
+      header: "Structure",
+      text: (
+        <ul>
+          <li>
+            Introduced clearer section blocks (Overview, Goal, Research,
+            Solution).
+          </li>
+          <li>Created a consistent project template for all case studies.</li>
+          <li>
+            Reorganized the homepage to prioritize introduction + featured work.
+          </li>
+          <li>
+            Scalable layout: new design makes it easier to add future projects.
+          </li>
+        </ul>
+      ),
+      imgSrc: ProjectStudy,
+      imgAlt: "Project Case Study",
+    },
+    {
+      id: 2,
+      header: "Visuals over text",
+      text: (
+        <ul>
+          <li>
+            Redesigned the About section, as it had a lot of text related to
+            professional background.
+          </li>
+          <li>
+            Started telling stories with more visuals rather than long
+            descriptions.
+          </li>
+          <li>
+            Gave as much attention to the section as I did for the case studies.
+          </li>
+        </ul>
+      ),
+      imgSrc: AboutSection,
+      imgAlt: "About Section",
+    },
+  ];
+
   return (
     <section>
       <div className="wrapper">
@@ -127,7 +193,7 @@ const Portfolio = () => {
                       src={StarPointImg}
                       alt="Star Point Icon"
                     />
-                    <div className="point_text portfolio_grow">
+                    <div className="point_text">
                       <p className="heading3 point_question">{question}</p>
 
                       <div className="point_answer body_text">{answer}</div>
@@ -135,7 +201,7 @@ const Portfolio = () => {
                   </div>
                 ))}
               </div>
-              <div className="portfolio_img_div portfolio_shrink">
+              <div className="portfolio_img_div">
                 <img
                   className="portfolio_img"
                   src={OverviewMockup}
@@ -157,7 +223,7 @@ const Portfolio = () => {
                     <div
                       className={` ${
                         section === "Goal"
-                          ? "portfolio_shrink portfolio_img_div_rev"
+                          ? "portfolio_img_div_rev"
                           : "portfolio_img_div"
                       }`}
                     >
@@ -175,11 +241,7 @@ const Portfolio = () => {
                       }`}
                     >
                       <h3 className="container_heading heading2">{section}</h3>
-                      <div
-                        className={`body_text point_answer ${
-                          section === "Research" ? "portfolio_shrink" : ""
-                        }`}
-                      >
+                      <div className="body_text point_answer">
                         {text1}
                         <br />
                         {text2}
@@ -189,6 +251,36 @@ const Portfolio = () => {
                 ))}
               </div>
             ))}
+            <div className="portfolio_solution container_column">
+              <h3 className="container_heading heading2">Solution</h3>
+              {solutionsContent.map(({ id, header, text, imgSrc, imgAlt }) => (
+                <div
+                  key={id}
+                  className={`container_row_center ${
+                    id === 1 ? "portfolio_container_reverse" : ""
+                  }`}
+                >
+                  <img
+                    className="portfolio_img_large"
+                    src={imgSrc}
+                    loading="lazy"
+                    alt={imgAlt}
+                  />
+                  <div className="point_start portfolio_text">
+                    <img
+                      className="star_dark"
+                      loading="lazy"
+                      src={StarPointImg}
+                      alt="Star Point Icon"
+                    />
+                    <div className="point_answer body_text container_column">
+                      <p className="heading3 point_question">{header}</p>
+                      {text}
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
