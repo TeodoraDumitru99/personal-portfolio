@@ -1,0 +1,34 @@
+.section_card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+}
+
+.section_left {
+  flex-direction: row;
+}
+.section_right {
+  flex-direction: row-reverse;
+}
+
+.section_left .section_text {
+  flex: 1 1 auto;
+  flex-grow: 1;
+}
+
+.section_left .img_div {
+  /* flex: 0 0 auto; */
+  flex-shrink: 1;
+}
+
+.section_right .section_text {
+  flex: 0 0 auto;
+}
+
+@media (max-width: 900px) {
+  .section_left,
+  .section_right {
+    flex-direction: column;
+  }
+}
