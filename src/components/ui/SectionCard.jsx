@@ -14,7 +14,7 @@ const SectionCard = ({
   const isOverview = Array.isArray(text);
   return (
     <div className={`container_row_center section_${alignment}`}>
-      <div className="container_column">
+      <div className="container_column container__column--alternative">
         {contentHasSectionTitle && (
           <h3 className="container_heading heading2">{section}</h3>
         )}
