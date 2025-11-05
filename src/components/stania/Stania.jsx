@@ -231,7 +231,7 @@ const Stania = () => {
               <div className="stania_overview_content">
                 <h3 className="heading2 container_heading">Overview</h3>
                 {overviewContent.map(({ id, question, answer }) => (
-                  <div key={`overview-${id}`} className="container_row_start">
+                  <div key={`overview-${id}`} className="point_start">
                     <img
                       className="star_dark"
                       loading="lazy"
@@ -314,7 +314,7 @@ const Stania = () => {
 
           {solutionContent.map(({ section, images, text }) => {
             const SectionText = (
-              <div className="container_row_start stania_section_text">
+              <div className="point_start stania_section_text">
                 <img
                   loading="lazy"
                   src={StarPointImg}
@@ -421,7 +421,7 @@ const Stania = () => {
           {designMockupContent.map(({ section, text, images }) => (
             <div key={`design-${section}`} className="container_column">
               <h3 className="heading2 container_heading">{section}</h3>
-              <div className="container_row_start">
+              <div className="point_start">
                 <img
                   loading="lazy"
                   src={StarPointImg}
