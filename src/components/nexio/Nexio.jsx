@@ -485,7 +485,7 @@ const Nexio = () => {
             <div className="nexio_process">
               <div className="nexio_process_text">
                 <h3 className="container_heading heading2">Process</h3>
-                <div className="point">
+                <div className="point_center">
                   <img
                     className="star_dark"
                     loading="lazy"
@@ -596,7 +596,7 @@ const Nexio = () => {
                     </div>
                   </div>
                 ))}
-              <div className="nexio_process_point point">
+              <div className="nexio_process_point point_center">
                 <img
                   className="star_dark"
                   loading="lazy"
@@ -639,7 +639,7 @@ const Nexio = () => {
               ))}
               <div className="nexio_design nexio_container_column">
                 <h3 className="container_heading heading2">Design</h3>
-                <div className="point">
+                <div className="point_center">
                   <img
                     className="star_dark"
                     loading="lazy"
@@ -673,7 +673,7 @@ const Nexio = () => {
                     {content.map(({ id, text1, text2 }) => (
                       <div key={id} className="nexio_container_column">
                         <p className="heading3 body_text">{section}</p>
-                        <div className="point nexio_container_row_center">
+                        <div className="point_center nexio_container_row_center">
                           <img
                             className="star_dark"
                             loading="lazy"
@@ -682,7 +682,7 @@ const Nexio = () => {
                           />
                           <p className="body_text point_text">{text1}</p>
                         </div>
-                        <div className="point nexio_container_row_center">
+                        <div className="point_center nexio_container_row_center">
                           <img
                             className="star_dark"
                             loading="lazy"
