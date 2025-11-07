@@ -4,6 +4,12 @@ import ResearchOldDesign from "../components/assets/portfolioImages/Research Old
 import PortfolioHero from "../components/assets/portfolioImages/Portfolio Hero Section.png";
 import ProjectStudy from "../components/assets/portfolioImages/Project Case Study.png";
 import AboutSection from "../components/assets/portfolioImages/About Section Preview.png";
+import DesignImg1 from "../components/assets/portfolioImages/Design Image 1.png";
+import DesignImg2 from "../components/assets/portfolioImages/Design Image 2.png";
+import DesignImg3 from "../components/assets/portfolioImages/Design Image 3.png";
+import DesignImg4 from "../components/assets/portfolioImages/Design Image 4.png";
+import Mockup1 from "../components/assets/portfolioImages/Mockup 1.png";
+import Mockup2 from "../components/assets/portfolioImages/Mockup 2.png";
 
 export const contentInfo = [
   {
@@ -162,5 +168,26 @@ export const contentInfo = [
     ),
     imgSrc: AboutSection,
     imgAlt: "About Section",
+  },
+];
+
+export const portfolioDesignMockups = [
+  {
+    section: "Design",
+    text: "Old vs New design",
+    content: [
+      { imgId: 0, imgSrc: DesignImg1, imgAlt: "Design Comparison 1" },
+      { imgId: 1, imgSrc: DesignImg2, imgAlt: "Design Comparison 2" },
+      { imgId: 2, imgSrc: DesignImg3, imgAlt: "Design Comparison 3" },
+      { imgId: 3, imgSrc: DesignImg4, imgAlt: "Design Comparison 4" },
+    ],
+  },
+  {
+    section: "Mockups",
+    text: "See the Portfolio presented on different devices",
+    content: [
+      { imgId: 0, imgSrc: Mockup1, imgAlt: "Mockup 1" },
+      { imgId: 1, imgSrc: Mockup2, imgAlt: "Mockup 2" },
+    ],
   },
 ];
