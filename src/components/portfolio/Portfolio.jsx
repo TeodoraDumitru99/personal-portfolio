@@ -1,7 +1,9 @@
 import "./portfolio.css";
 import Blur1Img from "../assets/heroImages/Blur Large.png";
 import { contentInfo } from "../../constants/constants";
-import SectionCard from "../../components/ui/SectionCard";
+import { portfolioDesignMockups } from "../../constants/constants";
+import SectionCard from "../ui/sectionCard/SectionCard";
+import ImgSection from "../ui/imgSection/ImgSection";
 
 const Portfolio = () => {
   return (
@@ -25,6 +27,14 @@ const Portfolio = () => {
               />
             ))}
           </div>
+          {portfolioDesignMockups.map(({ section, text, content }) => (
+            <ImgSection
+              key={section}
+              section={section}
+              text={text}
+              content={content}
+            />
+          ))}
         </div>
       </div>
     </section>
