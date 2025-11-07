@@ -1,4 +1,4 @@
-import StarPointImg from "../assets/profileImages/star point.png";
+import StarPointImg from "../../assets/profileImages/star point.png";
 import "./sectionCard.css";
 
 const SectionCard = ({
